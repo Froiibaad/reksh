@@ -6,7 +6,7 @@ public class Test {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Test!"); // Ivanov Dodatak koji jebe kevu
-		System.out.println("Strale je gey");
+		System.out.println("Strale je gey"); //   jhgiuhuhjhhk
 
 	}
 
