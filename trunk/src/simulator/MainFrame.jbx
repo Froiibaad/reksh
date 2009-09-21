@@ -1,0 +1,71 @@
+[PropertyInfo]
+aluPanel,javax.swing.JPanel,false,false, , ,false,<default>
+aluSigPanel,javax.swing.JPanel,false,false, , ,false,<default>
+arbPanel,javax.swing.JPanel,false,false, , ,false,<default>
+asmPanel,javax.swing.JPanel,false,false, , ,false,<default>
+borderLayout1,java.awt.BorderLayout,false,false, , ,false,<default>
+borderLayout2,java.awt.BorderLayout,false,false, , ,false,<default>
+borderLayout3,java.awt.BorderLayout,false,false, , ,false,<default>
+borderLayout4,java.awt.BorderLayout,false,false, , ,false,<default>
+borderLayout5,java.awt.BorderLayout,false,false, , ,false,<default>
+borderLayout6,java.awt.BorderLayout,false,false, , ,false,<default>
+controlPanel,javax.swing.JPanel,false,false, , ,false,<default>
+cuPanel,javax.swing.JPanel,false,false, , ,false,<default>
+desnoPanel,javax.swing.JPanel,false,false, , ,false,<default>
+flowLayout1,java.awt.FlowLayout,false,false, , ,false,<default>
+flowLayout2,java.awt.FlowLayout,false,false, , ,false,<default>
+gridLayout1,java.awt.GridLayout,false,false, , ,false,<default>
+init,simulator.Initializator,false,false, , ,false,<default>
+JButton1,javax.swing.JButton,false,false, , ,false,<default>
+JButton2,javax.swing.JButton,false,false, , ,false,<default>
+JButton3,javax.swing.JButton,false,false, , ,false,<default>
+JButton4,javax.swing.JButton,false,false, , ,false,<default>
+JButton5,javax.swing.JButton,false,false, , ,false,<default>
+JLabel1,javax.swing.JLabel,false,false, , ,false,<default>
+JLabel2,javax.swing.JLabel,false,false, , ,false,<default>
+JLabel3,javax.swing.JLabel,false,false, , ,false,<default>
+JLabel4,javax.swing.JLabel,false,false, , ,false,<default>
+JLabel5,javax.swing.JLabel,false,false, , ,false,<default>
+JMenu1,javax.swing.JMenu,false,false, , ,false,<default>
+JMenu2,javax.swing.JMenu,false,false, , ,false,<default>
+JMenuBar1,javax.swing.JMenuBar,false,false, , ,false,<default>
+JMenuFile,javax.swing.JMenu,false,false, , ,false,<default>
+JMenuFileExit,javax.swing.JMenuItem,false,false, , ,false,<default>
+JMenuItem1,javax.swing.JMenuItem,false,false, , ,false,<default>
+JMenuItem2,javax.swing.JMenuItem,false,false, , ,false,<default>
+JMenuItem3,javax.swing.JMenuItem,false,false, , ,false,<default>
+JMenuItem4,javax.swing.JMenuItem,false,false, , ,false,<default>
+JMenuItem5,javax.swing.JMenuItem,false,false, , ,false,<default>
+JMenuItem6,javax.swing.JMenuItem,false,false, , ,false,<default>
+JPanel6,javax.swing.JPanel,false,false, , ,false,<default>
+JPanel9,javax.swing.JPanel,false,false, , ,false,<default>
+JScrollPane1,javax.swing.JScrollPane,false,false, , ,false,<default>
+JScrollPane2,javax.swing.JScrollPane,false,false, , ,false,<default>
+JSpinner2,javax.swing.JSpinner,false,false, , ,false,<default>
+JTabbedPane1,javax.swing.JTabbedPane,false,false, , ,false,<default>
+JTabbedPane2,javax.swing.JTabbedPane,false,false, , ,false,<default>
+JTextField1,javax.swing.JTextField,false,false, , ,false,<default>
+JTextPane1,javax.swing.JTextPane,false,false, , ,false,<default>
+memColumnNames,String[],false,false, , ,false,<default>
+memModPanel,javax.swing.JPanel,false,false, , ,false,<default>
+memPane,javax.swing.JScrollPane,false,false, , ,false,<default>
+memPanel,javax.swing.JPanel,false,false, , ,false,<default>
+memTable,javax.swing.JTable,false,false, , ,false,<default>
+prikazPanel,javax.swing.JPanel,false,false, , ,false,<default>
+procPanel,javax.swing.JPanel,false,false, , ,false,<default>
+pswPanel,javax.swing.JPanel,false,false, , ,false,<default>
+regColumnNames,String[],false,false, , ,false,<default>
+registri,java.util.ArrayList,false,false, , ,false,<default>
+regPanel,javax.swing.JPanel,false,false, , ,false,<default>
+regTable,javax.swing.JTable,false,false, , ,false,<default>
+statusPanel,javax.swing.JPanel,false,false, , ,false,<default>
+synchPanel,javax.swing.JPanel,false,false, , ,false,<default>
+sysPanel,javax.swing.JPanel,false,false, , ,false,<default>
+titledBorder1,javax.swing.border.TitledBorder,false,false, , ,false,<default>
+titledBorder2,javax.swing.border.TitledBorder,false,false, , ,false,<default>
+titledBorder3,javax.swing.border.TitledBorder,false,false, , ,false,<default>
+[IconNames]
+
+
+
+
