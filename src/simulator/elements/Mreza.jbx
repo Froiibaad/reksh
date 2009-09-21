@@ -1,0 +1,10 @@
+[PropertyInfo]
+inputs,java.util.ArrayList,false,false, , ,false,<default>
+numOfInputs,int,false,false, , ,false,<default>
+outputs,java.util.ArrayList,false,false, , ,false,<default>
+successor,java.util.ArrayList,false,false, , ,false,<default>
+[IconNames]
+
+
+
+
