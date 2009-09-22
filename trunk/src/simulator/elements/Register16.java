@@ -7,7 +7,7 @@ public class Register16 extends SekvMreza {
     private int[] b = new int[16];
 
     public Register16(String name) {
-        super(22, 16);
+        super(23, 16);
         this.name = name;
         for (int i = 0; i < 16; i++) {
             b[i] = 0;
@@ -17,7 +17,7 @@ public class Register16 extends SekvMreza {
     public static final int IN0 = 0, IN1 = 1, IN2 = 2, IN3 = 3, IN4 = 4,
             IN5 = 5, IN6 = 6, IN7 = 7, IN8 = 8, IN9 = 9, IN10 = 10, IN11 = 11,
             IN12 = 12, IN13 = 13, IN14 = 14, IN15 = 15, LD = 16, LDL = 17,
-            LDH = 18, CLR = 19, INC = 20, DEC = 21;
+            LDH = 18, CLR = 19, INC = 20, DEC = 21, SWAP = 22;
 
     public void calc() {
         boolean done = false;
@@ -64,6 +64,16 @@ public class Register16 extends SekvMreza {
             for (int i = 8; i < 16; i++) {
                 b[i] = inputs.get(i).getValue();
             }
+        }
+        if (inputs.get(SWAP).getValue() == 1) {
+        	int [] c = new int [8];
+        	for (int i = 0; i < 8; i++) {
+        		c[i] = b[i];
+        		b[i] = b[i+8];
+        	}
+        	for(int i = 8; i < 16; i++) {
+        		b[i] = c[i-8];
+        	}
         }
     }
 
