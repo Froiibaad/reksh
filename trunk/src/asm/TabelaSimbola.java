@@ -10,12 +10,13 @@
 		private HashMap<String, Simbol> tabela;
 
 		public void dodaj(Simbol simb) {
+			this.tabela.put(simb.getIme(), simb);
 
 		}
 
 		public Simbol pronadji(String ime) {
 
-			return null;
+			return this.tabela.get(ime);
 
 		}
 
