@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Meta="http:///schemas/Meta/1" xmlns:Omondo_1="http:///_zrN_0SUoEdmNXYQzyImvfA.profile.uml2" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http:///schemas/Meta/1 platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_kycnUIE4EduiecUdqhZMrw http:///_zrN_0SUoEdmNXYQzyImvfA.profile.uml2 platform:/plugin/com.omondo.uml.core/profiles/Omondo.profile.uml#_zrN_1iUoEdmNXYQzyImvfA http://www.eclipse.org/uml2/schemas/Standard/1 platform:/plugin/org.eclipse.uml2.uml.resources/profiles/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:JavaProfile_1="http:///_aZXakH6MEdmbwasWWc4yvw.profile.uml2" xmlns:Meta="http:///schemas/Meta/1" xmlns:Omondo_1="http:///_zrN_0SUoEdmNXYQzyImvfA.profile.uml2" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http:///_aZXakH6MEdmbwasWWc4yvw.profile.uml2 platform:/plugin/com.omondo.uml.core/profiles/Java.profile.uml#_aZhLlH6MEdmbwasWWc4yvw http:///schemas/Meta/1 platform:/plugin/com.omondo.uml.core/profiles/Meta.profile.uml#_kycnUIE4EduiecUdqhZMrw http:///_zrN_0SUoEdmNXYQzyImvfA.profile.uml2 platform:/plugin/com.omondo.uml.core/profiles/Omondo.profile.uml#_zrN_1iUoEdmNXYQzyImvfA http://www.eclipse.org/uml2/schemas/Standard/1 platform:/plugin/org.eclipse.uml2.uml.resources/profiles/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
   <uml:Model xmi:id="_VUloYKd1Ed6SP_fDMcPYwg" name="Reksh">
     <eAnnotations xmi:id="_b5T5oqd1Ed6SP_fDMcPYwg" source="General" references="_b5T5oad1Ed6SP_fDMcPYwg _6DlqcKd2Ed6SP_fDMcPYwg"/>
     <packageImport xmi:id="_VcLeIKd1Ed6SP_fDMcPYwg">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_WloZgKd1Ed6SP_fDMcPYwg" name="asm">
-      <eAnnotations xmi:id="_YXc8cad1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd" references="_YXc8cKd1Ed6SP_fDMcPYwg _YX5oYKd1Ed6SP_fDMcPYwg _YYCyUKd1Ed6SP_fDMcPYwg _YYzAQKd1Ed6SP_fDMcPYwg _YY8KMKd1Ed6SP_fDMcPYwg _ZyW-wKd2Ed6SP_fDMcPYwg _Abr08Kd3Ed6SP_fDMcPYwg"/>
+      <eAnnotations xmi:id="_YXc8cad1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd" references="_YXc8cKd1Ed6SP_fDMcPYwg _YX5oYKd1Ed6SP_fDMcPYwg _YYCyUKd1Ed6SP_fDMcPYwg _ZyW-wKd2Ed6SP_fDMcPYwg _IAh9EKeQEd6SP_fDMcPYwg _KsU08KeQEd6SP_fDMcPYwg _f6SAcKeQEd6SP_fDMcPYwg _VvpboKeUEd6SP_fDMcPYwg _we4eYKeUEd6SP_fDMcPYwg _28iksKecEd6SP_fDMcPYwg"/>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_YXc8cKd1Ed6SP_fDMcPYwg" name="Registri">
         <eAnnotations xmi:id="_YXc8cqd1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
       </packagedElement>
@@ -25,13 +25,7 @@
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_YYCyUKd1Ed6SP_fDMcPYwg" name="NacinAdresiranja">
         <eAnnotations xmi:id="_YYCyUad1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_YYzAQKd1Ed6SP_fDMcPYwg" name="Instrukcije">
-        <eAnnotations xmi:id="_YYzAQad1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_YY8KMKd1Ed6SP_fDMcPYwg" name="Direktive">
-        <eAnnotations xmi:id="_YZF7MKd1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_ZyW-wKd2Ed6SP_fDMcPYwg" name="Tokenizer" clientDependency="_80cBcKd2Ed6SP_fDMcPYwg _80vjcKd2Ed6SP_fDMcPYwg _-UsTQKd2Ed6SP_fDMcPYwg _NlTVkKeCEd6SP_fDMcPYwg _e_jUAKeEEd6SP_fDMcPYwg">
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZyW-wKd2Ed6SP_fDMcPYwg" name="Tokenizer" clientDependency="_80cBcKd2Ed6SP_fDMcPYwg _80vjcKd2Ed6SP_fDMcPYwg _-UsTQKd2Ed6SP_fDMcPYwg _NlTVkKeCEd6SP_fDMcPYwg _e_jUAKeEEd6SP_fDMcPYwg _iPxcsKeGEd6SP_fDMcPYwg _iQOIoaeGEd6SP_fDMcPYwg _uH5EwKeHEd6SP_fDMcPYwg _7giN8KeUEd6SP_fDMcPYwg _worzQKeXEd6SP_fDMcPYwg _wpIfMaeXEd6SP_fDMcPYwg _nKKN4KeYEd6SP_fDMcPYwg _nLWgsKeYEd6SP_fDMcPYwg _nL89oKeYEd6SP_fDMcPYwg _3Jy9kKecEd6SP_fDMcPYwg">
         <eAnnotations xmi:id="_ZyW-wad2Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
         <ownedAttribute xmi:id="_zeOgAKd2Ed6SP_fDMcPYwg" name="in" visibility="package" type="_6Du0YKd2Ed6SP_fDMcPYwg">
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_zeOgAad2Ed6SP_fDMcPYwg">
@@ -39,23 +33,137 @@
           </defaultValue>
         </ownedAttribute>
         <ownedOperation xmi:id="_qKiuIKd2Ed6SP_fDMcPYwg" name="Tokenizer" visibility="public" concurrency="concurrent">
-          <ownedParameter xmi:id="_ramqAqeFEd6SP_fDMcPYwg" name="imeFajla" type="_b5T5o6d1Ed6SP_fDMcPYwg">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ramqA6eFEd6SP_fDMcPYwg" value="1"/>
+          <ownedParameter xmi:id="_9igMEKecEd6SP_fDMcPYwg" name="imeFajla" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9igMEaecEd6SP_fDMcPYwg" value="1"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:id="_NZhjYKeCEd6SP_fDMcPYwg" name="dohvatiToken" visibility="public" concurrency="concurrent">
-          <ownedParameter xmi:id="_ramqAKeFEd6SP_fDMcPYwg" type="_Abr08Kd3Ed6SP_fDMcPYwg" direction="return">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ramqAaeFEd6SP_fDMcPYwg" value="1"/>
+          <ownedParameter xmi:id="_9iWbEKecEd6SP_fDMcPYwg" type="_we4eYKeUEd6SP_fDMcPYwg" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9iWbEaecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_ldFtQ6eGEd6SP_fDMcPYwg" name="main" visibility="public" isStatic="true" concurrency="concurrent">
+          <ownedParameter xmi:id="_9igMEqecEd6SP_fDMcPYwg" name="args" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9igME6ecEd6SP_fDMcPYwg" value="1"/>
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Abr08Kd3Ed6SP_fDMcPYwg" name="Token">
-        <eAnnotations xmi:id="_Abr08ad3Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_IAh9EKeQEd6SP_fDMcPYwg" name="Instrukcija">
+        <eAnnotations xmi:id="_IAh9EaeQEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_KsU08KeQEd6SP_fDMcPYwg" name="BezadresnaInstrukcija" clientDependency="_KwpUQKeQEd6SP_fDMcPYwg _KxPKIaeQEd6SP_fDMcPYwg _Kxr2EaeQEd6SP_fDMcPYwg">
+        <eAnnotations xmi:id="_KsU08aeQEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        <generalization xmi:id="_Ks6q0KeQEd6SP_fDMcPYwg" general="_IAh9EKeQEd6SP_fDMcPYwg"/>
+        <ownedLiteral xmi:id="_MXTJAKeQEd6SP_fDMcPYwg" name="RTS"/>
+        <ownedLiteral xmi:id="_Oq9NsKeQEd6SP_fDMcPYwg" name="RTI"/>
+        <ownedLiteral xmi:id="_PpFp4KeQEd6SP_fDMcPYwg" name="INTE"/>
+        <ownedLiteral xmi:id="_P3i8oKeQEd6SP_fDMcPYwg" name="INTD"/>
+        <ownedLiteral xmi:id="_QPh-0KeQEd6SP_fDMcPYwg" name="TRPE"/>
+        <ownedLiteral xmi:id="_QnhBAKeQEd6SP_fDMcPYwg" name="TRPD"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_f6SAcKeQEd6SP_fDMcPYwg" name="JednoadresnaInstrukcija" clientDependency="_f7xOMKeQEd6SP_fDMcPYwg _f8N6IaeQEd6SP_fDMcPYwg _f80XEaeQEd6SP_fDMcPYwg">
+        <eAnnotations xmi:id="_f6SAcaeQEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        <generalization xmi:id="_f7LYUKeQEd6SP_fDMcPYwg" general="_IAh9EKeQEd6SP_fDMcPYwg"/>
+        <ownedLiteral xmi:id="_fb93UKeREd6SP_fDMcPYwg" name="INT"/>
+        <ownedLiteral xmi:id="_fvMVUKeREd6SP_fDMcPYwg" name="JNZ"/>
+        <ownedLiteral xmi:id="_sLk9gKeREd6SP_fDMcPYwg" name="JMP"/>
+        <ownedLiteral xmi:id="_sjkmwKeREd6SP_fDMcPYwg" name="JSR"/>
+        <ownedLiteral xmi:id="_tYKscKeREd6SP_fDMcPYwg" name="ASR"/>
+        <ownedLiteral xmi:id="_t0xv8KeREd6SP_fDMcPYwg" name="PUSH"/>
+        <ownedLiteral xmi:id="_krPGoKeTEd6SP_fDMcPYwg" name="POP"/>
+        <ownedLiteral xmi:id="_l39_gKeTEd6SP_fDMcPYwg" name="INC"/>
+        <ownedLiteral xmi:id="_mPz3wKeTEd6SP_fDMcPYwg" name="DEC"/>
+        <ownedLiteral xmi:id="_rKykAKeTEd6SP_fDMcPYwg" name="JMPIND"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_VvpboKeUEd6SP_fDMcPYwg" name="DvoadresnaInstrukcija" clientDependency="_Vw_fcKeUEd6SP_fDMcPYwg _VxSaYaeUEd6SP_fDMcPYwg _Vxl8YaeUEd6SP_fDMcPYwg">
+        <eAnnotations xmi:id="_VvpboaeUEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        <generalization xmi:id="_VwP4kKeUEd6SP_fDMcPYwg" general="_IAh9EKeQEd6SP_fDMcPYwg"/>
+        <ownedLiteral xmi:id="_YgqKsKeUEd6SP_fDMcPYwg" name="MOVS"/>
+        <ownedLiteral xmi:id="_YgqKsaeUEd6SP_fDMcPYwg" name="MOVD"/>
+        <ownedLiteral xmi:id="_YgqKsqeUEd6SP_fDMcPYwg" name="ADD"/>
+        <ownedLiteral xmi:id="_YqMhMKeUEd6SP_fDMcPYwg" name="AND"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_we4eYKeUEd6SP_fDMcPYwg" name="Token" clientDependency="_ycCuo6eUEd6SP_fDMcPYwg _1vnYMKeUEd6SP_fDMcPYwg">
+        <eAnnotations xmi:id="_we4eYaeUEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        <ownedAttribute xmi:id="_yVCuwKeUEd6SP_fDMcPYwg" name="labela" visibility="private" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yVCuwqeUEd6SP_fDMcPYwg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yVCuw6eUEd6SP_fDMcPYwg"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_yVCuwaeUEd6SP_fDMcPYwg">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_1pN1QKeUEd6SP_fDMcPYwg" name="instrukcija" visibility="private" type="_IAh9EKeQEd6SP_fDMcPYwg" association="_1wEEIKeUEd6SP_fDMcPYwg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1pN1QqeUEd6SP_fDMcPYwg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1pN1Q6eUEd6SP_fDMcPYwg"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_1pN1QaeUEd6SP_fDMcPYwg">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5pMR0KeUEd6SP_fDMcPYwg" name="adresnoPolje" visibility="private" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5pMR0qeUEd6SP_fDMcPYwg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5pMR06eUEd6SP_fDMcPYwg"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_5pMR0aeUEd6SP_fDMcPYwg">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_yYK7QKeUEd6SP_fDMcPYwg" name="setLabela" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_gG30gqecEd6SP_fDMcPYwg" name="labela" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gG30g6ecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_ycCuoKeUEd6SP_fDMcPYwg" name="getLabela" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_gHBlgqecEd6SP_fDMcPYwg" type="_b5T5o6d1Ed6SP_fDMcPYwg" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gHBlg6ecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_1vLTUqeUEd6SP_fDMcPYwg" name="getInstrukcija" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_gG30hqecEd6SP_fDMcPYwg" type="_IAh9EKeQEd6SP_fDMcPYwg" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gG30h6ecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_1vUdQqeUEd6SP_fDMcPYwg" name="setInstrukcija" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_gG30gKecEd6SP_fDMcPYwg" name="instrukcija" type="_IAh9EKeQEd6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gG30gaecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5wMRsqeUEd6SP_fDMcPYwg" name="setAdresnoPolje" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_gHBlgKecEd6SP_fDMcPYwg" name="adresnoPolje" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gHBlgaecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_5wMRtaeUEd6SP_fDMcPYwg" name="getAdresnoPolje" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_gG30hKecEd6SP_fDMcPYwg" type="_b5T5o6d1Ed6SP_fDMcPYwg" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gG30haecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Wb_K-qeZEd6SP_fDMcPYwg" name="Token" visibility="public" concurrency="concurrent">
+          <ownedParameter xmi:id="_gG30iKecEd6SP_fDMcPYwg" name="labela" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gG30iaecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gG30iqecEd6SP_fDMcPYwg" name="instr" type="_IAh9EKeQEd6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gG30i6ecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gG30jKecEd6SP_fDMcPYwg" name="adrPolje" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gG30jaecEd6SP_fDMcPYwg" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_1wEEIKeUEd6SP_fDMcPYwg" memberEnd="_1pN1QKeUEd6SP_fDMcPYwg _1wEEIaeUEd6SP_fDMcPYwg">
+        <ownedEnd xmi:id="_1wEEIaeUEd6SP_fDMcPYwg" name="ownedEnd" type="_we4eYKeUEd6SP_fDMcPYwg" association="_1wEEIKeUEd6SP_fDMcPYwg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_28iksKecEd6SP_fDMcPYwg" name="Direktiva" clientDependency="_2-eeYKecEd6SP_fDMcPYwg _2-7KUaecEd6SP_fDMcPYwg _2_hAMaecEd6SP_fDMcPYwg">
+        <eAnnotations xmi:id="_28iksaecEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        <generalization xmi:id="_29u3gKecEd6SP_fDMcPYwg" general="_IAh9EKeQEd6SP_fDMcPYwg"/>
+        <ownedLiteral xmi:id="_5DrQUKecEd6SP_fDMcPYwg" name="DC"/>
+        <ownedLiteral xmi:id="_5DrQUqecEd6SP_fDMcPYwg" name="BEG"/>
+        <ownedLiteral xmi:id="_5DrQVKecEd6SP_fDMcPYwg" name="DS"/>
+        <ownedLiteral xmi:id="_5DrQVaecEd6SP_fDMcPYwg" name="END"/>
+        <ownedLiteral xmi:id="_5DrQVqecEd6SP_fDMcPYwg" name="ORG"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_b5T5oKd1Ed6SP_fDMcPYwg" name="java">
       <packagedElement xmi:type="uml:Package" xmi:id="_b5T5oad1Ed6SP_fDMcPYwg" name="lang">
-        <eAnnotations xmi:id="_b5T5pKd1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd" references="_b5T5o6d1Ed6SP_fDMcPYwg _b5T5pqd1Ed6SP_fDMcPYwg _b5T5qKd1Ed6SP_fDMcPYwg"/>
+        <eAnnotations xmi:id="_b5T5pKd1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd" references="_b5T5o6d1Ed6SP_fDMcPYwg _b5T5pqd1Ed6SP_fDMcPYwg _b5T5qKd1Ed6SP_fDMcPYwg _nJkYAKeYEd6SP_fDMcPYwg"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_b5T5o6d1Ed6SP_fDMcPYwg" name="String" isLeaf="true">
           <eAnnotations xmi:id="_b5T5pad1Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
         </packagedElement>
@@ -72,9 +180,12 @@
             </ownedParameter>
           </ownedTemplateSignature>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_nJkYAKeYEd6SP_fDMcPYwg" name="Exception">
+          <eAnnotations xmi:id="_nJkYAaeYEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_6DlqcKd2Ed6SP_fDMcPYwg" name="io">
-        <eAnnotations xmi:id="_6Du0Yad2Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd" references="_6Du0YKd2Ed6SP_fDMcPYwg _-UPnUKd2Ed6SP_fDMcPYwg _e-XBNKeEEd6SP_fDMcPYwg"/>
+        <eAnnotations xmi:id="_6Du0Yad2Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd" references="_6Du0YKd2Ed6SP_fDMcPYwg _-UPnUKd2Ed6SP_fDMcPYwg _e-XBNKeEEd6SP_fDMcPYwg _iPLm0KeGEd6SP_fDMcPYwg _uHc_4KeHEd6SP_fDMcPYwg"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_6Du0YKd2Ed6SP_fDMcPYwg" name="BufferedReader">
           <eAnnotations xmi:id="_6Du0Yqd2Ed6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
         </packagedElement>
@@ -84,6 +195,12 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_e-XBNKeEEd6SP_fDMcPYwg" name="IOException">
           <eAnnotations xmi:id="_e-XBNaeEEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iPLm0KeGEd6SP_fDMcPYwg" name="PrintStream">
+          <eAnnotations xmi:id="_iPLm0aeGEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_uHc_4KeHEd6SP_fDMcPYwg" name="PrintWriter">
+          <eAnnotations xmi:id="_uHc_4aeHEd6SP_fDMcPYwg" source="Reksh/src/asm/asmDijagramKlasa.ucd"/>
+        </packagedElement>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_b6MqcKd1Ed6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg" client="_YX5oYKd1Ed6SP_fDMcPYwg"/>
@@ -92,8 +209,37 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_80cBcKd2Ed6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_80vjcKd2Ed6SP_fDMcPYwg" supplier="_6Du0YKd2Ed6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_-UsTQKd2Ed6SP_fDMcPYwg" supplier="_-UPnUKd2Ed6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_NlTVkKeCEd6SP_fDMcPYwg" supplier="_Abr08Kd3Ed6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_NlTVkKeCEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_e_jUAKeEEd6SP_fDMcPYwg" supplier="_e-XBNKeEEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Wytjg6eGEd6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_iPxcsKeGEd6SP_fDMcPYwg" supplier="_b5T5pqd1Ed6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_iQOIoaeGEd6SP_fDMcPYwg" supplier="_iPLm0KeGEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_uH5EwKeHEd6SP_fDMcPYwg" supplier="_uHc_4KeHEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_cKUPcKeIEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_i8XG0KePEd6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_i8zywaePEd6SP_fDMcPYwg" supplier="_b5T5pqd1Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_i9GtsaePEd6SP_fDMcPYwg" supplier="_b5T5qKd1Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_KwpUQKeQEd6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg" client="_KsU08KeQEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_KxPKIaeQEd6SP_fDMcPYwg" supplier="_b5T5pqd1Ed6SP_fDMcPYwg" client="_KsU08KeQEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Kxr2EaeQEd6SP_fDMcPYwg" supplier="_b5T5qKd1Ed6SP_fDMcPYwg" client="_KsU08KeQEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_f7xOMKeQEd6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg" client="_f6SAcKeQEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_f8N6IaeQEd6SP_fDMcPYwg" supplier="_b5T5pqd1Ed6SP_fDMcPYwg" client="_f6SAcKeQEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_f80XEaeQEd6SP_fDMcPYwg" supplier="_b5T5qKd1Ed6SP_fDMcPYwg" client="_f6SAcKeQEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Vw_fcKeUEd6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg" client="_VvpboKeUEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VxSaYaeUEd6SP_fDMcPYwg" supplier="_b5T5pqd1Ed6SP_fDMcPYwg" client="_VvpboKeUEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Vxl8YaeUEd6SP_fDMcPYwg" supplier="_b5T5qKd1Ed6SP_fDMcPYwg" client="_VvpboKeUEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_ycCuo6eUEd6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg" client="_we4eYKeUEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_1vnYMKeUEd6SP_fDMcPYwg" supplier="_IAh9EKeQEd6SP_fDMcPYwg" client="_we4eYKeUEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_7giN8KeUEd6SP_fDMcPYwg" supplier="_we4eYKeUEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_worzQKeXEd6SP_fDMcPYwg" supplier="_IAh9EKeQEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_wpIfMaeXEd6SP_fDMcPYwg" supplier="_KsU08KeQEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_nKKN4KeYEd6SP_fDMcPYwg" supplier="_f6SAcKeQEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_nLWgsKeYEd6SP_fDMcPYwg" supplier="_VvpboKeUEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_nL89oKeYEd6SP_fDMcPYwg" supplier="_nJkYAKeYEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_2-eeYKecEd6SP_fDMcPYwg" supplier="_b5T5o6d1Ed6SP_fDMcPYwg" client="_28iksKecEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_2-7KUaecEd6SP_fDMcPYwg" supplier="_b5T5pqd1Ed6SP_fDMcPYwg" client="_28iksKecEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_2_hAMaecEd6SP_fDMcPYwg" supplier="_b5T5qKd1Ed6SP_fDMcPYwg" client="_28iksKecEd6SP_fDMcPYwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_3Jy9kKecEd6SP_fDMcPYwg" supplier="_28iksKecEd6SP_fDMcPYwg" client="_ZyW-wKd2Ed6SP_fDMcPYwg"/>
     <profileApplication xmi:id="_VtnMYKd1Ed6SP_fDMcPYwg">
       <eAnnotations xmi:id="_Vtw9YKd1Ed6SP_fDMcPYwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="platform:/plugin/com.omondo.uml.core/profiles/Java.profile.uml#_aZhLlH6MEdmbwasWWc4yvw"/>
@@ -198,4 +344,39 @@
   <Standard:Call xmi:id="_e_GoEKeEEd6SP_fDMcPYwg" base_Usage="_80vjcKd2Ed6SP_fDMcPYwg"/>
   <Standard:Call xmi:id="_e_2O8KeEEd6SP_fDMcPYwg" base_Usage="_e_jUAKeEEd6SP_fDMcPYwg"/>
   <Omondo_1:Omondo__Import xmi:id="_fAS64KeEEd6SP_fDMcPYwg" base_Usage="_e_jUAKeEEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_WzAecKeGEd6SP_fDMcPYwg" base_Usage="_Wytjg6eGEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_iQOIoKeGEd6SP_fDMcPYwg" base_Usage="_iPxcsKeGEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_iQq0kKeGEd6SP_fDMcPYwg" base_Usage="_iQOIoaeGEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_uIMmwKeHEd6SP_fDMcPYwg" base_Usage="_uH5EwKeHEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_cKnKYKeIEd6SP_fDMcPYwg" base_Usage="_cKUPcKeIEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_i8zywKePEd6SP_fDMcPYwg" base_Usage="_i8XG0KePEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_i9GtsKePEd6SP_fDMcPYwg" base_Usage="_i8zywaePEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_i9ZooKePEd6SP_fDMcPYwg" base_Usage="_i9GtsaePEd6SP_fDMcPYwg"/>
+  <Meta:derive xmi:id="_i9sjkKePEd6SP_fDMcPYwg" base_Dependency="_i9GtsaePEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_KxPKIKeQEd6SP_fDMcPYwg" base_Usage="_KwpUQKeQEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_Kxr2EKeQEd6SP_fDMcPYwg" base_Usage="_KxPKIaeQEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_Kx-xAKeQEd6SP_fDMcPYwg" base_Usage="_Kxr2EaeQEd6SP_fDMcPYwg"/>
+  <Meta:derive xmi:id="_KySTAKeQEd6SP_fDMcPYwg" base_Dependency="_Kxr2EaeQEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_f8N6IKeQEd6SP_fDMcPYwg" base_Usage="_f7xOMKeQEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_f80XEKeQEd6SP_fDMcPYwg" base_Usage="_f8N6IaeQEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_f9HSAKeQEd6SP_fDMcPYwg" base_Usage="_f80XEaeQEd6SP_fDMcPYwg"/>
+  <Meta:derive xmi:id="_f9aM8KeQEd6SP_fDMcPYwg" base_Dependency="_f80XEaeQEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_VxSaYKeUEd6SP_fDMcPYwg" base_Usage="_Vw_fcKeUEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_Vxl8YKeUEd6SP_fDMcPYwg" base_Usage="_VxSaYaeUEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_VyCBQKeUEd6SP_fDMcPYwg" base_Usage="_Vxl8YaeUEd6SP_fDMcPYwg"/>
+  <Meta:derive xmi:id="_VyVjQKeUEd6SP_fDMcPYwg" base_Dependency="_Vxl8YaeUEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_ycVpkKeUEd6SP_fDMcPYwg" base_Usage="_ycCuo6eUEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_1v66MKeUEd6SP_fDMcPYwg" base_Usage="_1vnYMKeUEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_7g1I4KeUEd6SP_fDMcPYwg" base_Usage="_7giN8KeUEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_wpIfMKeXEd6SP_fDMcPYwg" base_Usage="_worzQKeXEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_wpbaIKeXEd6SP_fDMcPYwg" base_Usage="_wpIfMaeXEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_nKdI0KeYEd6SP_fDMcPYwg" base_Usage="_nKKN4KeYEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_nLpboKeYEd6SP_fDMcPYwg" base_Usage="_nLWgsKeYEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_nMP4kKeYEd6SP_fDMcPYwg" base_Usage="_nL89oKeYEd6SP_fDMcPYwg"/>
+  <Omondo_1:Omondo__Import xmi:id="_2-7KUKecEd6SP_fDMcPYwg" base_Usage="_2-eeYKecEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_2_hAMKecEd6SP_fDMcPYwg" base_Usage="_2-7KUaecEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_3AkJEKecEd6SP_fDMcPYwg" base_Usage="_2_hAMaecEd6SP_fDMcPYwg"/>
+  <Meta:derive xmi:id="_3A3EAKecEd6SP_fDMcPYwg" base_Dependency="_2_hAMaecEd6SP_fDMcPYwg"/>
+  <Standard:Call xmi:id="_3J8ukKecEd6SP_fDMcPYwg" base_Usage="_3Jy9kKecEd6SP_fDMcPYwg"/>
+  <JavaProfile_1:JavaProfile__MultidimensionalArray xmi:id="_9igMFKecEd6SP_fDMcPYwg" base_Parameter="_9igMEqecEd6SP_fDMcPYwg" dimension="1"/>
 </xmi:XMI>
