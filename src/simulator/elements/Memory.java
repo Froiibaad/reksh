@@ -1,21 +1,21 @@
 package simulator.elements;
-
+//Menjano
 public class Memory extends SekvMreza {
 
     private int[] data;
 
     public Memory() {
-        super(24, 8); // Address 0-14, DataIn 15-22, WR // DataOut 0-7
-        data = new int[32768]; //2^15 lokacija
+        super(24, 8); // Address 0-15, DataIn 16-23, WR // DataOut 0-7
+        data = new int[65536]; //2^16 lokacija
     }
 
     public void calc() {
         int addr = 0;
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i <= 15; i++) {
             addr += inputs.get(i).getValue() * Math.pow(2, i);
         }
         int dataIn = 0;
-        for (int i = 15; i < 23; i++) {
+        for (int i = 16; i <= 23; i++) {
             dataIn += inputs.get(i).getValue() * Math.pow(2, i-15);
         }
         int dataOut = read(addr);
@@ -23,7 +23,7 @@ public class Memory extends SekvMreza {
             outputs.get(i).set(dataOut % 2);
             dataOut = dataOut / 2;
         }
-        if (inputs.get(23).getValue() == 1) { // Write
+        if (inputs.get(24).getValue() == 1) { // Write
             write(dataIn, addr);
         }
     }
@@ -33,7 +33,7 @@ public class Memory extends SekvMreza {
 
     public int getValue() {
         int val = 0;
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i <= 8; i++) {
             val += outputs.get(i).getValue() * Math.pow(2, i);
         }
         return val;
