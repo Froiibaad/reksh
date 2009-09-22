@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" id="{UMLID=_IV-8YKdTEd6q5bh6lkXrYQ,JavaID=asm}" metadata="uml2-1.0" tag="10" key="32303037303632392052656B7368">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="asmDijagramKlasa" id="{UMLID=_IV-8YKdTEd6q5bh6lkXrYQ,JavaID=asm}" metadata="uml2-1.0" initialized="true" tag="10" key="32303037303632392052656B7368">
+  <children xsi:type="editmodel:EnumerationEditModel" name="Registri" location="56,42" size="101,195" timstampe="59" stereotype="" id="{UMLID=_VvQDkKdTEd6q5bh6lkXrYQ,JavaID=asm/Registri}" runTimeClassModel="AX%,SI%,BX%,DI%,DX%,CX%,SP%,BP%">
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="AX" size="44,16" id="{UMLID=_6PyWYKdVEd6q5bh6lkXrYQ}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="BX" size="43,16" id="{UMLID=_7cI0wKdVEd6q5bh6lkXrYQ}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="CX" size="43,16" id="{UMLID=_TYHswKdWEd6q5bh6lkXrYQ}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DX" size="43,16" id="{UMLID=_TYHsxKdWEd6q5bh6lkXrYQ}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SP" size="42,16" id="{UMLID=_TYHsw6dWEd6q5bh6lkXrYQ}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="BP" size="42,16" id="{UMLID=_TYHswqdWEd6q5bh6lkXrYQ}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SI" size="38,16" id="{UMLID=_TYHswadWEd6q5bh6lkXrYQ}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DI" size="38,16" id="{UMLID=_TohgQKdWEd6q5bh6lkXrYQ}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
-  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="0,0" rulerUnit="cm" gridShow="true">
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="0,14" rulerUnit="cm" gridShow="true">
     <leftRuler/>
     <topRuler/>
   </boardSetting>
