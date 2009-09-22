@@ -39,13 +39,13 @@
           </defaultValue>
         </ownedAttribute>
         <ownedOperation xmi:id="_qKiuIKd2Ed6SP_fDMcPYwg" name="Tokenizer" visibility="public" concurrency="concurrent">
-          <ownedParameter xmi:id="_m3UFAKeFEd6SP_fDMcPYwg" name="imeFajla" type="_b5T5o6d1Ed6SP_fDMcPYwg">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m3UFAaeFEd6SP_fDMcPYwg" value="1"/>
+          <ownedParameter xmi:id="_ramqAqeFEd6SP_fDMcPYwg" name="imeFajla" type="_b5T5o6d1Ed6SP_fDMcPYwg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ramqA6eFEd6SP_fDMcPYwg" value="1"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:id="_NZhjYKeCEd6SP_fDMcPYwg" name="dohvatiToken" visibility="public" concurrency="concurrent">
-          <ownedParameter xmi:id="_m3UFAqeFEd6SP_fDMcPYwg" type="_Abr08Kd3Ed6SP_fDMcPYwg" direction="return">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m3UFA6eFEd6SP_fDMcPYwg" value="1"/>
+          <ownedParameter xmi:id="_ramqAKeFEd6SP_fDMcPYwg" type="_Abr08Kd3Ed6SP_fDMcPYwg" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ramqAaeFEd6SP_fDMcPYwg" value="1"/>
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
