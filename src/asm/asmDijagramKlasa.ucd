@@ -154,7 +154,7 @@
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="TabelaSimbola" location="190,517" size="137,152" timstampe="18" stereotype="" id="{UMLID=_URaFkKegEd6qDpkCL_NpbA,JavaID=asm/TabelaSimbola}" runTimeClassModel="getTabela(),pronadji(Ljava.lang.String;),setTabela(Lasm.Simbol;),dodaj(Lasm.Simbol;),tabela">
+  <children xsi:type="editmodel:ClassEditModel" name="TabelaSimbola" location="190,517" size="137,152" timstampe="64" stereotype="" id="{UMLID=_URaFkKegEd6qDpkCL_NpbA,JavaID=asm/TabelaSimbola}" runTimeClassModel="getTabela(),pronadji(Ljava.lang.String;),setTabela(Lasm.Simbol;),dodaj(Lasm.Simbol;),tabela">
     <children xsi:type="editmodel:CompartmentEditModel">
       <children xsi:type="editmodel:AttributeEditModel" name="tabela" size="58,16" id="{UMLID=_qv8vMKegEd6qDpkCL_NpbA}"/>
     </children>
@@ -168,7 +168,7 @@
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
   </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
-  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="602,476" rulerUnit="cm" gridShow="true">
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="126,588" rulerUnit="cm" gridShow="true">
     <leftRuler/>
     <topRuler/>
   </boardSetting>
