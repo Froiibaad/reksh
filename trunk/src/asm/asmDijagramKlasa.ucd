@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="asmDijagramKlasa" id="{UMLID=_WloZgKd1Ed6SP_fDMcPYwg,JavaID=asm}" metadata="uml2-1.0" initialized="true" scrolledY="126" tag="10" key="32303037303632392052656B7368">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="asmDijagramKlasa" id="{UMLID=_WloZgKd1Ed6SP_fDMcPYwg,JavaID=asm}" metadata="uml2-1.0" initialized="true" scrolledY="32" tag="10" key="32303037303632392052656B7368">
   <children xsi:type="editmodel:EnumerationEditModel" name="Registri" location="56,42" size="101,195" timstampe="1" stereotype="" id="{UMLID=_YXc8cKd1Ed6SP_fDMcPYwg,JavaID=asm/Registri}" runTimeClassModel="">
     <children xsi:type="editmodel:CompartmentEditModel" size="44,144">
       <children xsi:type="editmodel:EnumerationLiteralEditModel" name="AX" size="44,16"/>
@@ -42,60 +42,105 @@
     </children>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
   </children>
-  <children xsi:type="editmodel:EnumerationEditModel" name="Instrukcije" location="518,42" size="113,357" timstampe="1" stereotype="" id="{UMLID=_YYzAQKd1Ed6SP_fDMcPYwg,JavaID=asm/Instrukcije}" runTimeClassModel="">
-    <children xsi:type="editmodel:CompartmentEditModel" size="92,306">
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="JNZ" size="48,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="ADD" size="51,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="AND" size="51,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="POP" size="49,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="INC" size="45,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="MOVS" size="60,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="SMP" size="50,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="RTI" size="49,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="INT" size="44,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="JSR" size="48,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="ASR" size="51,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="MOVD" size="60,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="PUSH" size="56,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DEC" size="49,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="JMPIND" size="64,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="UPDATEPSW" size="92,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="RTS" size="49,16"/>
-    </children>
-    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
-  </children>
-  <children xsi:type="editmodel:EnumerationEditModel" name="Direktive" location="658,42" size="101,195" timstampe="1" stereotype="" id="{UMLID=_YY8KMKd1Ed6SP_fDMcPYwg,JavaID=asm/Direktive}" runTimeClassModel="">
-    <children xsi:type="editmodel:CompartmentEditModel" size="52,144">
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="BEG" size="50,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="END" size="49,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DC" size="43,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="BSS" size="50,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DAT" size="50,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="TXT" size="48,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DS" size="43,16"/>
-      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="ORG" size="52,16"/>
-    </children>
-    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
-  </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Tokenizer" location="136,288" size="125,123" timstampe="371" stereotype="" id="{UMLID=_ZyW-wKd2Ed6SP_fDMcPYwg,JavaID=asm/Tokenizer}" runTimeClassModel="dohvatiToken(),Tokenizer(Ljava.lang.String;),in">
-    <children xsi:type="editmodel:CompartmentEditModel">
+  <children xsi:type="editmodel:ClassEditModel" name="Tokenizer" location="196,278" size="125,123" timstampe="1206" stereotype="" id="{UMLID=_ZyW-wKd2Ed6SP_fDMcPYwg,JavaID=asm/Tokenizer}" runTimeClassModel="main([Ljava.lang.String;),dohvatiToken(),Tokenizer(Ljava.lang.String;),in">
+    <children xsi:type="editmodel:CompartmentEditModel" size="37,18">
       <children xsi:type="editmodel:AttributeEditModel" name="in" size="37,16" id="{UMLID=_zeOgAKd2Ed6SP_fDMcPYwg}"/>
     </children>
-    <children xsi:type="editmodel:CompartmentEditModel">
+    <children xsi:type="editmodel:CompartmentEditModel" size="104,54">
       <children xsi:type="editmodel:MethodEditModel" name="Tokenizer" size="87,16" id="{UMLID=_qKiuIKd2Ed6SP_fDMcPYwg,JavaID=asm/Tokenizer#Tokenizer(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="main" size="62,16" id="{UMLID=_ldFtQ6eGEd6SP_fDMcPYwg,JavaID=asm/Tokenizer#main([Ljava.lang.String;)}"/>
       <children xsi:type="editmodel:MethodEditModel" name="dohvatiToken" size="104,16" id="{UMLID=_NZhjYKeCEd6SP_fDMcPYwg,JavaID=asm/Tokenizer#dohvatiToken()}"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Token" location="42,288" size="79,47" timstampe="10" stereotype="" id="{UMLID=_Abr08Kd3Ed6SP_fDMcPYwg,JavaID=asm/Token}" runTimeClassModel="">
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.5/@sourceConnections.0 //@children.6/@sourceConnections.0 //@children.7/@sourceConnections.0 //@children.9/@sourceConnections.0" name="Instrukcija" location="525,38" size="105,61" timstampe="18" stereotype="" id="{UMLID=_IAh9EKeQEd6SP_fDMcPYwg,JavaID=asm/Instrukcija}" runTimeClassModel="">
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <children xsi:type="editmodel:CompartmentEditModel"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
   </children>
+  <children xsi:type="editmodel:EnumerationEditModel" name="BezadresnaInstrukcija" location="504,126" size="180,159" timstampe="55" stereotype="" id="{UMLID=_KsU08KeQEd6SP_fDMcPYwg,JavaID=asm/BezadresnaInstrukcija}" runTimeClassModel="INTE%,TRPD%,INTD%,RTS%,RTI%,TRPE%">
+    <children xsi:type="editmodel:CompartmentEditModel" size="55,108">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="INTE" size="50,16" id="{UMLID=_PpFp4KeQEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="RTS" size="49,16" id="{UMLID=_MXTJAKeQEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="TRPD" size="55,16" id="{UMLID=_QnhBAKeQEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="INTD" size="51,16" id="{UMLID=_P3i8oKeQEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="RTI" size="44,16" id="{UMLID=_Oq9NsKeQEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="TRPE" size="54,16" id="{UMLID=_QPh-0KeQEd6SP_fDMcPYwg}"/>
+    </children>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_Ks6q0KeQEd6SP_fDMcPYwg}" source="//@children.5" target="//@children.4" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,61"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:EnumerationEditModel" name="JednoadresnaInstrukcija" location="494,182" size="195,231" timstampe="70" stereotype="" id="{UMLID=_f6SAcKeQEd6SP_fDMcPYwg,JavaID=asm/JednoadresnaInstrukcija}" runTimeClassModel="DEC%,ASR%,JNZ%,PUSH%,INT%,JMP%,INC%,JSR%,JMPIND%,POP%">
+    <children xsi:type="editmodel:CompartmentEditModel" size="64,180">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="INT" size="44,16" id="{UMLID=_fb93UKeREd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="JNZ" size="48,16" id="{UMLID=_fvMVUKeREd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="JMP" size="48,16" id="{UMLID=_sLk9gKeREd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="JSR" size="48,16" id="{UMLID=_sjkmwKeREd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="ASR" size="51,16" id="{UMLID=_tYKscKeREd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="PUSH" size="56,16" id="{UMLID=_t0xv8KeREd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="POP" size="49,16" id="{UMLID=_krPGoKeTEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="INC" size="45,16" id="{UMLID=_l39_gKeTEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DEC" size="49,16" id="{UMLID=_mPz3wKeTEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="JMPIND" size="64,16" id="{UMLID=_rKykAKeTEd6SP_fDMcPYwg}"/>
+    </children>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_f7LYUKeQEd6SP_fDMcPYwg}" source="//@children.6" target="//@children.4" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="83,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,61"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:EnumerationEditModel" name="DvoadresnaInstrukcija" location="504,532" size="180,123" timstampe="35" stereotype="" id="{UMLID=_VvpboKeUEd6SP_fDMcPYwg,JavaID=asm/DvoadresnaInstrukcija}" runTimeClassModel="MOVD%,ADD%,MOVS%,AND%">
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,72">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="MOVS" size="60,16" id="{UMLID=_YgqKsKeUEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="AND" size="51,16" id="{UMLID=_YqMhMKeUEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="MOVD" size="60,16" id="{UMLID=_YgqKsaeUEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="ADD" size="51,16" id="{UMLID=_YgqKsqeUEd6SP_fDMcPYwg}"/>
+    </children>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_VwP4kKeUEd6SP_fDMcPYwg}" source="//@children.7" target="//@children.4" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,61"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Token" location="29,255" size="140,242" timstampe="132" stereotype="" id="{UMLID=_we4eYKeUEd6SP_fDMcPYwg,JavaID=asm/Token}" runTimeClassModel="adresnoPolje,getLabela(),labela,getInstrukcija(),setInstrukcija(Lasm.Instrukcija;),setLabela(Ljava.lang.String;),instrukcija,getAdresnoPolje(),setAdresnoPolje(Ljava.lang.String;),Token(Ljava.lang.String;Lasm.Instrukcija;Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="91,59">
+      <children xsi:type="editmodel:AttributeEditModel" name="labela" size="57,16" id="{UMLID=_yVCuwKeUEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="instrukcija" size="83,21" id="{UMLID=_1pN1QKeUEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="adresnoPolje" size="91,16" id="{UMLID=_5pMR0KeUEd6SP_fDMcPYwg}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,136">
+      <children xsi:type="editmodel:MethodEditModel" name="Token" size="69,16" id="{UMLID=_Wb_K-qeZEd6SP_fDMcPYwg,JavaID=asm/Token#Token(Ljava.lang.String;Lasm.Instrukcija;Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLabela" size="87,16" id="{UMLID=_ycCuoKeUEd6SP_fDMcPYwg,JavaID=asm/Token#getLabela()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setLabela" size="87,16" id="{UMLID=_yYK7QKeUEd6SP_fDMcPYwg,JavaID=asm/Token#setLabela(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInstrukcija" size="109,21" id="{UMLID=_1vLTUqeUEd6SP_fDMcPYwg,JavaID=asm/Token#getInstrukcija()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInstrukcija" size="109,21" id="{UMLID=_1vUdQqeUEd6SP_fDMcPYwg,JavaID=asm/Token#setInstrukcija(Lasm.Instrukcija;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAdresnoPolje" size="119,16" id="{UMLID=_5wMRtaeUEd6SP_fDMcPYwg,JavaID=asm/Token#getAdresnoPolje()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAdresnoPolje" size="119,16" id="{UMLID=_5wMRsqeUEd6SP_fDMcPYwg,JavaID=asm/Token#setAdresnoPolje(Ljava.lang.String;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:EnumerationEditModel" name="Direktiva" location="696,50" size="101,195" timstampe="45" stereotype="" id="{UMLID=_28iksKecEd6SP_fDMcPYwg,JavaID=asm/Direktiva}" runTimeClassModel="BEG%,DC%,DS%,ORG%,END%">
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DS" size="43,16" id="{UMLID=_5DrQVKecEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="BEG" size="50,16" id="{UMLID=_5DrQUqecEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="END" size="49,16" id="{UMLID=_5DrQVaecEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="ORG" size="52,16" id="{UMLID=_5DrQVqecEd6SP_fDMcPYwg}"/>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="DC" size="43,16" id="{UMLID=_5DrQUKecEd6SP_fDMcPYwg}"/>
+    </children>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_29u3gKecEd6SP_fDMcPYwg}" source="//@children.9" target="//@children.4" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,24" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,36"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
-  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="602,210" rulerUnit="cm" gridShow="true">
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="0,42" rulerUnit="cm" gridShow="true">
     <leftRuler/>
     <topRuler/>
   </boardSetting>
