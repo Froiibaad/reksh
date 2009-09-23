@@ -1,12 +1,18 @@
 package simulator.elements;
-//Menjano
+/**
+ * 
+ * Memory predstavlja samo jedan memoriski modul unutar sistema,
+ * class {@MemoryWrapper} je pretstavlja nacin organizacije memorije
+ * i brine se o upisu i citanju.
+ *
+ */
 public class Memory extends SekvMreza {
 
     private int[] data;
 
     public Memory() {
         super(24, 8); // Address 0-15, DataIn 16-23, WR // DataOut 0-7
-        data = new int[65536]; //2^16 lokacija
+        data = new int[32768]; //2^15 lokacija
     }
 
     public void calc() {

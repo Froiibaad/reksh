@@ -1,55 +1,63 @@
-////////////////////////////////////////////////////////////////////////////////
-// Ova klasa definise kako je ceo sistem sastavljen od elemenata i povezan.
-// Njenom izmenom moze se dobiti potpuno drugaciji simulator, sa istim
-// korisnickim interfejsom.
-////////////////////////////////////////////////////////////////////////////////
-
 package simulator;
-
+s
 import simulator.elements.*;
 
+/**
+ * Ova klasa definise kako je ceo sistem sastavljen od elemenata i povezan.
+ * Njenom izmenom moze se dobiti potpuno drugaciji simulator, sa istim
+ * korisnickim interfejsom.
+ * 
+ */
 public class Initializator {
 
 ////////////////////////////////////////////////////////////////////////////////
 //  REGISTRI
 ////////////////////////////////////////////////////////////////////////////////
     //PC
-    public Mux2 muxPC1 = new Mux2();
-    public Mux2 muxPC2 = new Mux2();
-    public Register16 PC = new Register16("PC");
-
+	public Register16 PC = new Register16("PC");
+	public BusIn16 PCM2 = new BusIn16("PCM2");
+	public BusIn16 PCM3 = new BusIn16("PCM3");
+	
     //MBR
-    //TODO: Ovaj bafer ukloni kad se sredi KombMreza!!!!!!!!
-    public Buffer8 dbusInBuff = new Buffer8();
-    public Mux8 muxMBR = new Mux8();
-    public Or orMbrLd = new Or(2);
-    public Register8 MBR = new Register8("MBR");
+	public Register8 MBR = new Register8("MBR");
+	public BusIn16 MBRM1 = new BusIn16("MBRM1");
+	public BusIn16 MBRM2 = new BusIn16("MBRM2");
+	public BusIn16 MBRM3 = new BusIn16("MBRM3");
 
-    //MAR
-    public Mux8 muxMAR1 = new Mux8();
-    public Mux8 muxMAR2 = new Mux8();
+    //MAR 
     public Register16 MAR = new Register16("MAR");
-
-    //SP
-    public Register16 SP = new Register16("SP");
+    public Mux8 muxMAR2 = new Mux8();
+    public BusIn8 MARM1 = new BusIn8("MARM1");
 
     //IVTP
     public Register16 IVTP = new Register16("IVTP");
+    public BusIn16 IVTPM2 = new BusIn16("IVTPM2");
+	public BusIn16 IVTPM3 = new BusIn16("IVTPM3");
 
     //IR1
     public Register8 IR1 = new Register8("IR1");
+    public BusIn8 IR1M2 = new BusIn8("IR1M2");
+	public BusIn8 IR1M3 = new BusIn8("IR1M3");
+    
     //IR2
     public Register8 IR2 = new Register8("IR2");
+    public BusIn8 IR2M2 = new BusIn8("IR2M2");
+	public BusIn8 IR2M3 = new BusIn8("IR2M3");
+    
     //IR3
     public Register8 IR3 = new Register8("IR3");
+    public BusIn8 IR3M2 = new BusIn8("IR3M2");
+	public BusIn8 IR3M3 = new BusIn8("IR3M3");
+    
+    //IR4
+    public Register8 IR4 = new Register8("IR4");
+    public BusIn8 IR4M2 = new BusIn8("IR4M2");
+	public BusIn8 IR4M3 = new BusIn8("IR4M3");
 
-    //A
-    public Register8 A = new Register8("A");
+    //Y
+    public Register16 Y = new Register16("Y");
 
-    //B
-    public Mux4 muxB = new Mux4();
-    public Register8 B = new Register8("B");
-
+    //TODO Ovo nisam znao kuci sta sve treba u regfile
     //Registarski fajl
     public And andLdR0 = new And(3);
     public Register8 R0 = new Register8("R0");
@@ -105,7 +113,7 @@ public class Initializator {
     public Not IV14 = new Not();
     public Not IV22 = new Not();
     public Not IV23 = new Not();
-
+    
 ////////////////////////////////////////////////////////////////////////////////
 //  PSW
 ////////////////////////////////////////////////////////////////////////////////
