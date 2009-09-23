@@ -1,3 +1,8 @@
    GRP:   INC   GX
-   ADD R1,[R1]FFFF
+   ADD AX,[BX]FFFF
+   RTI
+   JMP GRP
+   INT #10
+   ASR [CX]
+   MOVS AX,[BX]pomeraj
    END
