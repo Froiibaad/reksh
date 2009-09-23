@@ -1,6 +1,6 @@
 	package asm;
 
 	public enum TipInstrukcije {
-		A, B, C, D, E;
+		A, B, C, D, E, DIR;
 
 	}

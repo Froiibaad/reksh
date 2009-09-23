@@ -29,6 +29,9 @@
 				}
 				linija = linija.replaceAll(" ,", ",");
 				linija = linija.replaceAll(", ", ",");
+				linija = (linija.split(";"))[0];
+				
+				if (linija.length() < 3) return this.dohvatiToken();
 	
 				String[] temp = linija.split(":");
 				String labela = null, adrPolje = null;
@@ -82,7 +85,8 @@
 		public static void main(String[] args)
 		{
 			
-			new Tokenizer("asm.asm").dohvatiToken();
+			 Token t = new Tokenizer("asm.asm").dohvatiToken();
+			 System.out.println(t.getInstrukcija().getClass().getName());
 		}
 	}
 	

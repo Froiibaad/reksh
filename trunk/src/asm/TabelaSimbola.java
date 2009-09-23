@@ -9,6 +9,11 @@
 		 */
 		private HashMap<String, Simbol> tabela;
 
+		public TabelaSimbola() {
+			this.tabela = new HashMap<String, Simbol>();
+
+		}
+
 		public void dodaj(Simbol simb) {
 			this.tabela.put(simb.getIme(), simb);
 
