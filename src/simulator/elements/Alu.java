@@ -2,7 +2,7 @@ package simulator.elements;
 
 public class Alu extends KombMreza {
     public Alu() {
-        super(44, 17); // X0-X15, Y0-Y15, ADD, INCX, INCY, DECX, DECY, TRANSX, OP, INSADD, INSAND, INSASR, INSINC, INSDEC
+        super(44, 17); // X0-X15, Y0-Y15, ADD, INCX, INCY, DECX, DECY, TRANSX, OP, INSADD, INSAND, INSASR, INSINC, INSDEC, TRANSY
         // Z0-Z15, C
     }
 
@@ -11,7 +11,7 @@ public class Alu extends KombMreza {
             Y0 = 16, Y1 = 17, Y2 = 18, Y3 = 19, Y4 = 20, Y5 = 21, Y6 = 22, Y7 = 23,
             Y8 = 24, Y9 = 25, Y10 = 26, Y11 = 27, Y12 = 28, Y13 = 29, Y14 = 30, Y15 = 31, 
             ADD = 32, INCX = 33, INCY = 34, DECX = 35, DECY = 36, TRANSX = 37, OP = 38, INSADD = 39, INSAND = 40,
-            INSASR = 41, INSINC = 42, INSDEC = 43;
+            INSASR = 41, INSINC = 42, INSDEC = 43, TRANSY;
 
     protected void calc() {
     	if (inputs.get(Alu.ADD).getValue() == 1 || (inputs.get(Alu.OP).getValue() == 1 && inputs.get(Alu.INSADD).getValue() == 1)) {
@@ -77,6 +77,11 @@ public class Alu extends KombMreza {
     	if (inputs.get(Alu.OP).getValue() == 1 && inputs.get(Alu.INSASR).getValue() == 1){		//asr radi nad y
     		for (int i = Alu.Y15; i > Alu.Y0 ; i--) {
     			outputs.get(i - Alu.Y0 - 1).set(inputs.get(i).getValue());
+    		}
+    	}
+    	if (inputs.get(Alu.TRANSY).getValue() == 1){
+    		for (int i = 0; i < 16; i++){
+    			outputs.get(i).set(inputs.get(i + Alu.Y0).getValue());
     		}
     	}
     }
