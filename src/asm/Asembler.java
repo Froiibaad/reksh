@@ -101,23 +101,23 @@
 					
 					case RTI:
 						fin.add(o);
-						this.kod += "04 ";
+						this.kod += "20 ";
 						break;
 					case INTE:
 						fin.add(o);
-						this.kod += "08 ";
+						this.kod += "10 ";
 						break;
 					case INTD:
 						fin.add(o);
-						this.kod += "0C ";
+						this.kod += "30 ";
 						break;
 					case TRPE:
 						fin.add(o);
-						this.kod += "10 ";
+						this.kod += "08 ";
 						break;
 					case TRPD:
 						fin.add(o);
-						this.kod += "14 ";
+						this.kod += "28 ";
 						break;
 					}
 					break;
@@ -135,14 +135,16 @@
 					switch((JednoadresnaInstrukcija)o.getIntrukcija())
 					{
 					case JMP:
-						this.kod += "02 ";
+						this.kod += "40 ";
 						break;
 					case JSR:
-						this.kod += "0A ";
+						this.kod += "50 ";
 						break;
 					}
-					this.kod += Integer.toHexString(i / 256) + " ";
-					this.kod += Integer.toHexString(i % 256) + " ";
+					o.setOp1NacinAdresiranja(NacinAdresiranja.IMMED);
+					fin.add(o);
+					this.kod += Integer.toHexString(i / 256).toUpperCase() + " ";
+					this.kod += Integer.toHexString(i % 256).toUpperCase() + " ";
 				}
 				break;
 				case C:
@@ -154,13 +156,110 @@
 					switch((JednoadresnaInstrukcija)o.getIntrukcija())
 					{
 					case JNZ:
-						this.kod += "06 ";
+						this.kod += "60 ";
 						break;
 					case INT:
-						this.kod += "0E ";
+						this.kod += "70 ";
 						break;
 					}
-					this.kod += Integer.toHexString(i % 256) + " ";				
+					o.setVrednostPomeraja(i);
+					this.kod += Integer.toHexString(i % 256).toUpperCase() + " ";	
+					fin.add(o);
+				}
+				break;
+				case D:
+				{
+					String s = o.getOperand1();
+					if(s.startsWith("["))
+					{
+						s = s.replace("[", "");
+						s = s.replace("]", "");
+						try
+						{
+							Registri ri = Registri.valueOf(s);
+							this.lc+=2;
+							o.setOp1NacinAdresiranja(NacinAdresiranja.REGINDIR);
+							o.setOperand1(s);
+						}
+						catch (Exception e)
+						{
+							this.lc+=4;
+							o.setOp1NacinAdresiranja(NacinAdresiranja.MEMINDIR);
+							o.setOperand1(s);						
+							int i = tabelaSimbola.pronadji(s).getVrednost();
+							o.setVrednostOperanda1(i);
+						}
+					}
+					else
+					{
+						try
+						{
+							Registri ri = Registri.valueOf(s);
+							this.lc+=2;
+							o.setOp1NacinAdresiranja(NacinAdresiranja.REGDIR);
+							o.setOperand1(s);
+						}
+						catch (Exception e)
+						{
+							this.lc+=4;
+							o.setOp1NacinAdresiranja(NacinAdresiranja.MEMDIR);
+							o.setOperand1(s);
+							Simbol sim = tabelaSimbola.pronadji(s);
+							int i = (tabelaSimbola.pronadji(s)).getVrednost();
+							o.setVrednostOperanda1(i);
+						}
+						
+					}
+					int opc = 0;
+					if (o.getOp1NacinAdresiranja()==NacinAdresiranja.REGDIR)
+					{
+						opc = 0 + Registri.valueOf(o.getOperand1()).ordinal();
+					}
+					else if (o.getOp1NacinAdresiranja()==NacinAdresiranja.REGINDIR)
+					{
+						opc = 64 + Registri.valueOf(o.getOperand1()).ordinal();
+					}
+					else if (o.getOp1NacinAdresiranja()==NacinAdresiranja.MEMDIR)
+					{
+						opc = 192;
+					}
+					else if (o.getOp1NacinAdresiranja()==NacinAdresiranja.MEMINDIR)
+					{
+						opc = 193;
+					}
+					switch((JednoadresnaInstrukcija)o.getIntrukcija())
+					{
+					case ASR:
+						this.kod += Integer.toHexString(128).toUpperCase() + " ";
+						this.kod += Integer.toHexString(opc).toUpperCase() + " ";
+						break;
+					case PUSH:
+						this.kod += Integer.toHexString(255).toUpperCase() + " ";
+						this.kod += Integer.toHexString(opc).toUpperCase() + " ";
+						break;
+					case POP:
+						this.kod += Integer.toHexString(255).toUpperCase() + " ";
+						this.kod += Integer.toHexString(opc + 8).toUpperCase() + " ";
+						break;
+					case INC:
+						this.kod += Integer.toHexString(255).toUpperCase() + " ";
+						this.kod += Integer.toHexString(opc + 16).toUpperCase() + " ";
+						break;
+					case DEC:
+						this.kod += Integer.toHexString(255).toUpperCase() + " ";
+						this.kod += Integer.toHexString(opc + 24).toUpperCase() + " ";
+						break;
+					case JMPIND:
+						this.kod += Integer.toHexString(255).toUpperCase() + " ";
+						this.kod += Integer.toHexString(opc + 32).toUpperCase() + " ";
+						break;
+					}
+					if (o.getOp1NacinAdresiranja()==NacinAdresiranja.MEMDIR || o.getOp1NacinAdresiranja()==NacinAdresiranja.MEMINDIR)
+					{
+						this.kod += Integer.toHexString(o.getVrednostOperanda1()/256).toUpperCase() + " ";
+						this.kod += Integer.toHexString(o.getVrednostOperanda1()%256).toUpperCase() + " ";
+					}
+					fin.add(o);
 				}
 				break;
 				}
@@ -416,6 +515,7 @@
 			}
 			temp.DrugiProlaz();
 			System.out.println("Sve proslo!");
+			System.out.println(Registri.SP.ordinal());
 		}
 
 		/**
