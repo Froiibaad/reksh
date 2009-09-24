@@ -34,6 +34,11 @@
 		 */
 		private String ulazniFajl;
 
+		/*
+		 * (non-javadoc)
+		 */
+		private String kod;
+
 		public Asembler(String ulazniFajl) {
 			this.ulazniFajl = ulazniFajl;
 			this.tokenizer = new Tokenizer(ulazniFajl);
@@ -43,92 +48,148 @@
 			this.lc = 0;
 		}
 
-		public void DrugiProlaz() {
-
+		public LinkedList<ObradjenToken> DrugiProlaz() {
+			LinkedList<ObradjenToken> fin = new LinkedList<ObradjenToken>();
+			for(ObradjenToken o : this.obradjeniTokeni)
+			{
+				TipInstrukcije ti = o.getTipInstr();
+				switch(ti)
+				{
+				case DIR:
+				{
+					switch((Direktiva)o.getIntrukcija())
+					{
+					case BEG:
+						this.lc=0;
+						this.kod += "0\n";
+						fin.add(o);
+						break;
+					case ORG:
+						int i = Integer.parseInt(o.getOperand1().substring(1), 16);
+						this.kod = o.getOperand1().substring(1) + "\n";
+						this.lc = i;
+						o.setVrednostOperanda1(i);
+						fin.add(o);						
+						break;
+					case DC:
+						i = Integer.parseInt(o.getOperand1().substring(1), 16);
+						this.kod += o.getOperand1().substring(1) + " ";
+						this.lc++ ;
+						o.setVrednostOperanda1(i);
+						fin.add(o);
+						break;
+					case DS:
+						i = Integer.parseInt(o.getOperand1().substring(1), 16);
+						for (int j = 0; j< i; j++) this.kod += "0 ";
+						this.lc += i;
+						o.setVrednostOperanda1(i);
+						fin.add(o);
+						break;
+					}
+				}
+				}
+			}
+			System.out.println(this.kod);
+			return null;
 		}
 
 		public void PrviProlaz() {
 			this.lc = 0;
 			this.radi = true;
-			while(radi)
-			{
+			while (radi) {
 				Token temp = tokenizer.dohvatiToken();
 				Instrukcija inst = temp.getInstrukcija();
-				if(temp.getLabela()!=null) tabelaSimbola.dodaj(new Simbol(temp.getLabela(), lc));
-				if("asm.Direktiva".equals(inst.getClass().getName()))
-				{
-					switch((Direktiva)inst)
-					{
-					case BEG: this.lc = 0; break;
-					case END: this.radi = false; break;
-					case ORG: int i = Integer.parseInt(temp.getAdresnoPolje().substring(1), 16); this.lc = i; break;
-					case DC: lc+=1; break;
-					case DS: i = Integer.parseInt(temp.getAdresnoPolje().substring(1), 16); this.lc += i; break;
-					}
-					obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.DIR, inst, temp.getAdresnoPolje(), null, null ));
-				}
-				if("asm.BezadresnaInstrukcija".equals(inst.getClass().getName()))
-				{
-					this.lc++; 
-					obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.A, inst, null, null, null ));
-				}
-				if("asm.JednoadresnaInstrukcija".equals(inst.getClass().getName()))
-				{
-					switch((JednoadresnaInstrukcija)inst)
-					{
-					case JMP: case JSR: 
-						this.lc += 3;
-						obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.B, inst, temp.getAdresnoPolje(), null, null ));
+				if (temp.getLabela() != null)
+					tabelaSimbola.dodaj(new Simbol(temp.getLabela(), lc));
+				if ("asm.Direktiva".equals(inst.getClass().getName())) {
+					switch ((Direktiva) inst) {
+					case BEG:
+						this.lc = 0;
 						break;
-					case JNZ: case INT: 
+					case END:
+						this.radi = false;
+						break;
+					case ORG:
+						int i = Integer.parseInt(temp.getAdresnoPolje()
+								.substring(1), 16);
+						this.lc = i;
+						break;
+					case DC:
+						lc += 1;
+						break;
+					case DS:
+						i = Integer.parseInt(temp.getAdresnoPolje()
+								.substring(1), 16);
+						this.lc += i;
+						break;
+					}
+					obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.DIR,
+							inst, temp.getAdresnoPolje(), null, null));
+				}
+				if ("asm.BezadresnaInstrukcija".equals(inst.getClass()
+						.getName())) {
+					this.lc++;
+					obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.A,
+							inst, null, null, null));
+				}
+				if ("asm.JednoadresnaInstrukcija".equals(inst.getClass()
+						.getName())) {
+					switch ((JednoadresnaInstrukcija) inst) {
+					case JMP:
+					case JSR:
+						this.lc += 3;
+						obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.B,
+								inst, temp.getAdresnoPolje(), null, null));
+						break;
+					case JNZ:
+					case INT:
 						this.lc += 2;
-						obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.C, inst, null, null, temp.getAdresnoPolje()));
+						obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.C,
+								inst, null, null, temp.getAdresnoPolje()));
 						break;
 					default:
-						//ako je registarsko direktno 2 bajta
+						// ako je registarsko direktno 2 bajta
 						String reg = temp.getAdresnoPolje();
-						try
-						{
+						try {
 							Registri r = Registri.valueOf(reg);
-							this.lc +=2;
-							ObradjenToken o = new ObradjenToken(TipInstrukcije.D, inst, temp.getAdresnoPolje(), null, null);
+							this.lc += 2;
+							ObradjenToken o = new ObradjenToken(
+									TipInstrukcije.D, inst, temp
+											.getAdresnoPolje(), null, null);
 							o.setOp1NacinAdresiranja(NacinAdresiranja.REGDIR);
 							obradjeniTokeni.add(o);
 							break;
-							
-						}
-						catch (Exception e)
-						{
-							this.lc +=4;
-							obradjeniTokeni.add(new ObradjenToken(TipInstrukcije.D, inst, temp.getAdresnoPolje(), null, null ));
+
+						} catch (Exception e) {
+							this.lc += 4;
+							obradjeniTokeni.add(new ObradjenToken(
+									TipInstrukcije.D, inst, temp
+											.getAdresnoPolje(), null, null));
 							break;
 						}
-							
+
 					}
 				}
-				if("asm.DvoadresnaInstrukcija".equals(inst.getClass().getName()))
-				{
+				if ("asm.DvoadresnaInstrukcija".equals(inst.getClass()
+						.getName())) {
 					String[] c = temp.getAdresnoPolje().split(",");
 					String[] d = c[1].split("]");
-					ObradjenToken o=null;
-					if (d.length > 1)
-					{
-						this.lc+=3;
-						o = new ObradjenToken(TipInstrukcije.E, inst, c[0], d[0].substring(1), d[1]);
-											
-					}
-					else
-					{
-						try
-						{
+					ObradjenToken o = null;
+					if (d.length > 1) {
+						this.lc += 3;
+						o = new ObradjenToken(TipInstrukcije.E, inst, c[0],
+								d[0].substring(1), d[1]);
+
+					} else {
+						try {
 							Registri r = Registri.valueOf(c[1]);
-							this.lc +=2;
-							o = new ObradjenToken(TipInstrukcije.E, inst, c[0], c[1], null);
-						}
-						catch (Exception e)
-						{
-							this.lc +=4;
-							o = new ObradjenToken(TipInstrukcije.E, inst, c[0], c[1], null);
+							this.lc += 2;
+							o = new ObradjenToken(TipInstrukcije.E, inst, c[0],
+									c[1], null);
+						} catch (Exception e) {
+							this.lc += 4;
+							o = new ObradjenToken(TipInstrukcije.E, inst, c[0],
+									c[1], null);
 						}
 					}
 					o.setOp1NacinAdresiranja(NacinAdresiranja.REGDIR);
@@ -269,16 +330,39 @@
 		public void setUlazniFajl(String ulazniFajl) {
 			this.ulazniFajl = ulazniFajl;
 		}
-		
-		public static void main(String[] args)
-		{
+
+		public static void main(String[] args) {
 			Asembler temp = new Asembler("asm.asm");
 			temp.PrviProlaz();
-			for(ObradjenToken e : temp.obradjeniTokeni)
-			{
-				System.out.println(e.getTipInstr() + "**" + e.getIntrukcija() +"**" + e.getOperand1()+"**" +e.getOperand2()+"**" +e.getPomeraj());
+			for (ObradjenToken e : temp.obradjeniTokeni) {
+				System.out.println(e.getTipInstr() + "**" + e.getIntrukcija()
+						+ "**" + e.getOperand1() + "**" + e.getOperand2()
+						+ "**" + e.getPomeraj());
 			}
+			temp.DrugiProlaz();
 			System.out.println("Sve proslo!");
+		}
+
+		/**
+		 * Getter of the property <tt>kod</tt>
+		 * 
+		 * @return Returns the kod.
+		 * 
+		 */
+
+		public String getKod() {
+			return kod;
+		}
+
+		/**
+		 * Setter of the property <tt>kod</tt>
+		 * 
+		 * @param kod
+		 *            The kod to set.
+		 * 
+		 */
+		public void setKod(String kod) {
+			this.kod = kod;
 		}
 
 	}

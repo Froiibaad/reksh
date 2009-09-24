@@ -30,17 +30,17 @@
 		/*
 		 * (non-javadoc)
 		 */
-		private String vrednostOperanda1;
+		private int vrednostOperanda1;
 
 		/*
 		 * (non-javadoc)
 		 */
-		private String vrednostOperanda2;
+		private int vrednostOperanda2;
 
 		/*
 		 * (non-javadoc)
 		 */
-		private String vrednostPomeraja;
+		private int vrednostPomeraja;
 
 		/*
 		 * (non-javadoc)
@@ -179,7 +179,7 @@
 		 * 
 		 */
 
-		public String getVrednostOperanda1() {
+		public int getVrednostOperanda1() {
 			return vrednostOperanda1;
 		}
 
@@ -190,7 +190,7 @@
 		 *            The vrednostOperanda1 to set.
 		 * 
 		 */
-		public void setVrednostOperanda1(String vrednostOperanda1) {
+		public void setVrednostOperanda1(int vrednostOperanda1) {
 			this.vrednostOperanda1 = vrednostOperanda1;
 		}
 
@@ -201,7 +201,7 @@
 		 * 
 		 */
 
-		public String getVrednostOperanda2() {
+		public int getVrednostOperanda2() {
 			return vrednostOperanda2;
 		}
 
@@ -212,7 +212,7 @@
 		 *            The vrednostOperanda2 to set.
 		 * 
 		 */
-		public void setVrednostOperanda2(String vrednostOperanda2) {
+		public void setVrednostOperanda2(int vrednostOperanda2) {
 			this.vrednostOperanda2 = vrednostOperanda2;
 		}
 
@@ -223,7 +223,7 @@
 		 * 
 		 */
 
-		public String getVrednostPomeraja() {
+		public int getVrednostPomeraja() {
 			return vrednostPomeraja;
 		}
 
@@ -234,7 +234,7 @@
 		 *            The vrednostPomeraja to set.
 		 * 
 		 */
-		public void setVrednostPomeraja(String vrednostPomeraja) {
+		public void setVrednostPomeraja(int vrednostPomeraja) {
 			this.vrednostPomeraja = vrednostPomeraja;
 		}
 
