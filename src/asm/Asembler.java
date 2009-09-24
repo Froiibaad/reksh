@@ -122,6 +122,47 @@
 					}
 					break;
 				}
+				case B:
+				{
+					this.lc+=3;
+					int i;
+					String t = o.getOperand1();
+					if (t.startsWith("#")) i = Integer.parseInt(t.substring(1), 16);
+					else 
+					{
+						i = tabelaSimbola.pronadji(t).getVrednost();
+					}
+					switch((JednoadresnaInstrukcija)o.getIntrukcija())
+					{
+					case JMP:
+						this.kod += "02 ";
+						break;
+					case JSR:
+						this.kod += "0A ";
+						break;
+					}
+					this.kod += Integer.toHexString(i / 256) + " ";
+					this.kod += Integer.toHexString(i % 256) + " ";
+				}
+				break;
+				case C:
+				{
+					this.lc += 2;
+					int i;
+					String t = o.getPomeraj();
+					i = Integer.parseInt(t.substring(1), 16);
+					switch((JednoadresnaInstrukcija)o.getIntrukcija())
+					{
+					case JNZ:
+						this.kod += "06 ";
+						break;
+					case INT:
+						this.kod += "0E ";
+						break;
+					}
+					this.kod += Integer.toHexString(i % 256) + " ";				
+				}
+				break;
 				}
 			}
 			System.out.println(this.kod);
@@ -153,8 +194,7 @@
 						lc += 1;
 						break;
 					case DS:
-						i = Integer.parseInt(temp.getAdresnoPolje()
-								.substring(1), 16);
+						i = Integer.parseInt(temp.getAdresnoPolje().substring(1), 16);
 						this.lc += i;
 						break;
 					}
