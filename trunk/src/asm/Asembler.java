@@ -86,6 +86,41 @@
 						fin.add(o);
 						break;
 					}
+					break;
+				}
+				
+				case A:
+				{
+					this.lc++;
+					switch((BezadresnaInstrukcija)o.getIntrukcija())
+					{
+					case RTS:
+						fin.add(o);
+						this.kod += "00 ";
+						break;
+					
+					case RTI:
+						fin.add(o);
+						this.kod += "04 ";
+						break;
+					case INTE:
+						fin.add(o);
+						this.kod += "08 ";
+						break;
+					case INTD:
+						fin.add(o);
+						this.kod += "0C ";
+						break;
+					case TRPE:
+						fin.add(o);
+						this.kod += "10 ";
+						break;
+					case TRPD:
+						fin.add(o);
+						this.kod += "14 ";
+						break;
+					}
+					break;
 				}
 				}
 			}
