@@ -15,7 +15,6 @@ public class Bus16 extends KombMreza {
 
             if (inputs.get(i).getValue() != -1) {
                 for (int j = 0; j < 16; j++) {
-
                     outputs.get(j).set(inputs.get(i + j).getValue());
                 }
                 highZ = false;
@@ -23,7 +22,6 @@ public class Bus16 extends KombMreza {
             }
         }
         if (highZ) {
-
             for (int i = 0; i < 16; i++) {
                 outputs.get(i).setHighZ();
             }
