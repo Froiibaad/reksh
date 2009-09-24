@@ -75,4 +75,9 @@ public abstract class Mreza {
             addInput(m, i);
         }
     }
+    public void addInput16 (Mreza m, int startNo) {
+    	for (int i = startNo; i< startNo + 16; i++){
+    		addInput(m, i);
+    	}
+    }
 }
