@@ -262,10 +262,86 @@
 					fin.add(o);
 				}
 				break;
+				case E:
+				{
+					int i=0, opc=0, na = Registri.valueOf(o.getOperand1()).ordinal()*8;
+					String op2 = o.getOperand2();
+					if(o.getPomeraj() != null) {
+						o.setOp2NacinAdresiranja(NacinAdresiranja.REGINDIROFF);
+						String pom = o.getPomeraj();
+						if (pom.startsWith("#")) i = Integer.parseInt(pom.substring(1), 16);
+						else i = tabelaSimbola.pronadji(pom).getVrednost();
+						o.setVrednostPomeraja(i);
+						this.lc+=3;
+						na+=128;
+					}
+					else
+					{
+						if(op2.contains("[")){
+							op2 = op2.replaceAll("\\[|\\]", "");
+							try
+							{
+								Registri ri = Registri.valueOf(op2);
+								o.setOp2NacinAdresiranja(NacinAdresiranja.REGINDIR);
+								o.setOperand2(op2);
+								this.lc+=2;
+								na+=64 + ri.ordinal();
+							}
+							catch (Exception e)
+							{
+								i = tabelaSimbola.pronadji(op2).getVrednost();
+								o.setVrednostOperanda2(i);
+								o.setOp2NacinAdresiranja(NacinAdresiranja.MEMINDIR);
+								na+=193;
+							}
+						}
+						else
+						{
+							try
+							{
+								Registri ri = Registri.valueOf(op2);
+								o.setOp2NacinAdresiranja(NacinAdresiranja.REGDIR);
+								this.lc+=2;
+								na += ri.ordinal();
+							}
+							catch (Exception e)
+							{
+								i = tabelaSimbola.pronadji(op2).getVrednost();
+								o.setVrednostOperanda2(i);
+								o.setOp2NacinAdresiranja(NacinAdresiranja.MEMDIR);
+								na += 192;
+							}
+						}
+					}
+					switch((DvoadresnaInstrukcija)o.getIntrukcija())
+					{
+					case MOVS:
+						opc = 192;
+						break;
+					case MOVD:
+						opc = 160;
+						break;
+					case ADD:
+						opc = 144;
+						break;
+					case AND:
+						opc = 136;
+						break;
+					}
+					fin.add(o);
+					this.kod += Integer.toHexString(opc).toUpperCase() + " ";
+					this.kod += Integer.toHexString(na).toUpperCase() + " ";
+					if(o.getOp2NacinAdresiranja()==NacinAdresiranja.REGINDIROFF) this.kod+= Integer.toHexString(o.getVrednostPomeraja()).toUpperCase() + " ";
+					else if (o.getOp2NacinAdresiranja()==NacinAdresiranja.MEMDIR || o.getOp2NacinAdresiranja()==NacinAdresiranja.MEMINDIR)
+					{
+						this.kod += Integer.toHexString(o.getVrednostOperanda2()/256).toUpperCase() + " ";
+						this.kod += Integer.toHexString(o.getVrednostOperanda2()%256).toUpperCase() + " ";
+					}
+				}break;
 				}
 			}
 			System.out.println(this.kod);
-			return null;
+			return fin;
 		}
 
 		public void PrviProlaz() {
@@ -515,7 +591,6 @@
 			}
 			temp.DrugiProlaz();
 			System.out.println("Sve proslo!");
-			System.out.println(Registri.SP.ordinal());
 		}
 
 		/**
