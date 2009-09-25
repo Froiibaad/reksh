@@ -75,38 +75,46 @@ public class Initializator {
     public And andLdAX = new And(2);
     public And andOutAX = new And(2);
     public Register16 AX = new Register16("AX");
+    public BusIn16 AXout = new BusIn16("AXout");
 
     public And andLdBX = new And(2);
     public And andOutBX = new And(2);
     public Register16 BX = new Register16("BX");
+    public BusIn16 BXout = new BusIn16("BXout");
 
     public And andLdCX = new And(2);
     public And andOutCX = new And(2);
     public Register16 CX = new Register16("CX");
+    public BusIn16 CXout = new BusIn16("CXout");
 
     public And andLdDX = new And(2);
     public And andOutDX = new And(2);
     public Register16 DX = new Register16("DX");
-    //TODO STRAHINJA DA ISPRAVI SLIKU 
+    public BusIn16 DXout = new BusIn16("DXout");
+
     public And andLdSP = new And(2);
     public And andOutSP = new And(2);
     public Or orLdSP = new Or(2);
     public Or orOutSP = new Or(2);
     public Register16 SP = new Register16("SP");
+    public BusIn16 SPout = new BusIn16("SPout");
     
     public And andLdSI= new And(2);
     public And andOutSI = new And(2);
     public Or orLdSI = new Or(2);
     public Or orOutSI = new Or(2);
     public Register16 SI = new Register16("SI");
+    public BusIn16 SIout = new BusIn16("SIout");
     
     public And andLdBP = new And(2);
     public And andOutBP = new And(2);
     public Register16 BP = new Register16("BP");
+    public BusIn16 BPout = new BusIn16("BPout");
     
     public And andLdDI = new And(2);
     public And andOutDI = new And(2);
     public Register16 DI = new Register16("DI");
+    public BusIn16 DIout = new BusIn16("DIout");
 
     //Ulazni mux za registarski file
     public MuxBus16 REGBUS = new MuxBus16("REGBUS");
@@ -210,7 +218,9 @@ public class Initializator {
     public And and2PswC = new And(2);
     public Or or1PswC = new Or(2);
     public Or or2PswC = new Or(2);
-    public Not notPswC = new Not();
+    public Not not1PswC = new Not();
+    public Not not2PswC = new Not();
+    public Not not3PswC = new Not();
     
     public And andIII1PswV = new And (3);
     public And andIII2PswV = new And (3);
@@ -241,15 +251,16 @@ public class Initializator {
     public Buffer BGR1 = new Buffer();
     public Buffer BREQ0 = new Buffer();
     public Buffer BREQ1 = new Buffer();
-    public Coder4 arbCoder = new Coder4();
-    public Decoder4 arbDecoder = new Decoder4();
+    public Coder8 arbCoder = new Coder8();
+    public Decoder8 arbDecoder = new Decoder8();
 
     //Arbitracija u procesoru
     public BusIn busyBuss = new BusIn("CPUBusyBuss");
     public SRff busySet = new SRff ();
     public Or readorwrite =  new Or (2);
-    public Buffer BGR = new Buffer();
+    public Buffer BGRCpu = new Buffer();
     public And BGRandBusyBus = new And (2);
+    public Not noBusy = new Not();
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Upravljacka
@@ -437,7 +448,7 @@ public class Initializator {
     public Bus8 DBUS = new Bus8(2);
     public Bus1 WRBUS = new Bus1(1);
     public Bus1 BUSYBUS = new Bus1(1);
-    public Bus16 M1 = new Bus16(8);
+    public Bus16 M1 = new Bus16(15);
     public Bus16 M2 = new Bus16(10);
     public Bus16 M3 = new Bus16(10);
 
@@ -502,16 +513,6 @@ public class Initializator {
         MAR.addInput16(MARmp, 0);
         MARM1.addInput16(MAR, 0);
         M1.addInput16(MARM1, 0);
-        
-        /*//SP 
-        SP.addInput8(nula, 0); //informacioni ulazi sve nule
-        SP.addInput8(nula, 0); //
-        SP.addInput(nula, 0); //LD
-        SP.addInput(nula, 0); //LDL
-        SP.addInput(nula, 0); //LDH
-        SP.addInput(nula, 0); //CLR
-        SP.addInput(incSP, 0); //INC		//TODO: CU
-        SP.addInput(decSP, 0); //DEC		//TODO: CU */
 
         //IVTP	NULOVAN
         IVTP.addInput8(nula, 0); //informacioni ulazi sve nule
@@ -591,6 +592,59 @@ public class Initializator {
         Y.addInput16(signEx, 0);
 
 ////////////////////////////////////////////////////////////////////////////////
+//  REGFILE
+////////////////////////////////////////////////////////////////////////////////        
+       REGBUS.addInput16(M2, 0);
+       REGBUS.addInput16(M3, 0);
+       AX.addInput16(REGBUS, 0);
+       BX.addInput16(REGBUS, 0);
+       CX.addInput16(REGBUS, 0);
+       DX.addInput16(REGBUS, 0);
+       SP.addInput16(REGBUS, 0);
+       BP.addInput16(REGBUS, 0);
+       DI.addInput16(REGBUS, 0);
+       SI.addInput16(REGBUS, 0);
+       AXout.addInput16(AX, 0);
+       BXout.addInput16(BX, 0);
+       CXout.addInput16(CX, 0);
+       DXout.addInput16(DX, 0);
+       SPout.addInput16(SP, 0);
+       BPout.addInput16(BP, 0);
+       DIout.addInput16(DI, 0);
+       SIout.addInput16(SI, 0);
+       M1.addInput16(AXout, 0);
+       M1.addInput16(BXout, 0);
+       M1.addInput16(CXout, 0);
+       M1.addInput16(DXout, 0);
+       M1.addInput16(SPout, 0);
+       M1.addInput16(BPout, 0);
+       M1.addInput16(DIout, 0);
+       M1.addInput16(SIout, 0);
+
+       
+       //Logika...
+       AX.addInput(andLdAX, 0);
+       AXout.addInput(andOutAX, 0);
+       BX.addInput(andLdBX, 0);
+       BXout.addInput(andOutBX, 0);
+       CX.addInput(andLdCX, 0);
+       CXout.addInput(andOutCX, 0);
+       DX.addInput(andLdDX, 0);
+       DXout.addInput(andOutDX, 0);
+       orLdSP.addInput(andLdSP, 0);
+       SP.addInput(orLdSP, 0);
+       orOutSP.addInput(andOutSP, 0);
+       SPout.addInput(orOutSP, 0);
+       orLdSI.addInput(andLdSI, 0);
+       SI.addInput(orLdSI, 0);
+       orOutSI.addInput(andOutSI, 0);
+       SIout.addInput(orOutSI, 0);
+       BP.addInput(andLdBP, 0);
+       BPout.addInput(andOutBP, 0);
+       DI.addInput(andLdDI, 0);
+       DIout.addInput(andOutDI, 0);
+       
+////////////////////////////////////////////////////////////////////////////////
 //  ALU
 ////////////////////////////////////////////////////////////////////////////////
       //Alump
@@ -607,7 +661,49 @@ public class Initializator {
         M3.addInput16(ALUM3, 0);
         
         //KM PSW
-
+        orPswZ.addInput16(alu, 0);
+        notPswZ.addInput(orPswZ, 0);
+        
+        and1PswC.addInput(not1PswC, 0);
+        //fale ulazni signali
+        not1PswC.addInput(alu, 16);
+        not2PswC.addInput(and1PswC, 0);
+        and2PswC.addInput(alu, 16);
+        and2PswC.addInput(or1PswC, 0);
+        not3PswC.addInput(and2PswC, 0);
+        or2PswC.addInput(not2PswC, 0);
+        or2PswC.addInput(not3PswC, 0);
+        
+        andIII1PswV.addInput(mpAlu, 15);
+        andIII1PswV.addInput(Y, 15);
+        not1PswV.addInput(alu, 15);
+        andIII1PswV.addInput(not1PswV, 0);
+        
+        not2PswV.addInput(mpAlu, 15);
+        not3PswV.addInput(Y, 15);
+        andIII2PswV.addInput(not2PswV, 0);
+        andIII2PswV.addInput(not3PswV, 0);
+        andIII2PswV.addInput(alu, 15);
+        
+        orIIPswV.addInput(andIII1PswV, 0);
+        orIIPswV.addInput(andIII2PswV, 0);
+        
+        andII1PswV.addInput(orIIPswV, 0);
+        
+        not4PswV.addInput(Y, 15);
+        andIII3PswV.addInput(not4PswV, 0);
+        andIII3PswV.addInput(alu, 15);
+        
+        not5PswV.addInput(alu, 15);
+        andIII4PswV.addInput(not5PswV, 0);
+        andIII4PswV.addInput(Y, 15);
+        
+        
+        orIIIPswV.addInput(andIII4PswV, 0);
+        orIIIPswV.addInput(andIII3PswV, 0);
+        orIIIPswV.addInput(andII1PswV, 0);
+        
+        
 ////////////////////////////////////////////////////////////////////////////////
 //  PSW
 ////////////////////////////////////////////////////////////////////////////////
@@ -620,7 +716,27 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  Arbitracija
 ////////////////////////////////////////////////////////////////////////////////
-   
+        //CPU
+        BUSYBUS.addInput(busyBuss, 0);
+        busyBuss.addInput(busySet, 0);
+        BGRCpu.addInput(readorwrite, 0);
+        BGRandBusyBus.addInput(BGRCpu, 0);
+        BGRandBusyBus.addInput(noBusy, 0);
+        noBusy.addInput(BUSYBUS, 0);
+        
+        //ARBITRATOR
+        arbCoder.addInput(BGRandBusyBus, 0);
+        for (int i = 0; i < 7; i++ ){
+        	arbCoder.addInput(nula, 0);
+        }
+        //TODO add arbotrator E signal.
+        arbDecoder.addInput(arbCoder, 0);
+        arbDecoder.addInput(arbCoder, 1);
+        arbDecoder.addInput(arbCoder, 2);
+        arbDecoder.addInput(arbCoder, 3);
+
+        
+        
 ////////////////////////////////////////////////////////////////////////////////
 //  Upravljacka
 ////////////////////////////////////////////////////////////////////////////////
