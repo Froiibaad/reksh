@@ -1,6 +1,9 @@
 	package asm;
 
-	import java.util.LinkedList;
+	import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.LinkedList;
 
 	public class Asembler {
 
@@ -45,6 +48,7 @@
 			this.obradjeniTokeni = new LinkedList<ObradjenToken>();
 			this.tabelaSimbola = new TabelaSimbola();
 			this.radi = false;
+			this.kod = "";
 			this.lc = 0;
 		}
 
@@ -66,7 +70,7 @@
 						break;
 					case ORG:
 						int i = Integer.parseInt(o.getOperand1().substring(1), 16);
-						this.kod = o.getOperand1().substring(1) + "\n";
+						this.kod += Integer.toHexString(i).toUpperCase() + "\n";
 						this.lc = i;
 						o.setVrednostOperanda1(i);
 						fin.add(o);						
@@ -340,7 +344,15 @@
 				}break;
 				}
 			}
-			System.out.println(this.kod);
+			 try{
+				    // Create file 
+				    FileWriter fstream = new FileWriter(new File("current.mc"));
+				    fstream.append(this.kod);		   
+				    //Close the output stream
+				    fstream.close();
+				    }catch (Exception e){//Catch exception if any
+				      System.err.println("Error: " + e.getMessage());
+				    }
 			return fin;
 		}
 
@@ -420,8 +432,7 @@
 
 					}
 				}
-				if ("asm.DvoadresnaInstrukcija".equals(inst.getClass()
-						.getName())) {
+				if ("asm.DvoadresnaInstrukcija".equals(inst.getClass().getName())) {
 					String[] c = temp.getAdresnoPolje().split(",");
 					String[] d = c[1].split("]");
 					ObradjenToken o = null;
@@ -584,13 +595,7 @@
 		public static void main(String[] args) {
 			Asembler temp = new Asembler("asm.asm");
 			temp.PrviProlaz();
-			for (ObradjenToken e : temp.obradjeniTokeni) {
-				System.out.println(e.getTipInstr() + "**" + e.getIntrukcija()
-						+ "**" + e.getOperand1() + "**" + e.getOperand2()
-						+ "**" + e.getPomeraj());
-			}
 			temp.DrugiProlaz();
-			System.out.println("Sve proslo!");
 		}
 
 		/**
