@@ -23,6 +23,7 @@ public class Initializator {
 	public BusIn16 MBRM1 = new BusIn16("MBRM1");
 	public BusIn16 MBRM2 = new BusIn16("MBRM2");
 	public BusIn16 MBRM3 = new BusIn16("MBRM3");
+	public Mux2 MBRbusorcpu = new Mux2 ();
 
     //MAR 
     public Register16 MAR = new Register16("MAR");
@@ -179,15 +180,15 @@ public class Initializator {
     //PSWI
     public Mux2b muxPSWI = new Mux2b();
     public SRff PSWI = new SRff();
-    public And and1PSWI = new And(2);
-    public And and2PSWI = new And(2);
+    //public And and1PSWI = new And(2);
+    //public And and2PSWI = new And(2);
     public Not notPSWI = new Not();
 
     //PSWT
     public Mux2b muxPSWT = new Mux2b();
     public SRff PSWT = new SRff();
-    public And and1PSWT = new And(2);
-    public And and2PSWT = new And(2);
+    //public And and1PSWT = new And(2);
+    //public And and2PSWT = new And(2);
     public Not notPSWT = new Not();
 
     //PSWL1
@@ -196,6 +197,10 @@ public class Initializator {
     //PSWL0
     public SRff PSWL0 = new SRff();
 
+    //PSW Izlazi na magistrale
+    public BusIn16 PSWM2 = new BusIn16("PSWM2");
+    public BusIn16 PSWM3 = new BusIn16("PSWM3");
+    
 ////////////////////////////////////////////////////////////////////////////////
 //  Sign Ext
 ////////////////////////////////////////////////////////////////////////////////
@@ -470,7 +475,7 @@ public class Initializator {
         Const jedan = new Const(1);
         
 ////////////////////////////////////////////////////////////////////////////////
-//  PRESPAJANJE MAGISTRALA
+//  PRESPAJANJE INTERNIH MAGISTRALA
 ////////////////////////////////////////////////////////////////////////////////
         M1M2.addInput16(M1, 0);
         M2.addInput16(M1M2, 0);
@@ -496,7 +501,9 @@ public class Initializator {
         
         
         //MBR
-        MBR.addInput8(M1, 0);
+        MBRbusorcpu.addInput8(M1, 0);
+        MBRbusorcpu.addInput8(DBUS, 0);
+        MBR.addInput8(MBRbusorcpu, 0);
         MBRM1.addInput8(MBR, 0);
         MBRM1.addInput8(nula, 0);
         MBRM2.addInput8(MBR, 0);
@@ -647,7 +654,7 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  ALU
 ////////////////////////////////////////////////////////////////////////////////
-      //Alump
+       	//Alump
         mpAlu.addInput16(M2, 0);
         mpAlu.addInput16(M3, 0);
         
@@ -707,6 +714,90 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  PSW
 ////////////////////////////////////////////////////////////////////////////////
+        // N
+        muxPSWN.addInput(alu, 15);
+        muxPSWN.addInput(M1, 0);
+        
+        and1PSWN.addInput(muxPSWN, 0);
+        
+        notPSWN.addInput(muxPSWN, 0);
+        and2PSWN.addInput(notPSWN, 0);
+        
+        PSWN.addInput(and1PSWN, 0);
+        PSWN.addInput(and2PSWN, 0);
+        PSWM2.addInput(PSWN, 0);
+        PSWM3.addInput(PSWN, 0);
+        
+        // Z
+        muxPSWZ.addInput(notPswZ, 0);
+        muxPSWZ.addInput(M1, 1);
+        
+        and1PSWZ.addInput(muxPSWZ, 0);
+        
+        notPSWZ.addInput(muxPSWZ, 0);
+        and2PSWZ.addInput(notPSWZ, 0);
+        
+        PSWZ.addInput(and1PSWZ, 0);
+        PSWZ.addInput(and2PSWZ, 0);
+        PSWM2.addInput(PSWZ, 0);
+        PSWM3.addInput(PSWZ, 0);
+        
+        //C
+        muxPSWC.addInput(or2PswC, 0);
+        muxPSWC.addInput(M1, 2);
+        
+        and1PSWC.addInput(muxPSWC, 0);
+        
+        notPSWC.addInput(muxPSWC, 0);
+        and2PSWC.addInput(notPSWC, 0);
+        
+        PSWC.addInput(and1PSWC, 0);
+        PSWC.addInput(and2PSWC, 0);
+        PSWM2.addInput(PSWC, 0);
+        PSWM3.addInput(PSWC, 0);
+        
+        //V
+        muxPSWV.addInput(orIIIPswV, 0);
+        muxPSWV.addInput(M1, 3);
+        
+        and1PSWV.addInput(muxPSWV, 0);
+        
+        notPSWV.addInput(muxPSWV, 0);
+        and2PSWV.addInput(notPSWV, 0);
+        
+        PSWV.addInput(and1PSWV, 0);
+        PSWV.addInput(and2PSWV, 0);
+        PSWM2.addInput(PSWV, 0);
+        PSWM3.addInput(PSWV, 0);
+        
+        //I
+        //TODO OVAVEZNO OVDE DODATI SIGNAL INTE, NE ISPOD
+        muxPSWI.addInput(M1, 4);
+        
+        notPSWI.addInput(muxPSWI, 0);
+        PSWI.addInput(muxPSWI, 0);
+        PSWI.addInput(notPSWI, 0);
+        PSWM2.addInput(PSWI, 0);
+        PSWM3.addInput(PSWI, 0);
+        
+        //T
+        //TODO isto kako i za I
+        muxPSWT.addInput(M1, 5);
+        
+        notPSWI.addInput(muxPSWT, 0);
+        PSWT.addInput(muxPSWT, 0);
+        PSWT.addInput(notPSWT, 0);
+        PSWM2.addInput(PSWT, 0);
+        PSWM3.addInput(PSWT, 0);
+        
+        PSWM2.addInput(PSWL0, 0);
+        PSWM2.addInput(PSWL1, 0);
+        
+        PSWM3.addInput(PSWL0, 0);
+        PSWM3.addInput(PSWL1, 0);
+        
+        PSWM2.addInput8(nula, 0);
+        PSWM3.addInput8(nula, 0);
         
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -746,12 +837,16 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  Magistrale
 ////////////////////////////////////////////////////////////////////////////////
- 
-        /*       
+         ABUS.addInput16(MAR, 0);
+         Mem.addInput16(ABUS, 0);
+         DBUS.addInput8(MBR, 0);
+         Mem.addInput8(DBUS, 0);
+         Mem.addInput(WRBUS, 0);
+        
 ////////////////////////////////////////////////////////////////////////////////
 //  Prijavljivanje registara
 ////////////////////////////////////////////////////////////////////////////////
-        PC.addToRegs();
+ /*       PC.addToRegs();
         MBR.addToRegs();
         MAR.addToRegs();
         SP.addToRegs();
