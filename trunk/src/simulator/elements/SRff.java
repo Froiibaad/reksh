@@ -1,9 +1,15 @@
 package simulator.elements;
 
+/**
+ * 
+ * IN0 - S;
+ * IN1 - R
+ *
+ */
 public class SRff extends SekvMreza {
 
     private int[] b = new int[2];
-
+    
     public SRff() {
         super(2, 2);
         b[0] = 0; b[1] = 1;
