@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="simulator.elementsClassDiagram" id="{UMLID=_ynIqMatLEd6EEb_MNCHSPw,JavaID=simulator.elements}" metadata="uml2-1.0" initialized="true" scrolledX="1523" tag="10" key="32303037303632392052656B7368" LinkThickness="1">
+  <children xsi:type="editmodel:ClassEditModel" name="Clock" location="1345,111" size="119,126" timstampe="2" stereotype="" id="{UMLID=_zm6FIKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Clock}" runTimeClassModel="sequential,tick(),init(),addToClock(Lsimulator.elements.SekvMreza;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="84,23">
+      <children xsi:type="editmodel:AttributeEditModel" name="sequential" size="84,21" id="{UMLID=_znD2IKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="96,54">
+      <children xsi:type="editmodel:MethodEditModel" name="init" size="53,16" id="{UMLID=_znNAG6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Clock#init()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="tick" size="56,16" id="{UMLID=_znNAF6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Clock#tick()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addToClock" size="96,16" id="{UMLID=_znNAGKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Clock#addToClock(Lsimulator.elements.SekvMreza;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Pin" location="1079,111" size="106,229" timstampe="2" stereotype="" id="{UMLID=_znzdA6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Pin}" runTimeClassModel="getValue(),Pin(),setHighZ(),ONE,set0(),value,HIGHZ,set(I),ZERO,set1()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="ZERO" size="57,16" id="{UMLID=_03OdgqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ONE" size="50,16" id="{UMLID=_03EsgKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="HIGHZ" size="60,16" id="{UMLID=_03OdgKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="value" size="55,16" id="{UMLID=_03EsgqtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,108">
+      <children xsi:type="editmodel:MethodEditModel" name="Pin" size="54,16" id="{UMLID=_03OdiatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Pin#Pin()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set" size="55,16" id="{UMLID=_03Odi6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Pin#set(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set1" size="61,16" id="{UMLID=_03OdiKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Pin#set1()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set0" size="61,16" id="{UMLID=_03OdiqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Pin#set0()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setHighZ" size="83,16" id="{UMLID=_03OdhKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Pin#setHighZ()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_03OdhatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Pin#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Uticnica" location="1202,111" size="114,149" timstampe="2" stereotype="" id="{UMLID=_030TYKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Uticnica}" runTimeClassModel="mreza,getMreza(),pinNo,getPinNo(),Uticnica(Lsimulator.elements.Mreza;I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="65,41">
+      <children xsi:type="editmodel:AttributeEditModel" name="mreza" size="65,21" id="{UMLID=_030TYqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pinNo" size="56,16" id="{UMLID=_030TZKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="91,59">
+      <children xsi:type="editmodel:MethodEditModel" name="Uticnica" size="78,16" id="{UMLID=_03-EZKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Uticnica#Uticnica(Lsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMreza" size="91,21" id="{UMLID=_03-EaatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Uticnica#getMreza()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPinNo" size="82,16" id="{UMLID=_03-EYatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Uticnica#getPinNo()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Decoder8" location="1681,546" size="110,85" timstampe="2" stereotype="" id="{UMLID=_z0w6_KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder8}" runTimeClassModel="calc(),Decoder8()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="87,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Decoder8" size="87,16" id="{UMLID=_0G8QEqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder8#Decoder8()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0G8QEatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder8#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0G8QEKtLEd6EEb_MNCHSPw}" source="//@children.3" target="//@children.27/@sourceConnections.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="55,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Buffer8" location="1795,370" size="100,85" timstampe="2" stereotype="" id="{UMLID=_z0w69qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Buffer8}" runTimeClassModel="calc(),Buffer8()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="77,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Buffer8" size="77,16" id="{UMLID=_0CnwwKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Buffer8#Buffer8()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0CnwwatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Buffer8#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0Cem0atLEd6EEb_MNCHSPw}" source="//@children.4" target="//@children.27/@sourceConnections.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TNot" location="1845,996" size="85,103" timstampe="2" stereotype="" id="{UMLID=_z1D14qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/TNot}" runTimeClassModel="calc(),numIn,TNot(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="57,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="numIn" size="57,16" id="{UMLID=_0dS6katLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="62,36">
+      <children xsi:type="editmodel:MethodEditModel" name="TNot" size="62,16" id="{UMLID=_0dS6k6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/TNot#TNot(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0dcrkKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/TNot#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0dS6kKtLEd6EEb_MNCHSPw}" source="//@children.5" target="//@children.27/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="41,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Mux8" location="1593,876" size="89,85" timstampe="2" stereotype="" id="{UMLID=_z06r-qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux8}" runTimeClassModel="Mux8(),calc()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Mux8" size="66,16" id="{UMLID=_0VGn4qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux8#Mux8()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0VGn4atLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux8#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0VGn4KtLEd6EEb_MNCHSPw}" source="//@children.6" target="//@children.27/@sourceConnections.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="43,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="33,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Mux2" location="1661,370" size="106,103" timstampe="2" stereotype="" id="{UMLID=_z0w69KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux2}" runTimeClassModel="getValue(),Mux2(),calc()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Mux2" size="66,16" id="{UMLID=_0BIjAKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux2#Mux2()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0BIjBKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux2#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0BIjAatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux2#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0A-yAKtLEd6EEb_MNCHSPw}" source="//@children.7" target="//@children.27/@sourceConnections.0" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="HighZAdapter" location="1233,370" size="130,85" timstampe="2" stereotype="" id="{UMLID=_z0nxCKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/HighZAdapter}" runTimeClassModel="HighZAdapter(),calc()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,36">
+      <children xsi:type="editmodel:MethodEditModel" name="HighZAdapter" size="107,16" id="{UMLID=_z6lPEKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/HighZAdapter#HighZAdapter()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_z6lPEatLEd6EEb_MNCHSPw,JavaID=simulator.elements/HighZAdapter#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_z6beEatLEd6EEb_MNCHSPw}" source="//@children.8" target="//@children.27/@sourceConnections.0" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="118,127"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.13/@sourceConnections.0" name="Mreza" location="1680,-84" size="149,321" timstampe="5" stereotype="" id="{UMLID=_zrhfYKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza}" runTimeClassModel="numOfInputs,Mreza(),successor,addSuccessor(Lsimulator.elements.KombMreza;),addOutput(),addInput(ILsimulator.elements.Mreza;I),getOutput(I),addInput16(Lsimulator.elements.Mreza;I),addInput8(Lsimulator.elements.Mreza;I),addInput(Lsimulator.elements.Mreza;I),inputs,Mreza(II),notifySuccessors(),outputs">
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,87">
+      <children xsi:type="editmodel:AttributeEditModel" name="successor" size="87,21" id="{UMLID=_zsH8UKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="outputs" size="71,21" id="{UMLID=_zsH8VKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="inputs" size="64,21" id="{UMLID=_zsH8UqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="numOfInputs" size="90,16" id="{UMLID=_zr-LUKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="126,185">
+      <children xsi:type="editmodel:MethodEditModel" name="Mreza" size="70,16" id="{UMLID=_zsRtUqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#Mreza()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Mreza" size="70,16" id="{UMLID=_zsRtU6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#Mreza(II)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="notifySuccessors" size="126,16" id="{UMLID=_zsa3Q6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#notifySuccessors()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addOutput" size="90,16" id="{UMLID=_zsRtXatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#addOutput()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOutput" size="87,16" id="{UMLID=_zsa3RKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#getOutput(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addSuccessor" size="117,21" id="{UMLID=_zsa3QKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#addSuccessor(Lsimulator.elements.KombMreza;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput" size="81,16" id="{UMLID=_zsRtWKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#addInput(Lsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput" size="81,16" id="{UMLID=_zsH8W6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#addInput(ILsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput8" size="87,16" id="{UMLID=_zsRtXqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#addInput8(Lsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput16" size="93,16" id="{UMLID=_zsH8VqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mreza#addInput16(Lsimulator.elements.Mreza;I)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Buffer" location="1952,546" size="94,103" timstampe="2" stereotype="" id="{UMLID=_z0w7AKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Buffer}" runTimeClassModel="calc(),status,Buffer()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="59,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="status" size="59,16" id="{UMLID=_0JxhoatLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="71,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Buffer" size="71,16" id="{UMLID=_0J7SoqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Buffer#Buffer()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0J7SoatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Buffer#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0JxhoKtLEd6EEb_MNCHSPw}" source="//@children.10" target="//@children.27/@sourceConnections.0" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="46,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="NumGen" location="1713,996" size="104,103" timstampe="2" stereotype="" id="{UMLID=_z1D14KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/NumGen}" runTimeClassModel="outVal,calc(),NumGen([I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="outVal" size="60,16" id="{UMLID=_0cGnwKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,36">
+      <children xsi:type="editmodel:MethodEditModel" name="NumGen" size="81,16" id="{UMLID=_0cGnxKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/NumGen#NumGen([I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0cGnyKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/NumGen#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0b82watLEd6EEb_MNCHSPw}" source="//@children.11" target="//@children.27/@sourceConnections.0" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Coder8" location="2040,1134" size="98,85" timstampe="2" stereotype="" id="{UMLID=_z1Nm4KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Coder8}" runTimeClassModel="calc(),Coder8()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="75,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Coder8" size="75,16" id="{UMLID=_0lo-QKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Coder8#Coder8()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0lfNQatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Coder8#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0lfNQKtLEd6EEb_MNCHSPw}" source="//@children.12" target="//@children.27/@sourceConnections.0" targetEnd="//@children.12/@sourceConnections.0/@children.1" sourceEnd="//@children.12/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="69,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.14/@sourceConnections.0" name="SekvMreza" location="1515,14" size="117,211" timstampe="9" stereotype="" id="{UMLID=_znNAFatLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza}" runTimeClassModel="getValue(),calc(),SekvMreza(II),addInput(Lsimulator.elements.Mreza;I),wakeUp(),name,setOutputs(),initialize(I),addInput(ILsimulator.elements.Mreza;I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="name" size="55,16" id="{UMLID=_zvjDwKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="94,144">
+      <children xsi:type="editmodel:MethodEditModel" name="SekvMreza" size="94,16" id="{UMLID=_zvs0yKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#SekvMreza(II)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput" size="81,16" id="{UMLID=_zvs00KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#addInput(Lsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput" size="81,16" id="{UMLID=_zvjDxatLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#addInput(ILsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="wakeUp" size="80,16" id="{UMLID=_zv2lwqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#wakeUp()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_zvs0x6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_zvs0xqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_zvjDwqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_zvs0zatLEd6EEb_MNCHSPw,JavaID=simulator.elements/SekvMreza#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.42/@sourceConnections.0" autoLocated="true" id="{UMLID=_zvZ50KtLEd6EEb_MNCHSPw}" source="//@children.13" target="//@children.9" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,320" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Dff" location="596,586" size="116,157" timstampe="2" stereotype="" id="{UMLID=_0m_CEKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Dff}" runTimeClassModel="getValue(),calc(),b,setOutputs(),Dff(),initialize(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="35,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="b" size="35,16" id="{UMLID=_0nR9AatLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,90">
+      <children xsi:type="editmodel:MethodEditModel" name="Dff" size="55,16" id="{UMLID=_0nR9BqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Dff#Dff()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0nR9CqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Dff#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_0nR9B6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Dff#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_0nR9BatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Dff#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0nbuAKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Dff#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.18/@sourceConnections.0 //@children.21/@sourceConnections.0 //@children.26/@sourceConnections.0 //@children.28/@sourceConnections.0 //@children.46/@sourceConnections.0 //@children.39/@sourceConnections.0" autoLocated="true" id="{UMLID=_0nR9AKtLEd6EEb_MNCHSPw}" source="//@children.14" target="//@children.13" targetEnd="//@children.14/@sourceConnections.0/@children.1" sourceEnd="//@children.14/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,211" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Bus1" location="2069,996" size="88,85" timstampe="2" stereotype="" id="{UMLID=_z1D15qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus1}" runTimeClassModel="calc(),Bus1(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="65,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Bus1" size="65,16" id="{UMLID=_0f1RMatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus1#Bus1(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0f1RMKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus1#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0frgMKtLEd6EEb_MNCHSPw}" source="//@children.15" target="//@children.27/@sourceConnections.0" targetEnd="//@children.15/@sourceConnections.0/@children.1" sourceEnd="//@children.15/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="44,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Alu" location="1391,370" size="95,823" timstampe="3" stereotype="" id="{UMLID=_z0w68KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Alu}" runTimeClassModel="Y3,Y4,Y15,Y1,Y14,Y2,Y13,X10,Y7,Y12,Y8,Y11,Y5,Y10,Y6,X14,X13,X12,X11,Y0,X15,ARS,AND,X9,X8,X0,X1,X2,X3,X4,X5,INCX,Y9,X6,INCY,X7,calc(),DECX,DECY,TRANSY,TRANSX,Alu(),ADD">
+    <children xsi:type="editmodel:CompartmentEditModel" size="72,738">
+      <children xsi:type="editmodel:AttributeEditModel" name="X0" size="42,16" id="{UMLID=_z8hIyqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X1" size="42,16" id="{UMLID=_z8hIzKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X2" size="42,16" id="{UMLID=_z8hIzqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X3" size="42,16" id="{UMLID=_z8hI0KtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X4" size="42,16" id="{UMLID=_z8hI0qtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X5" size="42,16" id="{UMLID=_z8qSsatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X6" size="42,16" id="{UMLID=_z8qSt6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X7" size="42,16" id="{UMLID=_z8qSu6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X8" size="42,16" id="{UMLID=_z8hIyKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X9" size="42,16" id="{UMLID=_z8hIxqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X10" size="48,16" id="{UMLID=_z8Nmy6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X11" size="48,16" id="{UMLID=_z8XXzqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X12" size="48,16" id="{UMLID=_z8XXzKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X13" size="48,16" id="{UMLID=_z8XXyqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X14" size="48,16" id="{UMLID=_z8XXyKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="X15" size="48,16" id="{UMLID=_z8hIwKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y0" size="43,16" id="{UMLID=_z8XX0KtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y1" size="43,16" id="{UMLID=_z8Nmw6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y2" size="43,16" id="{UMLID=_z8Nmx6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y3" size="43,16" id="{UMLID=_z8Ec0KtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y4" size="43,16" id="{UMLID=_z8Ec0qtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y5" size="43,16" id="{UMLID=_z8XXwqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y6" size="43,16" id="{UMLID=_z8XXxqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y7" size="43,16" id="{UMLID=_z8NmzatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y8" size="43,16" id="{UMLID=_z8Nm0atLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y9" size="43,16" id="{UMLID=_z8qStatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y10" size="49,16" id="{UMLID=_z8XXxKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y11" size="49,16" id="{UMLID=_z8XXwKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y12" size="49,16" id="{UMLID=_z8Nmz6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y13" size="49,16" id="{UMLID=_z8NmyatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y14" size="49,16" id="{UMLID=_z8NmxatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="Y15" size="49,16" id="{UMLID=_z8NmwatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ADD" size="51,16" id="{UMLID=_z80DuKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="AND" size="51,16" id="{UMLID=_z8hIxKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ARS" size="51,16" id="{UMLID=_z8hIwqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="INCX" size="52,16" id="{UMLID=_z8qSs6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="INCY" size="53,16" id="{UMLID=_z8qSuatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="DECX" size="56,16" id="{UMLID=_z80DsKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="DECY" size="57,16" id="{UMLID=_z80DsqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="TRANSX" size="71,16" id="{UMLID=_z80DtqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="TRANSY" size="72,16" id="{UMLID=_z80DtKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Alu" size="56,16" id="{UMLID=_z80DuqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Alu#Alu()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_z80Du6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Alu#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_z7nw4atLEd6EEb_MNCHSPw}" source="//@children.16" target="//@children.27/@sourceConnections.0" targetEnd="//@children.16/@sourceConnections.0/@children.1" sourceEnd="//@children.16/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="46,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Bus16" location="1824,738" size="106,103" timstampe="3" stereotype="" id="{UMLID=_z06r9KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus16}" runTimeClassModel="getValue(),calc(),Bus16(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Bus16" size="71,16" id="{UMLID=_0QoXlatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus16#Bus16(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0QoXlKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus16#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0QoXkatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus16#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0QoXkKtLEd6EEb_MNCHSPw}" source="//@children.17" target="//@children.27/@sourceConnections.0" targetEnd="//@children.17/@sourceConnections.0/@children.1" sourceEnd="//@children.17/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Register8" location="714,586" size="118,391" timstampe="2" stereotype="" id="{UMLID=_0nIMAatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register8}" runTimeClassModel="CLR,INC,DEC,b,setOutputs(),initialize(I),IN5,IN6,IN7,getValue(),IN2,IN1,IN4,calc(),IN3,Register8(Ljava.lang.String;),IN0,addToRegs(),LD">
+    <children xsi:type="editmodel:CompartmentEditModel" size="49,234">
+      <children xsi:type="editmodel:AttributeEditModel" name="b" size="35,16" id="{UMLID=_0oxKxqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN0" size="44,16" id="{UMLID=_0o67y6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN1" size="44,16" id="{UMLID=_0o67xatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN2" size="44,16" id="{UMLID=_0o67w6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN3" size="44,16" id="{UMLID=_0o67yatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN4" size="44,16" id="{UMLID=_0o67x6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN5" size="44,16" id="{UMLID=_0oxKyqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN6" size="44,16" id="{UMLID=_0oxKzKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN7" size="44,16" id="{UMLID=_0o67watLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="LD" size="42,16" id="{UMLID=_0o67zatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="CLR" size="49,16" id="{UMLID=_0oxKwKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="INC" size="45,16" id="{UMLID=_0oxKwqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="DEC" size="49,16" id="{UMLID=_0oxKxKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,108">
+      <children xsi:type="editmodel:MethodEditModel" name="Register8" size="86,16" id="{UMLID=_0o670KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register8#Register8(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0pEFsqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register8#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_0o67z6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register8#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_0pN2satLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register8#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addToRegs" size="95,16" id="{UMLID=_0pN2sKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register8#addToRegs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0pEFs6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register8#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0ooA0KtLEd6EEb_MNCHSPw}" source="//@children.18" target="//@children.14/@sourceConnections.0" targetEnd="//@children.18/@sourceConnections.0/@children.1" sourceEnd="//@children.18/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Xor" location="1958,996" size="83,85" timstampe="2" stereotype="" id="{UMLID=_z1D15KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Xor}" runTimeClassModel="Xor(I),calc()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Xor" size="57,16" id="{UMLID=_0eo-YKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Xor#Xor(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0eo-Y6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Xor#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0efNYatLEd6EEb_MNCHSPw}" source="//@children.19" target="//@children.27/@sourceConnections.0" targetEnd="//@children.19/@sourceConnections.0/@children.1" sourceEnd="//@children.19/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Decoder256" location="2056,370" size="122,85" timstampe="2" stereotype="" id="{UMLID=_z0w6-qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder256}" runTimeClassModel="calc(),Decoder256()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="99,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Decoder256" size="99,16" id="{UMLID=_0FdCUqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder256#Decoder256()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0FdCUatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder256#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0FdCUKtLEd6EEb_MNCHSPw}" source="//@children.20" target="//@children.27/@sourceConnections.0" targetEnd="//@children.20/@sourceConnections.0/@children.1" sourceEnd="//@children.20/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Counter" location="834,586" size="118,175" timstampe="2" stereotype="" id="{UMLID=_0nIMA6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter}" runTimeClassModel="getValue(),calc(),Counter(),b,setOutputs(),addToRegs(),initialize(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="35,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="b" size="35,16" id="{UMLID=_0rwNUatLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,108">
+      <children xsi:type="editmodel:MethodEditModel" name="Counter" size="78,16" id="{UMLID=_0r5XR6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter#Counter()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0rwNVqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_0rwNVatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_0r5XQatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0r5XRKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter#getValue()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addToRegs" size="95,16" id="{UMLID=_0r5XQKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter#addToRegs()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0rwNUKtLEd6EEb_MNCHSPw}" source="//@children.21" target="//@children.14/@sourceConnections.0" targetEnd="//@children.21/@sourceConnections.0/@children.1" sourceEnd="//@children.21/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="115,86"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BusIn8" location="1923,370" size="105,139" timstampe="2" stereotype="" id="{UMLID=_z0w6-KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn8}" runTimeClassModel="getName(),calc(),BusIn8(Ljava.lang.String;),setName(Ljava.lang.String;),name">
+    <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="name" size="55,16" id="{UMLID=_0D0DkKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="82,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="82,16" id="{UMLID=_0D0DlatLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn8#getName()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" size="82,16" id="{UMLID=_0D0DkqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn8#setName(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="BusIn8" size="73,16" id="{UMLID=_0D0DmatLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn8#BusIn8(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0D0DmKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn8#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0Dq5oatLEd6EEb_MNCHSPw}" source="//@children.22" target="//@children.27/@sourceConnections.0" targetEnd="//@children.22/@sourceConnections.0/@children.1" sourceEnd="//@children.22/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="118,68"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MuxBus16" location="1629,1134" size="114,157" timstampe="2" stereotype="" id="{UMLID=_z1D16KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/MuxBus16}" runTimeClassModel="getName(),calc(),setName(Ljava.lang.String;),MuxBus16(Ljava.lang.String;),name,signal">
+    <children xsi:type="editmodel:CompartmentEditModel" size="57,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="signal" size="57,16" id="{UMLID=_0hBkAqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" size="55,16" id="{UMLID=_0hBkAKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="91,72">
+      <children xsi:type="editmodel:MethodEditModel" name="MuxBus16" size="91,16" id="{UMLID=_0hBkCqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/MuxBus16#MuxBus16(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0hBkDatLEd6EEb_MNCHSPw,JavaID=simulator.elements/MuxBus16#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" size="82,16" id="{UMLID=_0hBkBKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/MuxBus16#setName(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="82,16" id="{UMLID=_0hBkB6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/MuxBus16#getName()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0g3zAKtLEd6EEb_MNCHSPw}" source="//@children.23" target="//@children.27/@sourceConnections.0" targetEnd="//@children.23/@sourceConnections.0/@children.1" sourceEnd="//@children.23/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,68"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TBuffer" location="877,370" size="100,103" timstampe="2" stereotype="" id="{UMLID=_z0nxAqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/TBuffer}" runTimeClassModel="TBuffer(I),calc(),numIn">
+    <children xsi:type="editmodel:CompartmentEditModel" size="57,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="numIn" size="57,16" id="{UMLID=_z22loatLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="77,36">
+      <children xsi:type="editmodel:MethodEditModel" name="TBuffer" size="77,16" id="{UMLID=_z22lo6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/TBuffer#TBuffer(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_z3AWoatLEd6EEb_MNCHSPw,JavaID=simulator.elements/TBuffer#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_z22loKtLEd6EEb_MNCHSPw}" source="//@children.24" target="//@children.27/@sourceConnections.0" targetEnd="//@children.24/@sourceConnections.0/@children.1" sourceEnd="//@children.24/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BusIn16" location="1819,546" size="105,139" timstampe="2" stereotype="" id="{UMLID=_z0w6_qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn16}" runTimeClassModel="getName(),calc(),setName(Ljava.lang.String;),name,BusIn16(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="name" size="55,16" id="{UMLID=_0IIi4KtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="82,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="82,16" id="{UMLID=_0IIi5atLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn16#getName()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" size="82,16" id="{UMLID=_0IIi6atLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn16#setName(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="BusIn16" size="79,16" id="{UMLID=_0IIi4qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn16#BusIn16(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0IIi6KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn16#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0H_Y8atLEd6EEb_MNCHSPw}" source="//@children.25" target="//@children.27/@sourceConnections.0" targetEnd="//@children.25/@sourceConnections.0/@children.1" sourceEnd="//@children.25/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SRff" location="976,586" size="116,157" timstampe="3" stereotype="" id="{UMLID=_0nIMBatLEd6EEb_MNCHSPw,JavaID=simulator.elements/SRff}" runTimeClassModel="getValue(),calc(),SRff(),b,setOutputs(),initialize(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="35,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="b" size="35,16" id="{UMLID=_0t1Q8atLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,90">
+      <children xsi:type="editmodel:MethodEditModel" name="SRff" size="62,16" id="{UMLID=_0t_B86tLEd6EEb_MNCHSPw,JavaID=simulator.elements/SRff#SRff()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0t_B9atLEd6EEb_MNCHSPw,JavaID=simulator.elements/SRff#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_0t_B9KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SRff#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_0t_B9qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SRff#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0t_B8KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/SRff#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0t1Q8KtLEd6EEb_MNCHSPw}" source="//@children.26" target="//@children.14/@sourceConnections.0" targetEnd="//@children.26/@sourceConnections.0/@children.1" sourceEnd="//@children.26/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,209"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Bus8" location="743,370" size="106,103" timstampe="2" stereotype="" id="{UMLID=_z0nxAKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus8}" runTimeClassModel="getValue(),calc(),Bus8(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Bus8" size="65,16" id="{UMLID=_z1Nm46tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus8#Bus8(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_z1Nm6atLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus8#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_z1Nm5qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Bus8#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.24/@sourceConnections.0 //@children.38/@sourceConnections.0 //@children.37/@sourceConnections.0 //@children.8/@sourceConnections.0 //@children.16/@sourceConnections.0 //@children.29/@sourceConnections.0 //@children.7/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.22/@sourceConnections.0 //@children.20/@sourceConnections.0 //@children.3/@sourceConnections.0 //@children.25/@sourceConnections.0 //@children.10/@sourceConnections.0 //@children.40/@sourceConnections.0 //@children.41/@sourceConnections.0 //@children.43/@sourceConnections.0 //@children.17/@sourceConnections.0 //@children.30/@sourceConnections.0 //@children.36/@sourceConnections.0 //@children.6/@sourceConnections.0 //@children.31/@sourceConnections.0 //@children.44/@sourceConnections.0 //@children.34/@sourceConnections.0 //@children.45/@sourceConnections.0 //@children.32/@sourceConnections.0 //@children.11/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.19/@sourceConnections.0 //@children.15/@sourceConnections.0 //@children.23/@sourceConnections.0 //@children.35/@sourceConnections.0 //@children.33/@sourceConnections.0 //@children.12/@sourceConnections.0" autoLocated="true" id="{UMLID=_z1Nm4qtLEd6EEb_MNCHSPw}" source="//@children.27" target="//@children.42" targetEnd="//@children.27/@sourceConnections.0/@children.1" sourceEnd="//@children.27/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,138" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Counter2" location="1120,586" size="116,157" timstampe="2" stereotype="" id="{UMLID=_0nIMB6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter2}" runTimeClassModel="getValue(),calc(),b,Counter2(),setOutputs(),initialize(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="35,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="b" size="35,16" id="{UMLID=_0vVFwKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,90">
+      <children xsi:type="editmodel:MethodEditModel" name="Counter2" size="84,16" id="{UMLID=_0vVFzKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter2#Counter2()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0vVFxatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter2#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_0vVFxKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter2#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_0vVFyatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter2#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0vVFxqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Counter2#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0vLUwKtLEd6EEb_MNCHSPw}" source="//@children.28" target="//@children.14/@sourceConnections.0" targetEnd="//@children.28/@sourceConnections.0/@children.1" sourceEnd="//@children.28/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="115,199"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Comparator" location="1514,370" size="119,85" timstampe="2" stereotype="" id="{UMLID=_z0w68qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Comparator}" runTimeClassModel="calc(),Comparator(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="96,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Comparator" size="96,16" id="{UMLID=_z_8QMqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Comparator#Comparator(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_z_8QMatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Comparator#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_z_8QMKtLEd6EEb_MNCHSPw}" source="//@children.29" target="//@children.27/@sourceConnections.0" targetEnd="//@children.29/@sourceConnections.0/@children.1" sourceEnd="//@children.29/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Coder4" location="1958,738" size="98,85" timstampe="2" stereotype="" id="{UMLID=_z06r9qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Coder4}" runTimeClassModel="calc(),Coder4()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="75,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Coder4" size="75,16" id="{UMLID=_0SHlUqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Coder4#Coder4()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0SHlUatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Coder4#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0SHlUKtLEd6EEb_MNCHSPw}" source="//@children.30" target="//@children.27/@sourceConnections.0" targetEnd="//@children.30/@sourceConnections.0/@children.1" sourceEnd="//@children.30/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Nor" location="1710,876" size="83,85" timstampe="2" stereotype="" id="{UMLID=_z06r_KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Nor}" runTimeClassModel="calc(),Nor(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Nor" size="57,16" id="{UMLID=_0WS6sqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Nor#Nor(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0WS6satLEd6EEb_MNCHSPw,JavaID=simulator.elements/Nor#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0WS6sKtLEd6EEb_MNCHSPw}" source="//@children.31" target="//@children.27/@sourceConnections.0" targetEnd="//@children.31/@sourceConnections.0/@children.1" sourceEnd="//@children.31/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Mux4b" location="1590,996" size="95,85" timstampe="2" stereotype="" id="{UMLID=_z06sBKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux4b}" runTimeClassModel="Mux4b(),calc()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="72,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Mux4b" location="4008,841" size="72,16" id="{UMLID=_0a6U8atLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux4b#Mux4b()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0a6U8qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux4b#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0a6U8KtLEd6EEb_MNCHSPw}" source="//@children.32" target="//@children.27/@sourceConnections.0" targetEnd="//@children.32/@sourceConnections.0/@children.1" sourceEnd="//@children.32/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="46,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Status" location="1882,1134" size="130,139" timstampe="2" stereotype="" id="{UMLID=_z1D17KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Status}" runTimeClassModel="calc(),status,Status(),getIntStatus(),getBoolStatus()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="59,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="status" size="59,16" id="{UMLID=_0kJwgatLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,72">
+      <children xsi:type="editmodel:MethodEditModel" name="Status" size="71,16" id="{UMLID=_0kS6cqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Status#Status()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBoolStatus" size="107,16" id="{UMLID=_0kS6c6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Status#getBoolStatus()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIntStatus" size="97,16" id="{UMLID=_0kS6dqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Status#getIntStatus()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0kS6catLEd6EEb_MNCHSPw,JavaID=simulator.elements/Status#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0kJwgKtLEd6EEb_MNCHSPw}" source="//@children.33" target="//@children.27/@sourceConnections.0" targetEnd="//@children.33/@sourceConnections.0/@children.1" sourceEnd="//@children.33/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="118,10"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Decoder4" location="1932,876" size="110,85" timstampe="2" stereotype="" id="{UMLID=_z06sAKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder4}" runTimeClassModel="calc(),Decoder4()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="87,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Decoder4" size="87,16" id="{UMLID=_0YhvUqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder4#Decoder4()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0YrgUKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Decoder4#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0YhvUatLEd6EEb_MNCHSPw}" source="//@children.34" target="//@children.27/@sourceConnections.0" targetEnd="//@children.34/@sourceConnections.0/@children.1" sourceEnd="//@children.34/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="55,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="42,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="And" location="1771,1134" size="83,85" timstampe="2" stereotype="" id="{UMLID=_z1D16qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/And}" runTimeClassModel="calc(),And(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,36">
+      <children xsi:type="editmodel:MethodEditModel" name="And" size="60,16" id="{UMLID=_0i9dsqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/And#And(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0i9dsatLEd6EEb_MNCHSPw,JavaID=simulator.elements/And#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0i9dsKtLEd6EEb_MNCHSPw}" source="//@children.35" target="//@children.27/@sourceConnections.0" targetEnd="//@children.35/@sourceConnections.0/@children.1" sourceEnd="//@children.35/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Const" location="2101,738" size="91,103" timstampe="2" stereotype="" id="{UMLID=_z06r-KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Const}" runTimeClassModel="calc(),Const(I),value">
+    <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="value" size="55,16" id="{UMLID=_0TdpIKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="68,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Const" size="68,16" id="{UMLID=_0TdpIqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Const#Const(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0TdpJatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Const#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0TT4IKtLEd6EEb_MNCHSPw}" source="//@children.36" target="//@children.27/@sourceConnections.0" targetEnd="//@children.36/@sourceConnections.0/@children.1" sourceEnd="//@children.36/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="44,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Not" location="1122,370" size="83,85" timstampe="2" stereotype="" id="{UMLID=_z0nxBqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Not}" runTimeClassModel="Not(),calc()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Not" size="56,16" id="{UMLID=_z5PLQatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Not#Not()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_z5PLQqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Not#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_z5PLQKtLEd6EEb_MNCHSPw}" source="//@children.37" target="//@children.27/@sourceConnections.0" targetEnd="//@children.37/@sourceConnections.0/@children.1" sourceEnd="//@children.37/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Mux4" location="1005,370" size="89,85" timstampe="2" stereotype="" id="{UMLID=_z0nxBKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux4}" runTimeClassModel="calc(),Mux4()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="66,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Mux4" size="66,16" id="{UMLID=_z4C4cqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux4#Mux4()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_z4C4catLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux4#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_z4C4cKtLEd6EEb_MNCHSPw}" source="//@children.38" target="//@children.27/@sourceConnections.0" targetEnd="//@children.38/@sourceConnections.0/@children.1" sourceEnd="//@children.38/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="43,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Memory" location="599,370" size="116,193" timstampe="3" stereotype="" id="{UMLID=_0nIMC6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory}" runTimeClassModel="getValue(),calc(),Memory(),setOutputs(),data,initialize(I),write(II),read(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="50,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="data" size="50,16" id="{UMLID=_00134atLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="93,126">
+      <children xsi:type="editmodel:MethodEditModel" name="Memory" size="78,16" id="{UMLID=_00_B1atLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory#Memory()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_00_B3KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_00_B1qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_00_B3atLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_00_B0qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory#getValue()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="write" size="65,16" id="{UMLID=_00_B4KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory#write(II)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="read" size="62,16" id="{UMLID=_00_B16tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Memory#read(I)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_00134KtLEd6EEb_MNCHSPw}" source="//@children.39" target="//@children.14/@sourceConnections.0" targetEnd="//@children.39/@sourceConnections.0/@children.1" sourceEnd="//@children.39/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="115,95"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BusIn" location="2101,546" size="105,139" timstampe="2" stereotype="" id="{UMLID=_z0w7AqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn}" runTimeClassModel="getName(),calc(),setName(Ljava.lang.String;),name,BusIn(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="name" size="55,16" id="{UMLID=_0L3MUKtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="82,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="82,16" id="{UMLID=_0MA9U6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn#getName()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" size="82,16" id="{UMLID=_0MA9VqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn#setName(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="BusIn" size="67,16" id="{UMLID=_0MA9UKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn#BusIn(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0L3MUqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/BusIn#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0LtbUKtLEd6EEb_MNCHSPw}" source="//@children.40" target="//@children.27/@sourceConnections.0" targetEnd="//@children.40/@sourceConnections.0/@children.1" sourceEnd="//@children.40/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="118,68"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Mux2b" location="1590,738" size="95,85" timstampe="2" stereotype="" id="{UMLID=_z06r8KtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux2b}" runTimeClassModel="calc(),Mux2b()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="72,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Mux2b" size="72,16" id="{UMLID=_0OPx8atLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux2b#Mux2b()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" location="2626,928" size="60,16" id="{UMLID=_0OPx8qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Mux2b#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0OPx8KtLEd6EEb_MNCHSPw}" source="//@children.41" target="//@children.27/@sourceConnections.0" targetEnd="//@children.41/@sourceConnections.0/@children.1" sourceEnd="//@children.41/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="46,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.27/@sourceConnections.0" name="KombMreza" location="1887,140" size="120,139" timstampe="36" stereotype="" id="{UMLID=_zrhfYqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/KombMreza}" runTimeClassModel="calc(),addInput(Lsimulator.elements.Mreza;I),wakeUp(),KombMreza(II),addInput(ILsimulator.elements.Mreza;I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="97,90">
+      <children xsi:type="editmodel:MethodEditModel" name="KombMreza" size="97,16" id="{UMLID=_zyFaYqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/KombMreza#KombMreza(II)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="wakeUp" size="80,16" id="{UMLID=_zyFaYatLEd6EEb_MNCHSPw,JavaID=simulator.elements/KombMreza#wakeUp()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput" size="81,16" id="{UMLID=_zyPLaatLEd6EEb_MNCHSPw,JavaID=simulator.elements/KombMreza#addInput(Lsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInput" size="81,16" id="{UMLID=_zyPLYqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/KombMreza#addInput(ILsimulator.elements.Mreza;I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_zyPLYatLEd6EEb_MNCHSPw,JavaID=simulator.elements/KombMreza#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_zyFaYKtLEd6EEb_MNCHSPw}" source="//@children.42" target="//@children.13/@sourceConnections.0" targetEnd="//@children.42/@sourceConnections.0/@children.1" sourceEnd="//@children.42/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,309"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Add" location="1713,738" size="83,85" timstampe="2" stereotype="" id="{UMLID=_z06r8qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Add}" runTimeClassModel="calc(),Add()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Add" size="60,16" id="{UMLID=_0PcEwatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Add#Add()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0PcEwqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Add#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0PcEwKtLEd6EEb_MNCHSPw}" source="//@children.43" target="//@children.27/@sourceConnections.0" targetEnd="//@children.43/@sourceConnections.0/@children.1" sourceEnd="//@children.43/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="24,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Or" location="1821,876" size="83,85" timstampe="2" stereotype="" id="{UMLID=_z06r_qtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Or}" runTimeClassModel="calc(),Or(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Or" size="52,16" id="{UMLID=_0XfNgatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Or#Or(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0XfNgKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Or#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0XVcgatLEd6EEb_MNCHSPw}" source="//@children.44" target="//@children.27/@sourceConnections.0" targetEnd="//@children.44/@sourceConnections.0/@children.1" sourceEnd="//@children.44/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Nand" location="2070,876" size="88,85" timstampe="2" stereotype="" id="{UMLID=_z06sAqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Nand}" runTimeClassModel="calc(),Nand(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="65,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Nand" size="65,16" id="{UMLID=_0ZuCIqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Nand#Nand(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0ZuCIatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Nand#calc()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0ZuCIKtLEd6EEb_MNCHSPw}" source="//@children.45" target="//@children.27/@sourceConnections.0" targetEnd="//@children.45/@sourceConnections.0/@children.1" sourceEnd="//@children.45/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="44,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,137"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Register16" location="453,370" size="118,589" timstampe="2" stereotype="" id="{UMLID=_0nIMCatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register16}" runTimeClassModel="DEC,CLR,SWAP,initialize(I),IN11,IN10,LDL,IN13,IN12,LDH,addToRegs(),IN15,Register16(Ljava.lang.String;),IN14,INC,b,setOutputs(),IN9,IN5,IN6,IN7,IN8,IN2,getValue(),IN1,IN4,calc(),IN3,IN0,LD">
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,432">
+      <children xsi:type="editmodel:AttributeEditModel" name="b" size="35,16" id="{UMLID=_0xQ_dqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN0" size="44,16" id="{UMLID=_0xj6Z6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN1" size="44,16" id="{UMLID=_0xaJaqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN2" size="44,16" id="{UMLID=_0xaJZKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN3" size="44,16" id="{UMLID=_0xj6Y6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN4" size="44,16" id="{UMLID=_0xaJcKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN5" size="44,16" id="{UMLID=_0xQ_fqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN6" size="44,16" id="{UMLID=_0xQ_gKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN7" size="44,16" id="{UMLID=_0xaJYKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN8" size="44,16" id="{UMLID=_0xaJYqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN9" size="44,16" id="{UMLID=_0xQ_fKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN10" size="50,16" id="{UMLID=_0xaJbKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN11" size="50,16" id="{UMLID=_0xaJZqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN12" size="50,16" id="{UMLID=_0xj6YatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN13" size="50,16" id="{UMLID=_0xaJbqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN14" size="50,16" id="{UMLID=_0xj6batLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="IN15" size="50,16" id="{UMLID=_0xj6aatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="LD" size="42,16" id="{UMLID=_0xj6a6tLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="LDL" size="48,16" id="{UMLID=_0xaJaKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="LDH" size="49,16" id="{UMLID=_0xj6ZatLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="CLR" size="49,16" id="{UMLID=_0xQ_dKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="INC" size="45,16" id="{UMLID=_0xQ_cqtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="DEC" size="49,16" id="{UMLID=_0xQ_cKtLEd6EEb_MNCHSPw}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="SWAP" size="60,16" id="{UMLID=_0xQ_eqtLEd6EEb_MNCHSPw}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,108">
+      <children xsi:type="editmodel:MethodEditModel" name="Register16" size="92,16" id="{UMLID=_0xtrY6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register16#Register16(Ljava.lang.String;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calc" size="60,16" id="{UMLID=_0x21VKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register16#calc()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOutputs" size="93,16" id="{UMLID=_0x21UKtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register16#setOutputs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" size="77,16" id="{UMLID=_0x21UatLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register16#initialize(I)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addToRegs" size="95,16" id="{UMLID=_0xtrYqtLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register16#addToRegs()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getValue" size="83,16" id="{UMLID=_0xj6b6tLEd6EEb_MNCHSPw,JavaID=simulator.elements/Register16#getValue()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="{UMLID=_0w-EgKtLEd6EEb_MNCHSPw}" source="//@children.46" target="//@children.14/@sourceConnections.0" targetEnd="//@children.46/@sourceConnections.0/@children.1" sourceEnd="//@children.46/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1974,1078" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>
