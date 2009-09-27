@@ -1,5 +1,6 @@
 package simulator.panels;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import simulator.Initializator;
@@ -13,6 +14,55 @@ public class PanelRegSel extends ImagePanel {
 
     public void paint(Graphics g) {
         g.drawImage(image, 0, 0, null);
+        //1
+        g.setColor(Color.RED);
+        g.drawLine(699, 181, 699, 209);
+        
+        //AXsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 236, 910, 236);
+        
+        //BXsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 289, 910, 289);
+        
+        //CXsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 344, 910, 344);
+        
+        //DXsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 396, 910, 396);
+      
+        //SPsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 449, 910, 449);
+     
+        //BPsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 502, 910, 502);
+     
+        //SIsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 555, 910, 555);
+     
+        //DIsel
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(832, 608, 910, 608);
+      
+        //regsel2
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(301, 542, 301, 583);
+        
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.alu, 8));
         g.drawLine(459, 319, 368, 319);
