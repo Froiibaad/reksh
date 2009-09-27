@@ -73,8 +73,6 @@ public class MainFrame extends JFrame {
     JPanel memPanel = new JPanel();
     JPanel regPanel = new JPanel();
     JPanel jPanel9 = new JPanel();
-    JPanel aluPCPanel = new PanelAluPC(init);
-    JPanel IRPanel = new PanelAluIR(init);
     JPanel aluPanel = new PanelAlu(init);
     JPanel cpuPanel = new PanelCPU(init);
     JPanel oper1Panel = new PanelOper1(init);
@@ -84,20 +82,10 @@ public class MainFrame extends JFrame {
     JPanel regselPanel = new PanelRegSel(init);
     JPanel kombPanel = new PanelKomb(init);
     JPanel signePane = new PanelSignE(init);
-    
-    JPanel aluSigPanel = new PanelAluSig(init);
-    JPanel cuPanel = new PanelCU(init);
     JPanel arbPanel = new PanelARB(init);
-    JPanel perPanel = new PanelPer(init);
-    JPanel pswPanel = new PanelPSW(init);
-    JPanel synchPanel = new PanelSynch(init);
-    JPanel synchPanel1 = new PanelSynch1(init);
-    JPanel synchPanel2 = new PanelSynch2(init);
-    JPanel synchPanel3 = new PanelSynch3(init);
-    JPanel synchPanel4 = new PanelSynch4(init);
-    JPanel intPanel1 = new PanelPrekid1(init);
-    JPanel intPanel2 = new PanelPrekid2(init);
-    JPanel intPanel3 = new PanelPrekid3(init);
+    JPanel upravPanel = new PanelUprav(init);
+
+    
     JPanel memModPanel = new JPanel();
     BorderLayout borderLayout4 = new BorderLayout();
     JScrollPane memPane = new JScrollPane(null);
@@ -125,6 +113,7 @@ public class MainFrame extends JFrame {
         try {
             setDefaultCloseOperation(EXIT_ON_CLOSE);
             jbInit();
+            
         } catch (Exception exception) {
             exception.printStackTrace();
         }
@@ -288,6 +277,8 @@ public class MainFrame extends JFrame {
         jTabbedPane2.addTab("Sign Extension", signePane);
         jTabbedPane2.addTab("ALU", aluPanel);
         jTabbedPane2.addTab("Kombination PSW", kombPanel);
+        jTabbedPane2.addTab("Control Unit", upravPanel);
+        
         /*jTabbedPane2.addTab("ALU signali", aluSigPanel);
         jTabbedPane2.addTab("ALU IR", IRPanel);
         jTabbedPane2.addTab("ALU PC", aluPCPanel);
