@@ -105,23 +105,23 @@ import java.util.LinkedList;
 					
 					case RTI:
 						fin.add(o);
-						this.kod += "20 ";
+						this.kod += "01 ";
 						break;
 					case INTE:
 						fin.add(o);
-						this.kod += "10 ";
+						this.kod += "02 ";
 						break;
 					case INTD:
 						fin.add(o);
-						this.kod += "30 ";
+						this.kod += "03 ";
 						break;
 					case TRPE:
 						fin.add(o);
-						this.kod += "08 ";
+						this.kod += "04 ";
 						break;
 					case TRPD:
 						fin.add(o);
-						this.kod += "28 ";
+						this.kod += "05 ";
 						break;
 					}
 					break;
@@ -142,7 +142,7 @@ import java.util.LinkedList;
 						this.kod += "40 ";
 						break;
 					case JSR:
-						this.kod += "50 ";
+						this.kod += "41 ";
 						break;
 					}
 					o.setOp1NacinAdresiranja(NacinAdresiranja.IMMED);
@@ -163,7 +163,7 @@ import java.util.LinkedList;
 						this.kod += "60 ";
 						break;
 					case INT:
-						this.kod += "70 ";
+						this.kod += "61 ";
 						break;
 					}
 					o.setVrednostPomeraja(i);
@@ -596,6 +596,7 @@ import java.util.LinkedList;
 			Asembler temp = new Asembler("asm.asm");
 			temp.PrviProlaz();
 			temp.DrugiProlaz();
+			System.out.print(temp.getKod());
 		}
 
 		/**
