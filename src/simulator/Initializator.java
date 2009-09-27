@@ -275,7 +275,7 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  Upravljacka
 ////////////////////////////////////////////////////////////////////////////////
-    public uMemory uMem = new uMemory (8, 80);
+    public uMemory uMem = new uMemory (8, 81);
     public Register8 cnt = new Register8 ("CNT");
     public Mux4 upravljackaMux = new Mux4 ();
     public uMemory kmstore = new uMemory (3, 8);
@@ -285,6 +285,18 @@ public class Initializator {
     public Or upravljackaOr2 = new Or (2);
     public Or upravljackaOr3 = new Or (4);
     public And upravljackaAnd = new And	(2);
+    
+    //logika za branch
+    public And brAnd1 = new And (2);
+    public And brAnd2 = new And (2);
+    public And brAnd3 = new And (2);
+    public And brAnd4 = new And (2);
+    public And brAnd5 = new And (2);
+    public And brAnd6 = new And (2);
+    public And brAnd7 = new And (2);
+    public And brAnd8 = new And (2);
+    public Or brOr = new Or (12);
+    
     
 ////////////////////////////////////////////////////////////////////////////////
 //  Memory
@@ -309,7 +321,7 @@ public class Initializator {
     public BusIn16 M1M3 = new BusIn16("M1M3");
     public BusIn16 M3M1 = new BusIn16("M3M1");
     public BusIn16 M2M1 = new BusIn16("M2M1");
-    
+
 ////////////////////////////////////////////////////////////////////////////////
 //  Konstruktor
 ////////////////////////////////////////////////////////////////////////////////
@@ -699,12 +711,29 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  Upravljacka
 ////////////////////////////////////////////////////////////////////////////////
-        uMem.addInput8(cnt, 0);
+        //branch 
+        brAnd1.addInput(uMem, Signali.brilop.ordinal());
+        //brAnd1.addInput(nula, Signali.)
+        
+        //uMem.addInput8(cnt, 0);
         cnt.addInput8(upravljackaMux, 0);
-        //upravljackaMux.addInput8(uMem, 73);
+        upravljackaMux.addInput8(uMem, 73);
         upravljackaMux.addInput8(kmaddr, 0);
         upravljackaMux.addInput8(kmstore, 0);
         upravljackaMux.addInput8(kmop, 0);
+        upravljackaOr3.addInput(uMem, Signali.brcaseadr.ordinal());
+        upravljackaOr3.addInput(uMem, Signali.brcaseop.ordinal());
+        upravljackaOr3.addInput(uMem, Signali.brcasestore.ordinal());
+        //upravljackaOr3.addInput(uMem, Signali.br.ordinal());
+        
+        upravljackaOr1.addInput(uMem, Signali.brcaseop.ordinal());
+        upravljackaOr1.addInput(uMem, Signali.brcaseadr.ordinal());
+        upravljackaOr2.addInput(uMem, Signali.brcaseop.ordinal());
+        upravljackaOr2.addInput(uMem, Signali.brcasestore.ordinal());
+        upravljackaMux.addInput(upravljackaOr1, 0);
+        upravljackaMux.addInput(upravljackaOr2, 0);
+        
+        
 
 
 ////////////////////////////////////////////////////////////////////////////////
