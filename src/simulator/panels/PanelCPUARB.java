@@ -1,14 +1,13 @@
 package simulator.panels;
 
-import java.awt.Color;
-import java.awt.Graphics;
-
+import java.awt.*;
 import simulator.Initializator;
 
-public class PanelARB extends ImagePanel {
-	private static final String imageName = "Arbitrator.png";
 
-    public PanelARB(Initializator init) {
+public class PanelCPUARB extends ImagePanel {
+    private static final String imageName = "CPUArb.png";
+
+    public PanelCPUARB(Initializator init) {
         super(init, imageName);
     }
 
@@ -19,7 +18,7 @@ public class PanelARB extends ImagePanel {
         g.drawLine(283, 123, 283, 327);
         g.setColor(findColor(init.REQ, 0));
         g.drawLine(51, 180, 395, 180);
-        g.setColor(findColor(init.BCLK, 0));
+      	g.setColor(findColor(init.BCLK, 0));
         g.drawLine(348, 41, 348, 508);
         g.drawLine(348, 508, 394, 508);
         g.drawLine(394, 508, 349, 508);
