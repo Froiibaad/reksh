@@ -1,6 +1,7 @@
 package simulator.panels;
 
 import java.awt.*;
+
 import simulator.Initializator;
 
 
@@ -13,6 +14,76 @@ public class PanelCPUARB extends ImagePanel {
 
     public void paint(Graphics g) {
         g.drawImage(image, 0, 0, null);
+        
+        //BUSYBUS
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(49, 224, 1021, 224);
+        g.drawLine(49, 225, 1021, 225);
+        g.drawLine(325, 275, 325, 226);
+        g.drawLine(326, 275, 326, 226);
+        g.drawLine(789, 226, 789, 404);
+        g.drawLine(790, 226, 790, 404);
+        g.drawLine(789, 403, 828, 403);
+        g.drawLine(789, 404, 828, 404);  
+        
+        //BGRQ
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(65, 362, 104, 362);
+        g.drawLine(65, 363, 104, 363);
+   
+        //run
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(65, 476, 104, 476);
+        g.drawLine(65, 477, 104, 477);
+        
+        //Q
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(229, 362, 326, 362);
+        g.drawLine(229, 363, 326, 363);
+        g.drawLine(325, 305, 325, 363);
+        g.drawLine(326, 305, 326, 363);
+        
+        //CPUBUSBUSYout
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(337, 294, 352, 294);
+        g.drawLine(338, 295, 352, 295);
+        
+        
+        //read
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(463, 415, 482, 415);
+        g.drawLine(463, 416, 483, 416);
+        
+        //write
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(463, 439, 483, 439);
+        g.drawLine(463, 440, 482, 440);
+        
+        //read+write
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(529, 427, 597, 427);
+        g.drawLine(529, 428, 597, 428);
+        
+        //DQ
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(721, 427, 838, 427);
+        g.drawLine(721, 428, 838, 428);
+ 
+        //DQ
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(903, 415, 978, 415);
+        g.drawLine(903, 416, 978, 416);
+        
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.busyAdapter, 0));
         g.drawLine(283, 123, 283, 327);
