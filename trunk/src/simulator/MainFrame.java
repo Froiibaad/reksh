@@ -76,6 +76,15 @@ public class MainFrame extends JFrame {
     JPanel aluPCPanel = new PanelAluPC(init);
     JPanel IRPanel = new PanelAluIR(init);
     JPanel aluPanel = new PanelAlu(init);
+    JPanel cpuPanel = new PanelCPU(init);
+    JPanel oper1Panel = new PanelOper1(init);
+    JPanel oper2Panel = new PanelOper2(init);
+    JPanel cpuarbPanel = new PanelCPUARB(init);
+    JPanel regfilePanel = new PanelRegFile(init);
+    JPanel regselPanel = new PanelRegSel(init);
+    JPanel kombPanel = new PanelKomb(init);
+    JPanel signePane = new PanelSignE(init);
+    
     JPanel aluSigPanel = new PanelAluSig(init);
     JPanel cuPanel = new PanelCU(init);
     JPanel arbPanel = new PanelARB(init);
@@ -130,7 +139,7 @@ public class MainFrame extends JFrame {
         contentPane = (JPanel) getContentPane();
         contentPane.setLayout(borderLayout1);
         this.setResizable(false);
-        setSize(new Dimension(1024, 738));
+        setSize(new Dimension(1235, 870));
         setTitle("Simulator AOR2");
         jMenuFile.setToolTipText("");
         jMenuFile.setText("File");
@@ -196,7 +205,7 @@ public class MainFrame extends JFrame {
         regPanel.setLayout(borderLayout5);
         jScrollPane2.getViewport();
         prikazPanel.setLayout(borderLayout6);
-        jTabbedPane2.setTabPlacement(JTabbedPane.BOTTOM);
+        jTabbedPane2.setTabPlacement(JTabbedPane.TOP);
         clockButton.setBorder(null);
         clockButton.setOpaque(false);
         clockButton.setPreferredSize(new Dimension(100, 100));
@@ -269,8 +278,17 @@ public class MainFrame extends JFrame {
         asmScrollPane.setViewportView(asmText);
 
         //Dodavanje panela
+        jTabbedPane2.addTab("System Overview", cpuPanel);
+        jTabbedPane2.addTab("Arbitrator", arbPanel);
+        jTabbedPane2.addTab("CPU Arbitrator", cpuarbPanel);
+        jTabbedPane2.addTab("Operational Unit 1", oper1Panel);
+        jTabbedPane2.addTab("Operational Unit 2", oper2Panel);
+        jTabbedPane2.addTab("Registry File", regfilePanel);
+        jTabbedPane2.addTab("Registry Select", regselPanel);
+        jTabbedPane2.addTab("Sign Extension", signePane);
         jTabbedPane2.addTab("ALU", aluPanel);
-        jTabbedPane2.addTab("ALU signali", aluSigPanel);
+        jTabbedPane2.addTab("Kombination PSW", kombPanel);
+        /*jTabbedPane2.addTab("ALU signali", aluSigPanel);
         jTabbedPane2.addTab("ALU IR", IRPanel);
         jTabbedPane2.addTab("ALU PC", aluPCPanel);
         jTabbedPane2.addTab("CU", cuPanel);
@@ -284,7 +302,7 @@ public class MainFrame extends JFrame {
         jTabbedPane2.addTab("Mem Slave", synchPanel4);
         jTabbedPane2.addTab("Interrupt1", intPanel1);
         jTabbedPane2.addTab("Interrupt2", intPanel2);
-        jTabbedPane2.addTab("Interrupt3", intPanel3);
+        jTabbedPane2.addTab("Interrupt3", intPanel3);*/
         //Clock++ Ins++ i Prog++ dugme je inicijalno onemoguceno. Omogucava tek po
         //ucitavanju fajla sa asemblerskim kodom
         clockButton.setEnabled(false);
@@ -294,7 +312,7 @@ public class MainFrame extends JFrame {
         clock = 0;
         //Inicijalno popunjavanje memorijske i registarske tabele
         fillRegTable();
-        drawMemTable();
+ //       drawMemTable();
         //Ucitavanje mikrokoda
         int nUCode = 0;
         BufferedReader inputUCode = null;
@@ -356,8 +374,8 @@ public class MainFrame extends JFrame {
         }
     }
 
-    public void drawMemTable() {
-        accessedAddresses = init.mw.getAccessedAddresses();        
+/*    public void drawMemTable() {
+//        accessedAddresses = init.mw.getAccessedAddresses();        
         Integer addr;
         if (accessedAddresses != null) {
 //            int n = accessedAddresses.size();
@@ -372,7 +390,7 @@ public class MainFrame extends JFrame {
                         mw.read(addr)).toUpperCase(), i, 1);
             }
         }
-    }
+    }*/
 
     public void drawStatus() {
         pcLabel.setText("PC = " + Integer.toHexString(init.PC.getValue()) + 'h');
@@ -380,7 +398,7 @@ public class MainFrame extends JFrame {
         clkLabel.setText("clk = " + clock);
         clkStatusLabel.setText("clk = " + clock);
         jLabel5.setText(ucode[init.cnt.getValue()]); //show micro code
-        drawMemTable();
+ //       drawMemTable();
         fillRegTable();
         jTabbedPane2.repaint();
     }
@@ -390,8 +408,8 @@ public class MainFrame extends JFrame {
     //Get button
     public void jButton4_actionPerformed(ActionEvent actionEvent) {
         int address = (Integer) jSpinner2.getValue();        
-        Integer dat = init.mw.read(address);
-        jTextField1.setText(Integer.toHexString(dat) + "h");
+//        Integer dat = init.mw.read(address);
+//        jTextField1.setText(Integer.toHexString(dat) + "h");
     }
 
     //Load button
@@ -438,11 +456,11 @@ public class MainFrame extends JFrame {
             String mcFile = Assembler.assemble("current.asm");
             if(compiled) {
                 init.cnt.initialize(0);
-                init.mw.clearAccessedAddresses();
+//                init.mw.clearAccessedAddresses();
                 clock = 0;
             }
             if (mcFile != null) {
-                init.initialize(mcFile);
+ //               init.initialize(mcFile);
                 Clock.init();
                 compiled = true;                
                 drawStatus();

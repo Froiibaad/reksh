@@ -116,6 +116,10 @@ public class Initializator {
     public And andOutDI = new And(2);
     public Register16 DI = new Register16("DI");
     public BusIn16 DIout = new BusIn16("DIout");
+    
+    //Regfile regsel
+    public Mux2x3b RegselMux = new Mux2x3b ();
+    public Decoder8 RegselDec = new Decoder8 ();
 
     //Ulazni mux za registarski file
     public MuxBus16 REGBUS = new MuxBus16("REGBUS");
@@ -650,6 +654,29 @@ public class Initializator {
        BPout.addInput(andOutBP, 0);
        DI.addInput(andLdDI, 0);
        DIout.addInput(andOutDI, 0);
+       
+       
+       //Regsel
+       RegselMux.addInput(IR2, 0);
+       RegselMux.addInput(IR2, 1);
+       RegselMux.addInput(IR2, 2);
+       RegselMux.addInput(IR2, 3);
+       RegselMux.addInput(IR2, 4);
+       RegselMux.addInput(IR2, 5);
+       //TODO Signal iz upravljacke
+       RegselDec.addInput(RegselMux, 0);
+       RegselDec.addInput(RegselMux, 1);
+       RegselDec.addInput(RegselMux, 2);
+       RegselDec.addInput(jedan, 0);
+       andLdAX.addInput(RegselDec, 0);
+       andLdBX.addInput(RegselDec, 1);
+       andLdCX.addInput(RegselDec, 2);
+       andLdDX.addInput(RegselDec, 3);
+       andLdSP.addInput(RegselDec, 4);
+       andLdBP.addInput(RegselDec, 5);
+       andLdSI.addInput(RegselDec, 6);
+       andLdDI.addInput(RegselDec, 7);
+       
        
 ////////////////////////////////////////////////////////////////////////////////
 //  ALU

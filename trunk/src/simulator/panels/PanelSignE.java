@@ -1,13 +1,13 @@
 package simulator.panels;
 
-import java.awt.*;
+import java.awt.Graphics;
+
 import simulator.Initializator;
 
+public class PanelSignE extends ImagePanel {
+	private static final String imageName = "SignE.png";
 
-public class PanelAlu extends ImagePanel {
-    private static final String imageName = "alu.png";
-
-    public PanelAlu(Initializator init) {
+    public PanelSignE(Initializator init) {
         super(init, imageName);
     }
 
