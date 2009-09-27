@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -12,7 +14,7 @@ import simulator.assembler.*;
 import simulator.panels.*;
 
 import javax.swing.*;
-import java.awt.FlowLayout;
+
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
@@ -125,7 +127,7 @@ public class MainFrame extends JFrame {
      * @throws java.lang.Exception
      */
     private void jbInit() throws Exception {
-        contentPane = (JPanel) getContentPane();
+    	contentPane = (JPanel) getContentPane();
         contentPane.setLayout(borderLayout1);
         this.setResizable(false);
         setSize(new Dimension(1235, 870));

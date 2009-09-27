@@ -1,15 +1,20 @@
 package simulator.panels;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
 import simulator.Initializator;
 import sun.java2d.loops.DrawLine;
 
 
 public class PanelAlu extends ImagePanel {
     private static final String imageName = "alu.png";
-
     public PanelAlu(Initializator init) {
         super(init, imageName);
+        this.setLayout(new GridBagLayout());
     }
 
     public void paint(Graphics g) {
