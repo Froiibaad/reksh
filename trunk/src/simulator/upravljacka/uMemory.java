@@ -3,12 +3,12 @@ package simulator.upravljacka;
 import java.io.*;
 import simulator.elements.KombMreza;
 
-public class Memorija extends KombMreza {
+public class uMemory extends KombMreza {
 	private int numOfSteps;
 	private int numOfOutputs;
 	Red mem[];
 
-	public Memorija(int numOfInputs, int numOfOutputs) {
+	public uMemory(int numOfInputs, int numOfOutputs) {
 		super(numOfInputs, numOfOutputs);
 		this.numOfOutputs = numOfOutputs;
 		mem = new Red[256];

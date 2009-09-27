@@ -33,7 +33,6 @@ public class Simulator {
         frame.setLocation((screenSize.width - frameSize.width) / 2,
                           (screenSize.height - frameSize.height) / 2);
         frame.setVisible(true);
-        frame.setLocation(0, 0);
         try {
             jbInit();
         } catch (Exception ex) {

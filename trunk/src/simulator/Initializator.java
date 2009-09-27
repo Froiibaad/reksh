@@ -1,6 +1,7 @@
 package simulator;
 
 import simulator.elements.*;
+import simulator.upravljacka.*;
 
 /**
  * Ova klasa definise kako je ceo sistem sastavljen od elemenata i povezan.
@@ -274,177 +275,17 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  Upravljacka
 ////////////////////////////////////////////////////////////////////////////////
-    //Generisanje vrednosti brojaca koraka
-    //Instrukcije RTI, RTS, INTE, INTD, TRPE, TRPD, JZ, JMP, INT, JSR, LOAD, ALUOP, STORE, HALT
-    public int[] nizInstrukcija = {0x25, 0x29, 0x30, 0x31, 0x32, 0x33, 0x34,
-                                  0x35, 0x36, 0x37, 0x4D, 0x4D, 0x50, 0x59};
-    public NumGen kmoper = new NumGen(nizInstrukcija);
-    //Adresiranja IMM, REGDIR, RELATIV, MEMDIR, MEMIND
-    public int[] nizAdresiranja = {0x11, 0x12, 0x13, 0x18, 0x19};
-    public NumGen kmadr = new NumGen(nizAdresiranja);
-    //Skokovi val00, ..., val57
-    public int[] nizSkokova = {0x00, 0x06, 0x0F, 0x17, 0x20, 0x24, 0x37, 0x4C,
-                              0x52, 0x54, 0x57};
-    public NumGen kmbr = new NumGen(nizSkokova);
-    //MUX
-    public Mux4 ctrlMux = new Mux4();
-
-    //Brojac i dekoder
-    public Counter cnt = new Counter();
-    public And cntLd = new And(2);
-    public And cntInc = new And(2);
-    public Not cntIncNot = new Not();
-    public Or cntBranch = new Or(3);
-    public Decoder256 ctrlDec = new Decoder256();
-
-    //Generisanje uslova
-    //notIRs
-    public Not notIR0 = new Not();
-    public Not notIR1 = new Not();
-    public Not notIR2 = new Not();
-    public Not notIR3 = new Not();
-    public Not notIR4 = new Not();
-    public Not notIR5 = new Not();
-    public Not notIR6 = new Not();
-    public Not notIR7 = new Not();
-    //Instructions
-    public And RTI = new And(8);
-    public And RTS = new And(8);
-    public And INTE = new And(8);
-    public And INTD = new And(8);
-    public And TRPE = new And(8);
-    public And TRPD = new And(8);
-    public And HALT = new And(8);
-    public And JZ = new And(8);
-    public And JMP = new And(8);
-    public And JSR = new And(8);
-    public And INT = new And(8);
-    public And LOAD = new And(5);
-    public And STORE = new And(5);
-    public And ADD = new And(5);
-    public And XOR = new And(5);
-    public And LSR = new And(5);
-    public Or ALUOP = new Or(3);
-    //Address modes
-    public And IMM = new And(4);
-    public And REGDIR = new And(2);
-    public And RELATIV = new And(4);
-    public And MEMDIR = new And(4);
-    public And MEMIND = new And(4);
-    //notBADCODE, L1, L2, ADRLESS, notIMM, notREGDIR
-    public Or notBADCODE = new Or(16);
-    public Not notREGDIR = new Not();
-    public Not notIMM = new Not();
-    public Not ADRLESS = new Not();
-    public And andL1 = new And(2);
-    public Or L1 = new Or(2);
-    public Or L2 = new Or(2);
-    //ADDC, PSWZ, MASK, INTR
-    public Not notADDC = new Not();
-    //public Not notPSWZ = new Not();
-    public Not notMASK = new Not();
-    public Not notINTR = new Not();
-
-    //Generisanje upravljackih signala upravljacke jedinice
-    //uslovni skokovi
-    public Buffer brnotBADCODE = new Buffer();
-    public Buffer brL1 = new Buffer();
-    public Buffer brL2 = new Buffer();
-    public Buffer brADRLESS = new Buffer();
-    public Buffer brnotADDC = new Buffer();
-    public Buffer brSTORE = new Buffer();
-    public Buffer brnotPSWZ = new Buffer();
-    public Buffer brJSR = new Buffer();
-    public Buffer brnotMASK = new Buffer();
-    public Buffer brnotIMM = new Buffer();
-    public Buffer brnotREGDIR = new Buffer();
-    public Buffer brnotINTR = new Buffer();
-    //bezuslovni skok
-    public Or bruncond = new Or(18);
-    //branch
-    public And andBr1 = new And(2);
-    public And andBr2 = new And(2);
-    public And andBr3 = new And(2);
-    public And andBr4 = new And(2);
-    public And andBr5 = new And(2);
-    public And andBr6 = new And(2);
-    public And andBr7 = new And(2);
-    public And andBr8 = new And(2);
-    public And andBr9 = new And(2);
-    public And andBr10 = new And(2);
-    public And andBr11 = new And(2);
-    public And andBr12 = new And(2);
-    public Or branch = new Or(13);
-    //visestruki uslovni skokovi
-    public Buffer broper = new Buffer();
-    public Buffer bradr = new Buffer();
-    //adrese skoka
-    public Or val00 = new Or(3);
-    public Buffer val06 = new Buffer();
-    public Or val0F = new Or(2);
-    public Buffer val17 = new Buffer();
-    public Or val20 = new Or(2);
-    public Or val24 = new Or(4);
-    public Buffer val37 = new Buffer();
-    public Buffer val4C = new Buffer();
-    public Buffer val52 = new Buffer();
-    public Buffer val54 = new Buffer();
-    public Or val57 = new Or(13);
-
-    //Generisanje upravljackih signala operacione jedinice
-    public Or ldMAR = new Or(14);
-    public Or incPC = new Or(3);
-    public Or clMBR = new Or(13);
-    public Or read = new Or(11);
-    public Or wmfc = new Or(15);
-    public Buffer ldIR1 = new Buffer();
-    public Buffer ldIR2 = new Buffer();
-    public Buffer ldIR3 = new Buffer();
-    public Buffer setCINTR = new Buffer();
-    public Or mxB1 = new Or(3);
-    public Or ldB = new Or(6);
-    public Or mxX0 = new Or(2);
-    public Or ldX = new Or(3);
-    public Or mxY0 = new Or(2);
-    public Or ldY = new Or(4);
-    public Or ALUadd = new Or(2);
-    public Or ldZL = new Or(4);
-    public Or ldZH = new Or(2);
-    public Buffer ldADDC = new Buffer();
-    public Or setAINTR = new Or(2);
-    public Or mxMAR1 = new Or(3);
-    public Or mxMAR0 = new Or(4);
-    public Or incMAR = new Or(2);
-    public Or mxB0 = new Or(3);
-    public Or mxMAR2 = new Or(6);
-    public Or decSP = new Or(4);
-    public Buffer ldPSW = new Buffer();
-    public Or mxPC = new Or(4);
-    public Or ldPCL = new Or(4);
-    public Or ldPCH = new Or(4);
-    public Or it = new Or(2);
-    public Or ldI = new Or(3);
-    public Or ldT = new Or(3);
-    public Or incSP = new Or(3);
-    public Or mxMBR1 = new Or(2);
-    public Or ldMBR = new Or(4);
-    public Or write = new Or(4);
-    public Or mxMBR0 = new Or(2);
-    public Buffer mxMBR2 = new Buffer();
-    public Buffer ALUshl = new Buffer();
-    public Buffer mxY1 = new Buffer();
-    public Buffer mxX1 = new Buffer();
-    public Buffer mxADD = new Buffer();
-    public Buffer ldL1L0 = new Buffer();
-    public Buffer ALUop = new Buffer();
-    public Buffer ldNZCV = new Buffer();
-    public Buffer ldA = new Buffer();
-    public Buffer REGin = new Buffer();
-    public Buffer inta = new Buffer();
-    public Buffer halt = new Buffer();
-
-
-
+    public uMemory uMem = new uMemory (8, 80);
+    public Register8 cnt = new Register8 ("CNT");
+    public Mux4 upravljackaMux = new Mux4 ();
+    public uMemory kmstore = new uMemory (3, 8);
+    public uMemory kmop = new uMemory (4, 8);
+    public uMemory kmaddr = new uMemory (3, 8);
+    public Or upravljackaOr1 = new Or (2);
+    public Or upravljackaOr2 = new Or (2);
+    public Or upravljackaOr3 = new Or (4);
+    public And upravljackaAnd = new And	(2);
+    
 ////////////////////////////////////////////////////////////////////////////////
 //  Memory
 ////////////////////////////////////////////////////////////////////////////////
@@ -858,7 +699,10 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  Upravljacka
 ////////////////////////////////////////////////////////////////////////////////
-        //Generisanje vrednosti brojaca koraka
+        uMem.addInput8(cnt, 0);
+        cnt.addInput8(upravljackaMux, 0);
+        upravljackaMux.addInput8(uMem, 73);
+        upravljackaMux.addInput8(kmaddr, 0);
 
 
 ////////////////////////////////////////////////////////////////////////////////
