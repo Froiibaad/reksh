@@ -1,5 +1,6 @@
 package simulator.panels;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import simulator.Initializator;
@@ -13,6 +14,147 @@ public class PanelKomb extends ImagePanel {
 
     public void paint(Graphics g) {
         g.drawImage(image, 0, 0, null);
+        
+        //ADD
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(105, 321, 135, 321);
+        g.drawLine(416, 522, 440, 522);
+        
+        //DEC
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(306, 231, 330, 231);
+        g.drawLine(416, 713, 440, 713);
+        
+        //INC
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(105, 360, 136, 360);
+        g.drawLine(416, 606, 440, 606);
+        
+        //C16
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(306, 192, 314, 192);
+        g.drawLine(306, 302, 330, 302);
+        
+      //X15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(105, 412, 130, 412);
+        g.drawLine(105, 509, 114, 509);
+        
+      //Y15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(105, 431, 130, 431);
+        g.drawLine(105, 528, 114, 528);
+        g.drawLine(416, 625, 425, 625);
+        g.drawLine(416, 733, 440, 733);
+        
+      //F15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 17, 907, 17);
+        g.drawLine(726, 354, 751, 354);
+        g.drawLine(105, 451, 114, 451);
+        g.drawLine(105, 548, 130, 548);
+        g.drawLine(416, 645, 440, 645);
+        g.drawLine(416, 752, 425, 752);
+        
+        //F0
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 63, 751, 63);
+
+        //F1
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 82, 751, 82);
+
+        //F2
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 101, 751, 101);
+
+        //F3
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 121, 751, 121);
+
+        //F4
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 140, 751, 140);
+        
+
+        //F5
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 159, 751, 159);
+        
+
+        //F6
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 179, 751, 179);
+
+        //F7
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 198, 756, 198);
+        
+
+        //F8
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 218, 760, 218);
+        
+        //F9
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 237, 757, 237);
+
+        //F10
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 256, 751, 256);
+
+        //F11
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 275, 751, 275);
+
+        //F12
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 295, 751, 295);
+
+        //F13
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 315, 751, 315);
+
+        //F14
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(726, 334, 751, 334);
+        
+        //C16*DEC
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(426, 211, 466, 211);
+        g.drawLine(466, 211, 466, 244);
+        g.drawLine(466, 244, 524, 244);
+        
+        //C16*(ADD+INC)
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(426, 321, 461, 321);
+        g.drawLine(461, 283, 461, 321);
+        g.drawLine(466, 244, 524, 244);
+        
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.alu, 8));
         g.drawLine(459, 319, 368, 319);
