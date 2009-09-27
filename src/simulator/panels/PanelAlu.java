@@ -12,7 +12,43 @@ public class PanelAlu extends ImagePanel {
     }
 
     public void paint(Graphics g) {
+    	//ALUop
         g.drawImage(image, 0, 0, null);
+        g.setColor(Color.BLUE);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(95, 144, 118, 144);
+        g.drawLine(118, 144, 118, 520);
+        g.drawLine(118, 520, 140, 520);
+        g.drawLine(118, 223, 137, 223);
+        g.drawLine(118, 272, 140, 272);
+        g.drawLine(118, 332, 140, 332);
+        g.drawLine(118, 374, 140, 374);
+        g.drawLine(118, 445, 142, 445);
+        
+        //ALUtransY
+        g.setColor(Color.RED);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(95, 180, 114, 180);
+        g.drawArc(114, 175, 9, 9, 0, 180);
+        g.drawLine(123, 180, 199, 180);
+        g.drawLine(199, 180, 199, 201);
+        g.drawLine(199, 201, 228, 201);
+        
+        //insMOVS
+        g.setColor(Color.RED);
+        g.drawLine(95, 208, 114, 208);
+        g.drawArc(114, 204, 9, 9, 0, 180);
+        g.drawLine(123, 208, 137, 208);
+        
+        //ALUadd
+        
+        
+        
+        
+        //g.drawArc(114, 175, 9, 9, 0, 180);
+        //g.drawArc(100, 100, 40, 40, 0, 180);
+        //g.drawLine(100, 100, 200, 100);
+        //g.drawLine(100, 100, 100, 200);
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.alu, 8));
         g.drawLine(459, 319, 368, 319);
