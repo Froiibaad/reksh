@@ -148,12 +148,72 @@ public class PanelKomb extends ImagePanel {
         g.drawLine(466, 211, 466, 244);
         g.drawLine(466, 244, 524, 244);
         
+        //ADD+INC
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(210, 341, 330, 341);
+       
         //C16*(ADD+INC)
         g.setColor(Color.GREEN);
         //g.setColor(findColor(init.alu, 37));
         g.drawLine(426, 321, 461, 321);
         g.drawLine(461, 283, 461, 321);
-        g.drawLine(466, 244, 524, 244);
+        g.drawLine(461, 283, 524, 283);
+        
+        //ALUC
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(599, 263, 662, 263);
+        g.drawLine(662, 263, 662, 405);
+        g.drawLine(662, 405, 907, 405);
+        
+        //ALUZ
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(847, 218, 907, 218);     
+        
+        //X15*Y15*!F15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(211, 431, 241, 431);
+        g.drawLine(241, 431, 241, 463);
+        g.drawLine(241, 463, 278, 463);
+        
+        //!X15*!Y15*F15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(211, 528, 241, 528);
+        g.drawLine(241, 503, 241, 528);
+        g.drawLine(241, 503, 278, 503);
+        
+        //!X15*!Y15*F15+X15*Y15*!F15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(353, 483, 440, 483);
+        
+        //(!X15*!Y15*F15+X15*Y15*!F15)*ADD
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(521, 503, 584, 503);
+        g.drawLine(584, 503, 584, 606);
+        g.drawLine(584, 606, 647, 606);
+        
+        //INC*!Y15*F15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(521, 625, 650, 625);
+        
+        //DEC*Y15*!F15
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(527, 733, 568, 733);
+        g.drawLine(568, 645, 568, 733);
+        g.drawLine(568, 645, 647, 645);
+        
+        //ALUV
+        g.setColor(Color.GREEN);
+        //g.setColor(findColor(init.alu, 37));
+        g.drawLine(721, 625, 905, 625);
         
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.alu, 8));
