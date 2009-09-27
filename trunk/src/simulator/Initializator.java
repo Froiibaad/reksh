@@ -701,8 +701,10 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
         uMem.addInput8(cnt, 0);
         cnt.addInput8(upravljackaMux, 0);
-        upravljackaMux.addInput8(uMem, 73);
+        //upravljackaMux.addInput8(uMem, 73);
         upravljackaMux.addInput8(kmaddr, 0);
+        upravljackaMux.addInput8(kmstore, 0);
+        upravljackaMux.addInput8(kmop, 0);
 
 
 ////////////////////////////////////////////////////////////////////////////////
