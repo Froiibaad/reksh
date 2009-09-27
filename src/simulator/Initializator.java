@@ -297,6 +297,47 @@ public class Initializator {
     public And brAnd8 = new And (2);
     public Or brOr = new Or (12);
     
+////////////////////////////////////////////////////////////////////////////////
+//  Dekoder instrukcija
+////////////////////////////////////////////////////////////////////////////////
+    public Or diOr1 = new Or (2);
+    public Not diNot1 = new Not ();
+    public Decoder8 diDec81 = new Decoder8 ();
+    public Or diOr2 = new Or (2);
+    public And diAndod7 = new And (7);
+    public Or diOrod7 = new Or (7);
+    public Not diNot2 = new Not ();
+    public Or diOr3 =  new Or (2);
+    public And diAnd1 = new And (3);
+    public Not diNot3 =  new Not ();
+    public Or diOr4 =  new Or (3);
+    public Not diNot4 = new Not ();
+    public Decoder4 diDec41 = new Decoder4 ();
+    public And diAnd3 = new And (2);
+    public And diAnd2 = new And (2);
+    public Decoder8 diDec82 = new Decoder8 ();
+    public And diAnd4 = new And (2);
+    
+    public And diAnd5 = new And (3);
+    public And diAnd6 = new And (3);
+    public And diAnd7 = new And (3);
+    public And diAnd8 = new And (3);
+    public Not diNot5 = new Not ();
+    
+    public Or diOr5 = new Or(4);
+    
+    //ADRESIRANJE
+    public Decoder4 daDec41 = new Decoder4 ();
+    public Decoder4 daDec42 = new Decoder4 ();
+    public And daAnd = new And (2);
+    
+    
+    
+    
+   
+
+    
+    
     
 ////////////////////////////////////////////////////////////////////////////////
 //  Memory
@@ -707,7 +748,113 @@ public class Initializator {
         arbDecoder.addInput(arbCoder, 3);
 
         
+ 
+////////////////////////////////////////////////////////////////////////////////
+//  Dekoder instrukcija
+////////////////////////////////////////////////////////////////////////////////
+        //L1
+        diOr1.addInput(IR1, 7);
+        diOr1.addInput(IR1, 6);
+        diNot1.addInput(diOr1, 0);
+        //Dekoder - RTS, RTI, INTE, INTD, TRPE, TRPD, ILEGAL0, ILEGAL0
+        diDec81.addInput(IR1, 0);
+        diDec81.addInput(IR1, 1);
+        diDec81.addInput(IR1, 2);
+        diDec81.addInput(diNot1, 0);
+        diNot4.addInput(IR1, 7);
+        //Deckoder za - JMP, JSR, BNZ, INT
+        diAnd3.addInput(diNot4, 0);
+        diAnd3.addInput(IR1, 6);
+        diDec41.addInput(IR1, 0);
+        diDec41.addInput(IR1, 5);
+        diDec41.addInput(diAnd3, 0);
+        //ILOP
+        diOr2.addInput(diDec81, 6);
+        diOr2.addInput(diDec81, 7);
+        //L2
+        diAndod7.addInput(IR1, 0);
+        diAndod7.addInput(IR1, 1);
+        diAndod7.addInput(IR1, 2);
+        diAndod7.addInput(IR1, 3);
+        diAndod7.addInput(IR1, 4);
+        diAndod7.addInput(IR1, 5);
+        diAndod7.addInput(IR1, 6);
+        diOrod7.addInput(IR1, 0);
+        diOrod7.addInput(IR1, 1);
+        diOrod7.addInput(IR1, 2);
+        diOrod7.addInput(IR1, 3);
+        diOrod7.addInput(IR1, 4);
+        diOrod7.addInput(IR1, 5);
+        diOrod7.addInput(IR1, 6);
+        diNot2.addInput(diOrod7, 0);
+        diOr3.addInput(diNot2, 0);
+        diOr3.addInput(diAndod7, 0);
+        diAnd1.addInput(IR1, 7);
+        diAnd1.addInput(diOr3, 0);
+        diNot3.addInput(IR2, 7);
+        diAnd1.addInput(diNot3, 0);
+        diOr4.addInput(diAnd1, 0);
+        diOr4.addInput(diDec41, 2);
+        diOr4.addInput(diDec41, 3);
         
+        //L3
+        diOr5.addInput(diDec41, 0);
+        diOr5.addInput(diDec41, 1);
+        diOr5.addInput(daDec42, 2);
+        diOr5.addInput(daDec41, 2);
+        
+        
+        //ASR
+        diAnd2.addInput(IR1, 7);
+        diAnd2.addInput(diNot2, 0);
+        //Dekoder - PUSH, POP, INC, DEC, JMPIND
+        diAnd4.addInput(IR1, 7);
+        diAnd4.addInput(diAndod7, 0);
+        diDec82.addInput(IR2, 3);
+        diDec82.addInput(IR2, 4);
+        diDec82.addInput(IR2, 5);
+        diDec82.addInput(diAnd4, 0);
+        
+        diNot5.addInput(diAndod7, 0);
+        //AND
+        diAnd5.addInput(IR1, 7);
+        diAnd5.addInput(IR1, 3);
+        diAnd5.addInput(diNot5, 0);
+        //ADD
+        diAnd6.addInput(IR1, 7);
+        diAnd6.addInput(IR1, 4);
+        diAnd6.addInput(diNot5, 0);
+        //MOVD
+        diAnd7.addInput(IR1, 7);
+        diAnd7.addInput(IR1, 5);
+        diAnd7.addInput(diNot5, 0);
+        //MOVS
+        diAnd8.addInput(IR1, 7);
+        diAnd8.addInput(IR1, 6);
+        diAnd8.addInput(diNot5, 0);        
+        
+        //GENERISANJE SIGNALA ZA ADRESIRANJE
+        //REGDIR, REGIND, REGINDOF
+        daDec41.addInput(IR2, 6);
+        daDec41.addInput(IR2, 7);
+        daDec41.addInput(diOr1, 0);
+        //TRECI
+        
+        //MEMDIR, MEMIND, PCREL, IMMED
+        daDec42.addInput(IR2, 0);
+        daDec42.addInput(IR2, 1);
+        daDec42.addInput(daDec41, 3);
+        
+        //MEMADR
+        daAnd.addInput(daDec42, 0);
+        daAnd.addInput(daDec42, 1);
+
+        
+        
+        
+        
+        
+
 ////////////////////////////////////////////////////////////////////////////////
 //  Upravljacka
 ////////////////////////////////////////////////////////////////////////////////
@@ -744,7 +891,7 @@ public class Initializator {
          DBUS.addInput8(MBR, 0);
          Mem.addInput8(DBUS, 0);
          Mem.addInput(WRBUS, 0);
-        
+       
 ////////////////////////////////////////////////////////////////////////////////
 //  Prijavljivanje registara
 ////////////////////////////////////////////////////////////////////////////////
