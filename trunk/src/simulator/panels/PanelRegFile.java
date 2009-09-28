@@ -94,7 +94,7 @@ public class PanelRegFile extends ImagePanel {
         g.drawLine(792, 197, 803, 197);
         
         //SIin
-        g.setColor(Color.BLUE);
+        g.setColor(Color.GREEN);
         g.drawLine(535, 661, 546, 661);
         g.drawLine(784, 725, 795, 725); 
           
@@ -174,8 +174,8 @@ public class PanelRegFile extends ImagePanel {
         //REGout*BPsel
         g.setColor(Color.GREEN);
         //g.setColor(findColor(init.alu, 37));
-        g.drawLine(820, 357, 840, 357);
-        g.drawLine(840, 357, 840, 339);
+        g.drawLine(820, 358, 840, 358);
+        g.drawLine(840, 358, 840, 339);
   
         //REGout*CXsel
         g.setColor(Color.GREEN);
@@ -186,8 +186,8 @@ public class PanelRegFile extends ImagePanel {
         //REGout*DIsel
         g.setColor(Color.GREEN);
         //g.setColor(findColor(init.alu, 37));
-        g.drawLine(825, 531, 839, 531);
-        g.drawLine(839, 531, 839, 517);
+        g.drawLine(820, 532, 839, 532);
+        g.drawLine(839, 532, 839, 517);
     
         //REGout*DXsel
         g.setColor(Color.GREEN);
@@ -209,7 +209,7 @@ public class PanelRegFile extends ImagePanel {
         //REGBUSsel
         g.setColor(Color.GREEN);
         //g.setColor(findColor(init.alu, 37));
-        g.drawLine(171, 742, 711, 751);
+        g.drawLine(171, 742, 171, 752);
         
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.alu, 8));
