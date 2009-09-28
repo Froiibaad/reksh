@@ -118,6 +118,12 @@ public class Initializator {
     public Register16 DI = new Register16("DI");
     public BusIn16 DIout = new BusIn16("DIout");
     
+    //ADDER...REGFILE
+    /*public Decoder8 adddec = new Decoder8 ();
+    public Add addadd = new Add ();
+    public Or addOr1 = new Or (2);*/
+    //public Mux 
+    
     //Regfile regsel
     public Mux2x3b RegselMux = new Mux2x3b ();
     public Decoder8 RegselDec = new Decoder8 ();
@@ -325,7 +331,9 @@ public class Initializator {
     public Not diNot5 = new Not ();
     
     public Or diOr5 = new Or(4);
-    
+    public Or diOr6 = new Or(3);
+    public Or diOr7 = new Or(3);
+       
     //ADRESIRANJE
     public Decoder4 daDec41 = new Decoder4 ();
     public Decoder4 daDec42 = new Decoder4 ();
@@ -570,6 +578,14 @@ public class Initializator {
        andLdBP.addInput(RegselDec, 5);
        andLdSI.addInput(RegselDec, 6);
        andLdDI.addInput(RegselDec, 7);
+       
+       //ADDER 
+       /*addOr1.addInput(daDec41, 1);
+       addOr1.addInput(daDec41, 2);
+       adddec.addInput(IR2, 0);
+       adddec.addInput(IR2, 1);
+       adddec.addInput(IR2, 2);
+       adddec.addInput(addOr1, 0);*/
        
        
 ////////////////////////////////////////////////////////////////////////////////
@@ -831,7 +847,15 @@ public class Initializator {
         //MOVS
         diAnd8.addInput(IR1, 7);
         diAnd8.addInput(IR1, 6);
-        diAnd8.addInput(diNot5, 0);        
+        diAnd8.addInput(diNot5, 0);
+        //ALUADROP
+        diOr6.addInput(diAnd6, 0);
+        diOr6.addInput(diAnd7, 0);
+        diOr6.addInput(diAnd8, 0);
+        //ALUREGOP
+        diOr7.addInput(diDec82, 2);
+        diOr7.addInput(diDec82, 3);
+        diOr7.addInput(diAnd2, 0);
         
         //GENERISANJE SIGNALA ZA ADRESIRANJE
         //REGDIR, REGIND, REGINDOF
