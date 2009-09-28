@@ -1,5 +1,7 @@
 package simulator;
 
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Single;
+
 import simulator.elements.*;
 import simulator.upravljacka.*;
 
@@ -73,7 +75,9 @@ public class Initializator {
     public BusIn16 IRRM1 = new BusIn16 ("IRRM1");
     
     
-    //Registarski fajl
+////////////////////////////////////////////////////////////////////////////////
+//  REGFILE
+////////////////////////////////////////////////////////////////////////////////
     public And andLdAX = new And(2);
     public And andOutAX = new And(2);
     public Register16 AX = new Register16("AX");
@@ -151,6 +155,7 @@ public class Initializator {
     public Or orIncY = new Or(2);
     public Or orDecY = new Or(2);
     public Or orTransY = new Or(2);
+    public Or orMovs = new Or (2);
     
     //Mx and outs
     MuxBus16 mpAlu = new MuxBus16("ALUmp");
@@ -164,42 +169,38 @@ public class Initializator {
     public Mux2b muxPSWN = new Mux2b();
     public SRff PSWN = new SRff();
     public And and1PSWN = new And(2);
-    public And and2PSWN = new And(2);
     public Not notPSWN = new Not();
 
     //PSWZ
     public Mux2b muxPSWZ = new Mux2b();
     public SRff PSWZ = new SRff();
     public And and1PSWZ = new And(2);
-    public And and2PSWZ = new And(2);
     public Not notPSWZ = new Not();
 
     //PSWC
     public Mux2b muxPSWC = new Mux2b();
     public SRff PSWC = new SRff();
     public And and1PSWC = new And(2);
-    public And and2PSWC = new And(2);
     public Not notPSWC = new Not();
 
     //PSWV
     public Mux2b muxPSWV = new Mux2b();
     public SRff PSWV = new SRff();
     public And and1PSWV = new And(2);
-    public And and2PSWV = new And(2);
     public Not notPSWV = new Not();
     
     //PSWI
-    public Mux2b muxPSWI = new Mux2b();
     public SRff PSWI = new SRff();
-    //public And and1PSWI = new And(2);
-    //public And and2PSWI = new And(2);
+    public And and1PSWI = new And(2);
+    public Or or1PSWI = new Or(2);
+    public Or or2PSWI = new Or(2);
     public Not notPSWI = new Not();
 
     //PSWT
-    public Mux2b muxPSWT = new Mux2b();
     public SRff PSWT = new SRff();
-    //public And and1PSWT = new And(2);
-    //public And and2PSWT = new And(2);
+    public And and1PSWT = new And(2);
+    public Or or1PSWT = new Or(2);
+    public Or or2PSWT = new Or(2);
     public Not notPSWT = new Not();
 
     //PSWL1
@@ -333,6 +334,7 @@ public class Initializator {
     public Or diOr5 = new Or(4);
     public Or diOr6 = new Or(3);
     public Or diOr7 = new Or(3);
+    public Or aluop = new Or(2);
        
     //ADRESIRANJE
     public Decoder4 daDec41 = new Decoder4 ();
@@ -384,15 +386,19 @@ public class Initializator {
 //  PRESPAJANJE INTERNIH MAGISTRALA
 ////////////////////////////////////////////////////////////////////////////////
         M1M2.addInput16(M1, 0);
+        M1M2.addInput(uMem, Signali.M1M2out.ordinal());
         M2.addInput16(M1M2, 0);
         
         M2M1.addInput16(M2, 0);
+        M2M1.addInput(uMem, Signali.M2M1out.ordinal());
         M1.addInput16(M2M1, 0);
         
         M1M3.addInput16(M1, 0);
+        M1M3.addInput(uMem, Signali.M1M3out.ordinal());
         M3.addInput16(M1M3, 0);
         
         M3M1.addInput16(M3, 0);
+        M3M1.addInput(uMem, Signali.M3M1out.ordinal());
         M1.addInput16(M3M1, 0);
         
 ////////////////////////////////////////////////////////////////////////////////
@@ -400,22 +406,28 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
         //PC
         PC.addInput16(M1, 0);
+        PC.addInput(uMem, Signali.PCin.ordinal());
         PCM2.addInput16(PC, 0);
         PCM3.addInput16(PC, 0);
+        PCM2.addInput(uMem, Signali.PCM2out.ordinal());
+        PCM3.addInput(uMem, Signali.PCM3out.ordinal());
         M2.addInput16(PCM2, 0);
         M3.addInput16(PCM3, 0);
-        
         
         //MBR
         MBRbusorcpu.addInput8(M1, 0);
         MBRbusorcpu.addInput8(DBUS, 0);
         MBR.addInput8(MBRbusorcpu, 0);
+        MBR.addInput(uMem, Signali.MBRin.ordinal());
         MBRM1.addInput8(MBR, 0);
         MBRM1.addInput8(nula, 0);
+        MBRM1.addInput(uMem, Signali.MBRM1out.ordinal());
         MBRM2.addInput8(MBR, 0);
         MBRM2.addInput8(nula, 0);
+        MBRM2.addInput(nula, 0);
         MBRM3.addInput8(MBR, 0);
         MBRM3.addInput8(nula, 0);
+        MBRM3.addInput(nula, 0);
         M1.addInput16(MBRM1, 0);
         M2.addInput16(MBRM2, 0);
         M3.addInput16(MBRM3, 0);
@@ -423,79 +435,115 @@ public class Initializator {
         //MAR
         MARmp.addInput16(M1, 0);
         MARmp.addInput16(M2, 0);
+        MARmp.addInput(uMem, Signali.MARmp.ordinal());
         MAR.addInput16(MARmp, 0);
+        MAR.addInput(uMem, Signali.MARin.ordinal());
         MARM1.addInput16(MAR, 0);
+        MARM1.addInput(nula, 0);
         M1.addInput16(MARM1, 0);
 
         //IVTP	NULOVAN
         IVTP.addInput8(nula, 0); //informacioni ulazi sve nule
-        IVTP.addInput8(nula, 0); //
+        IVTPM2.addInput16(nula, 0); //
+        IVTPM3.addInput16(nula, 0); //
+        IVTPM2.addInput(nula, 0);
+        IVTPM3.addInput(nula, 0);
         IVTP.addInput(nula, 0); //LD
         IVTP.addInput(nula, 0); //LDL
         IVTP.addInput(nula, 0); //LDH
         IVTP.addInput(nula, 0); //CLR
         IVTP.addInput(nula, 0); //INC		//TODO: CU
         IVTP.addInput(nula, 0); //DEC		//TODO: CU
+        
 
         //IR	
         //IR1
         IR1.addInput8(M1,0);
+        IR1.addInput(uMem, Signali.IR1in.ordinal());
         IR1M2.addInput8(IR1, 0);
         IR1M2.addInput8(nula, 0);
+        IR1M2.addInput(nula, 0);
         IR1M3.addInput8(IR1, 0);
         IR1M3.addInput8(nula, 0);
+        IR1M3.addInput(nula, 0);
         M2.addInput16(IR1M2, 0);
         M3.addInput16(IR1M3, 0);
         
         //IR2
         IR2.addInput8(M1,0);
+        IR2.addInput(uMem, Signali.IR2in.ordinal());
         IR2M2.addInput8(IR2, 0);
         IR2M2.addInput8(nula, 0);
+        IR2M2.addInput(uMem, Signali.IR2M2out.ordinal());
         IR2M3.addInput8(IR2, 0);
         IR2M3.addInput8(nula, 0);
+        IR2M3.addInput(nula, 0);
         M2.addInput16(IR2M2, 0);
         M3.addInput16(IR2M3, 0);
         //IR3
         IR3.addInput8(M1,0);
+        IR3.addInput(uMem, Signali.IR3in.ordinal());
         IR3M2.addInput8(IR3, 0);
         IR3M2.addInput8(nula, 0);
+        IR3M3.addInput(uMem, Signali.IR3M2out.ordinal());
         IR3M3.addInput8(IR3, 0);
         IR3M3.addInput8(nula, 0);
+        IR3M3.addInput(nula, 0);
         M2.addInput16(IR3M2, 0);
         M3.addInput16(IR3M3, 0);
         //IR4
         IR4.addInput8(M1,0);
+        IR4.addInput(uMem, Signali.IR4in.ordinal());
         IR4M2.addInput8(IR4, 0);
         IR4M2.addInput8(nula, 0);
+        IR4M2.addInput(uMem, Signali.IR4M2out.ordinal());
         IR4M3.addInput8(IR4, 0);
         IR4M3.addInput8(nula, 0);
+        IR4M3.addInput(nula, 0);
         M2.addInput16(IR4M2, 0);
         M3.addInput16(IR4M3, 0);
         
-        //Temp & Temp2
+        //Temp
         TEMP.addInput16(M1, 0);
-        TEMP2M1.addInput16(TEMP, 0);
-        M1.addInput16(TEMP2M1, 0);
-        
+        TEMP.addInput(uMem, Signali.TEMPin.ordinal());
+        TEMP.addInput(Register16.LDL, uMem, Signali.TEMPinLOW.ordinal());
+        TEMP.addInput(Register16.SWAP, uMem, Signali.TEMPswap.ordinal());
+        TEMPM1.addInput16(TEMP, 0);
+        M1.addInput16(TEMPM1, 0);
+               
+        //Temp2
         TEMP2mp.addInput16(M1, 0);
         TEMP2mp.addInput16(M3, 0);
+        TEMP2mp.addInput(uMem, Signali.TEMP2mp.ordinal());
         TEMP2.addInput16(TEMP2mp, 0);
+        TEMP2.addInput(uMem, Signali.TEMP2in.ordinal());
+        TEMP2.addInput(Register16.LDL, uMem, Signali.TEMP2inLOW.ordinal());
+        TEMP2.addInput(Register16.SWAP, uMem, Signali.TEMP2swap.ordinal());
         TEMP2M1.addInput16(TEMP2, 0);
+        TEMP2M1.addInput(uMem, Signali.TEMP2out.ordinal());
         M1.addInput16(TEMP2M1, 0);
         
         //IRR
         IRR.addInput16(M1, 0);
+        IRR.addInput(uMem, Signali.IRRin.ordinal());
         IRRM1.addInput16(IRR, 0);
+        IRRM1.addInput(nula, 0);
         M1.addInput16(IRRM1, 0);
         
-        //Sign Ex
+////////////////////////////////////////////////////////////////////////////////
+//  SIGN EXT
+////////////////////////////////////////////////////////////////////////////////
         YM1.addInput16(M1, 0);
+        YM1.addInput(uMem, Signali.YselM1.ordinal());
         YM2.addInput16(M2, 0);
+        YM2.addInput(uMem, Signali.YselM2.ordinal());
         YM3.addInput16(M3, 0);
+        YM3.addInput(uMem, Signali.YselM3.ordinal());
         YM1Ex.addInput8(M1, 0);
         for (int i = 0; i < 8; i++){
         	YM1Ex.addInput(M1, 7);
         }
+        YM1Ex.addInput(uMem, Signali.YsignEx.ordinal());
         signEx.addInput16(YM1, 0);
         signEx.addInput16(YM2, 0);
         signEx.addInput16(YM3, 0);
@@ -503,12 +551,14 @@ public class Initializator {
         
         //Y
         Y.addInput16(signEx, 0);
-
+        Y.addInput(Register16.LD, uMem, Signali.Yin.ordinal());
+        
 ////////////////////////////////////////////////////////////////////////////////
 //  REGFILE
 ////////////////////////////////////////////////////////////////////////////////        
        REGBUS.addInput16(M2, 0);
        REGBUS.addInput16(M3, 0);
+       REGBUS.addInput(uMem, Signali.REGBUSsel.ordinal());
        AX.addInput16(REGBUS, 0);
        BX.addInput16(REGBUS, 0);
        CX.addInput16(REGBUS, 0);
@@ -536,28 +586,79 @@ public class Initializator {
 
        
        //Logika...
+       //AX
+       andLdAX.addInput(uMem, Signali.REGin.ordinal());
+       andLdAX.addInput(RegselDec, 0);
        AX.addInput(andLdAX, 0);
+       
+       andOutAX.addInput(uMem, Signali.REGout.ordinal());
+       andOutAX.addInput(RegselDec, 0);
        AXout.addInput(andOutAX, 0);
+       
+       //BX
+       andLdBX.addInput(uMem, Signali.REGin.ordinal());
+       andLdBX.addInput(RegselDec, 1);
        BX.addInput(andLdBX, 0);
+       
+       andOutBX.addInput(uMem, Signali.REGout.ordinal());
+       andOutBX.addInput(RegselDec, 1);
        BXout.addInput(andOutBX, 0);
+       
+       //CX
+       andLdCX.addInput(uMem, Signali.REGin.ordinal());
+       andLdCX.addInput(RegselDec, 2);
        CX.addInput(andLdCX, 0);
+       
+       andOutCX.addInput(uMem, Signali.REGout.ordinal());
+       andOutCX.addInput(RegselDec, 2);
        CXout.addInput(andOutCX, 0);
+       
+       //DX
+       andLdDX.addInput(uMem, Signali.REGin.ordinal());
+       andLdDX.addInput(RegselDec, 3);
        DX.addInput(andLdDX, 0);
+       andOutDX.addInput(uMem, Signali.REGout.ordinal());
+       andOutDX.addInput(RegselDec, 3);
        DXout.addInput(andOutDX, 0);
+       
+       //SP
+       andLdSP.addInput(uMem, Signali.REGin.ordinal());
+       andLdSP.addInput(RegselDec, 4);
        orLdSP.addInput(andLdSP, 0);
+       orLdSP.addInput(uMem, Signali.SPin.ordinal());
        SP.addInput(orLdSP, 0);
+       andOutSP.addInput(uMem, Signali.REGout.ordinal());
+       andOutSP.addInput(RegselDec, 4);
        orOutSP.addInput(andOutSP, 0);
+       orOutSP.addInput(uMem, Signali.SPout.ordinal());
        SPout.addInput(orOutSP, 0);
-       orLdSI.addInput(andLdSI, 0);
-       SI.addInput(orLdSI, 0);
-       orOutSI.addInput(andOutSI, 0);
-       SIout.addInput(orOutSI, 0);
+       
+       //BP
+       andLdBP.addInput(uMem, Signali.REGin.ordinal());
+       andLdBP.addInput(RegselDec, 5);
        BP.addInput(andLdBP, 0);
+       andOutBP.addInput(uMem, Signali.REGout.ordinal());
+       andOutBP.addInput(RegselDec, 5);
        BPout.addInput(andOutBP, 0);
+       
+       //DI
+       andLdDI.addInput(uMem, Signali.REGin.ordinal());
+       andLdDI.addInput(RegselDec, 7);
        DI.addInput(andLdDI, 0);
+       andOutDI.addInput(uMem, Signali.REGout.ordinal());
+       andOutDI.addInput(RegselDec, 7);
        DIout.addInput(andOutDI, 0);
        
-       
+       //SI
+       andLdSI.addInput(uMem, Signali.REGin.ordinal());
+       andLdSI.addInput(RegselDec, 6);
+       orLdSI.addInput(andLdSI, 0);
+       SI.addInput(orLdSI, 0);
+       andOutSI.addInput(uMem, Signali.REGout.ordinal());
+       andOutSI.addInput(RegselDec, 6);
+       orOutSI.addInput(andOutSI, 0);
+       SIout.addInput(orOutSI, 0);
+      
        //Regsel
        RegselMux.addInput(IR2, 0);
        RegselMux.addInput(IR2, 1);
@@ -565,19 +666,13 @@ public class Initializator {
        RegselMux.addInput(IR2, 3);
        RegselMux.addInput(IR2, 4);
        RegselMux.addInput(IR2, 5);
-       //TODO Signal iz upravljacke
+       RegselMux.addInput(uMem, Signali.regsel2.ordinal());
+       
        RegselDec.addInput(RegselMux, 0);
        RegselDec.addInput(RegselMux, 1);
        RegselDec.addInput(RegselMux, 2);
        RegselDec.addInput(jedan, 0);
-       andLdAX.addInput(RegselDec, 0);
-       andLdBX.addInput(RegselDec, 1);
-       andLdCX.addInput(RegselDec, 2);
-       andLdDX.addInput(RegselDec, 3);
-       andLdSP.addInput(RegselDec, 4);
-       andLdBP.addInput(RegselDec, 5);
-       andLdSI.addInput(RegselDec, 6);
-       andLdDI.addInput(RegselDec, 7);
+       
        
        //ADDER 
        /*addOr1.addInput(daDec41, 1);
@@ -594,30 +689,70 @@ public class Initializator {
        	//Alump
         mpAlu.addInput16(M2, 0);
         mpAlu.addInput16(M3, 0);
-        
-        
+        mpAlu.addInput(uMem, Signali.ALUmp.ordinal());
+                
         //ALU
         alu.addInput16(mpAlu, 0);
         alu.addInput16(Y, 0);
         ALUM2.addInput16(alu, 0);
+        ALUM2.addInput(uMem, Signali.ALUM2out.ordinal());
         ALUM3.addInput16(alu, 0);
+        ALUM3.addInput(uMem, Signali.ALUM3out.ordinal());
         M2.addInput16(ALUM2, 0);
         M3.addInput16(ALUM3, 0);
         
+        //ALU LOGIKA
+        alu.addInput(Alu.INCX, uMem, Signali.ALUincX.ordinal());
+        alu.addInput(Alu.DECX, uMem, Signali.ALUdecX.ordinal());
+        alu.addInput(Alu.TRANSX, uMem, Signali.ALUtransX.ordinal());
+        andMovs.addInput(aluop, 0);
+        andMovs.addInput(diAnd8, 0);
+        orMovs.addInput(andMovs, 0);
+        orMovs.addInput(uMem, Signali.ALUtransY.ordinal());
+        alu.addInput(Alu.TRANSY, orMovs, 0);
+        andAdd.addInput(aluop, 0);
+        andAdd.addInput(diAnd6, 0);
+        orAdd.addInput(andAdd, 0);
+        orAdd.addInput(uMem, Signali.ALUadd.ordinal());
+        alu.addInput(Alu.ADD, orAdd, 0);
+        andAnd.addInput(aluop, 0);
+        andAnd.addInput(diAnd5, 0);
+        alu.addInput(Alu.AND, andAnd, 0);
+        andAsr.addInput(aluop, 0);
+        andAsr.addInput(diAnd2, 0);
+        alu.addInput(Alu.ARS, andAsr, 0);
+        andInc.addInput(aluop, 0);
+        andInc.addInput(diDec82, 2);
+        orIncY.addInput(andInc, 0);
+        orIncY.addInput(uMem, Signali.ALUincY.ordinal());
+        alu.addInput(Alu.INCY, orIncY, 0);
+        andDec.addInput(aluop, 0);
+        andDec.addInput(diDec82, 3);
+        orDecY.addInput(andDec, 0);
+        orDecY.addInput(uMem, Signali.ALUdecY.ordinal());
+        alu.addInput(Alu.DECY, orDecY, 0);
+        
+        
+        
         //KM PSW
+        //Z
         orPswZ.addInput16(alu, 0);
         notPswZ.addInput(orPswZ, 0);
         
-        and1PswC.addInput(not1PswC, 0);
-        //fale ulazni signali
+        //C
         not1PswC.addInput(alu, 16);
+        and1PswC.addInput(not1PswC, 0);
+        and1PswC.addInput(diDec82, 3);        
         not2PswC.addInput(and1PswC, 0);
+        or1PswC.addInput(diAnd6, 0);
+        or1PswC.addInput(diDec82, 2);
         and2PswC.addInput(alu, 16);
         and2PswC.addInput(or1PswC, 0);
         not3PswC.addInput(and2PswC, 0);
         or2PswC.addInput(not2PswC, 0);
         or2PswC.addInput(not3PswC, 0);
         
+        //V
         andIII1PswV.addInput(mpAlu, 15);
         andIII1PswV.addInput(Y, 15);
         not1PswV.addInput(alu, 15);
@@ -633,15 +768,17 @@ public class Initializator {
         orIIPswV.addInput(andIII2PswV, 0);
         
         andII1PswV.addInput(orIIPswV, 0);
+        andII1PswV.addInput(diAnd6, 0);
         
         not4PswV.addInput(Y, 15);
         andIII3PswV.addInput(not4PswV, 0);
         andIII3PswV.addInput(alu, 15);
+        andIII3PswV.addInput(diDec82, 2);
         
         not5PswV.addInput(alu, 15);
         andIII4PswV.addInput(not5PswV, 0);
         andIII4PswV.addInput(Y, 15);
-        
+        andIII4PswV.addInput(diDec82, 3);
         
         orIIIPswV.addInput(andIII4PswV, 0);
         orIIIPswV.addInput(andIII3PswV, 0);
@@ -652,81 +789,97 @@ public class Initializator {
 //  PSW
 ////////////////////////////////////////////////////////////////////////////////
         // N
-        muxPSWN.addInput(alu, 15);
-        muxPSWN.addInput(M1, 0);
+        and1PSWN.addInput(alu, 15);
+        and1PSWN.addInput(uMem, Signali.PSWupdateNZCV.ordinal());
         
-        and1PSWN.addInput(muxPSWN, 0);
+        muxPSWN.addInput(and1PSWN, 0);
+        muxPSWN.addInput(M1, 0);
+        muxPSWN.addInput(uMem, Signali.PSWin.ordinal());
         
         notPSWN.addInput(muxPSWN, 0);
-        and2PSWN.addInput(notPSWN, 0);
+                
+        PSWN.addInput(muxPSWN, 0);
+        PSWN.addInput(notPSWN, 0);
         
-        PSWN.addInput(and1PSWN, 0);
-        PSWN.addInput(and2PSWN, 0);
         PSWM2.addInput(PSWN, 0);
         PSWM3.addInput(PSWN, 0);
         
         // Z
-        muxPSWZ.addInput(notPswZ, 0);
-        muxPSWZ.addInput(M1, 1);
+        and1PSWZ.addInput(notPswZ, 0);
+        and1PSWZ.addInput(uMem, Signali.PSWupdateNZCV.ordinal());
         
-        and1PSWZ.addInput(muxPSWZ, 0);
+        muxPSWZ.addInput(and1PSWZ, 0);
+        muxPSWZ.addInput(M1, 1);
+        muxPSWZ.addInput(uMem, Signali.PSWin.ordinal());
         
         notPSWZ.addInput(muxPSWZ, 0);
-        and2PSWZ.addInput(notPSWZ, 0);
+                
+        PSWZ.addInput(muxPSWZ, 0);
+        PSWZ.addInput(notPSWZ, 0);
         
-        PSWZ.addInput(and1PSWZ, 0);
-        PSWZ.addInput(and2PSWZ, 0);
         PSWM2.addInput(PSWZ, 0);
         PSWM3.addInput(PSWZ, 0);
         
         //C
-        muxPSWC.addInput(or2PswC, 0);
-        muxPSWC.addInput(M1, 2);
+        and1PSWC.addInput(or2PswC, 0);
+        and1PSWC.addInput(uMem, Signali.PSWupdateNZCV.ordinal());
         
-        and1PSWC.addInput(muxPSWC, 0);
+        muxPSWC.addInput(and1PSWC, 0);
+        muxPSWC.addInput(M1, 2);
+        muxPSWC.addInput(uMem, Signali.PSWin.ordinal());
         
         notPSWC.addInput(muxPSWC, 0);
-        and2PSWC.addInput(notPSWC, 0);
+                
+        PSWC.addInput(muxPSWC, 0);
+        PSWC.addInput(notPSWC, 0);
         
-        PSWC.addInput(and1PSWC, 0);
-        PSWC.addInput(and2PSWC, 0);
         PSWM2.addInput(PSWC, 0);
         PSWM3.addInput(PSWC, 0);
         
         //V
-        muxPSWV.addInput(orIIIPswV, 0);
-        muxPSWV.addInput(M1, 3);
+        and1PSWV.addInput(orIIIPswV, 0);
+        and1PSWV.addInput(uMem, Signali.PSWupdateNZCV.ordinal());
         
-        and1PSWV.addInput(muxPSWV, 0);
+        muxPSWV.addInput(and1PSWV, 0);
+        muxPSWV.addInput(M1, 3);
+        muxPSWV.addInput(uMem, Signali.PSWin.ordinal());
         
         notPSWV.addInput(muxPSWV, 0);
-        and2PSWV.addInput(notPSWV, 0);
+                
+        PSWV.addInput(muxPSWV, 0);
+        PSWV.addInput(notPSWV, 0);
         
-        PSWV.addInput(and1PSWV, 0);
-        PSWV.addInput(and2PSWV, 0);
         PSWM2.addInput(PSWV, 0);
         PSWM3.addInput(PSWV, 0);
         
         //I
-        //TODO OVAVEZNO OVDE DODATI SIGNAL INTE, NE ISPOD
-        muxPSWI.addInput(M1, 4);
+        and1PSWI.addInput(M1, 4);
+        and1PSWI.addInput(uMem, Signali.PSWin.ordinal());
+        notPSWI.addInput(and1PSWI, 0);
+        or1PSWI.addInput(and1PSWI, 0);
+        or1PSWI.addInput(diDec81, 2);
+        or2PSWI.addInput(notPSWI, 0);
+        or2PSWI.addInput(diDec81, 3);
         
-        notPSWI.addInput(muxPSWI, 0);
-        PSWI.addInput(muxPSWI, 0);
-        PSWI.addInput(notPSWI, 0);
+        PSWI.addInput(or1PSWI, 0);
+        PSWI.addInput(or2PSWI, 0);
         PSWM2.addInput(PSWI, 0);
         PSWM3.addInput(PSWI, 0);
         
         //T
-        //TODO isto kako i za I
-        muxPSWT.addInput(M1, 5);
+        and1PSWT.addInput(M1, 5);
+        and1PSWT.addInput(uMem, Signali.PSWin.ordinal());
+        notPSWT.addInput(and1PSWT, 0);
+        or1PSWT.addInput(and1PSWT, 0);
+        or1PSWT.addInput(diDec81, 4);
+        or2PSWT.addInput(notPSWT, 0);
+        or2PSWT.addInput(diDec81, 5);
         
-        notPSWI.addInput(muxPSWT, 0);
-        PSWT.addInput(muxPSWT, 0);
-        PSWT.addInput(notPSWT, 0);
+        PSWT.addInput(or1PSWT, 0);
+        PSWT.addInput(or2PSWT, 0);
         PSWM2.addInput(PSWT, 0);
         PSWM3.addInput(PSWT, 0);
-        
+                
         PSWM2.addInput(PSWL0, 0);
         PSWM2.addInput(PSWL1, 0);
         
@@ -736,28 +889,29 @@ public class Initializator {
         PSWM2.addInput8(nula, 0);
         PSWM3.addInput8(nula, 0);
         
-
-////////////////////////////////////////////////////////////////////////////////
-//  Prekidi
-////////////////////////////////////////////////////////////////////////////////
-        
+        PSWM2.addInput(nula, 0);
+        PSWM3.addInput(uMem, Signali.PSWM3out.ordinal());
+             
 ////////////////////////////////////////////////////////////////////////////////
 //  Arbitracija
 ////////////////////////////////////////////////////////////////////////////////
         //CPU
         BUSYBUS.addInput(busyBuss, 0);
+        busySet.addInput(arbDecoder, 0);
+        
         busyBuss.addInput(busySet, 0);
         BGRCpu.addInput(readorwrite, 0);
+        noBusy.addInput(BUSYBUS, 0);
         BGRandBusyBus.addInput(BGRCpu, 0);
         BGRandBusyBus.addInput(noBusy, 0);
-        noBusy.addInput(BUSYBUS, 0);
+        
         
         //ARBITRATOR
         arbCoder.addInput(BGRandBusyBus, 0);
         for (int i = 0; i < 7; i++ ){
         	arbCoder.addInput(nula, 0);
         }
-        //TODO add arbotrator E signal.
+        arbCoder.addInput(jedan, 0);
         arbDecoder.addInput(arbCoder, 0);
         arbDecoder.addInput(arbCoder, 1);
         arbDecoder.addInput(arbCoder, 2);
@@ -848,7 +1002,7 @@ public class Initializator {
         diAnd8.addInput(IR1, 7);
         diAnd8.addInput(IR1, 6);
         diAnd8.addInput(diNot5, 0);
-        //ALUADROP
+        //ALUOPDRP
         diOr6.addInput(diAnd6, 0);
         diOr6.addInput(diAnd7, 0);
         diOr6.addInput(diAnd8, 0);
@@ -856,6 +1010,9 @@ public class Initializator {
         diOr7.addInput(diDec82, 2);
         diOr7.addInput(diDec82, 3);
         diOr7.addInput(diAnd2, 0);
+        //ALUOP
+        aluop.addInput(diOr7, 0);
+        aluop.addInput(diOr6, 0);
         
         //GENERISANJE SIGNALA ZA ADRESIRANJE
         //REGDIR, REGIND, REGINDOF
