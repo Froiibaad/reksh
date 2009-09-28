@@ -12,32 +12,44 @@ public class PanelOper1 extends ImagePanel {
 
     public void paint(Graphics g) {
         g.drawImage(image, 0, 0, null);
-        g.setColor(Color.GREEN);
         //M1M2out
+        g.setColor(Color.GREEN);
         g.drawLine(201, 32, 201, 41);
         //M1M3out
+        g.setColor(Color.GREEN);
         g.drawLine(202, 79, 202, 88);
         //M2M1out
+        g.setColor(Color.GREEN);
         g.drawLine(838, 75, 838, 85);
         //M3M1out
+        g.setColor(Color.GREEN);
         g.drawLine(838, 122, 838, 132);
         //ALUmp
+        g.setColor(Color.GREEN);
         g.drawLine(452, 388, 464, 388);
         //Yin
+        g.setColor(Color.GREEN);
         g.drawLine(638, 387, 651, 387);
         //REGin
+        g.setColor(Color.GREEN);
         g.drawLine(643, 156, 655, 156);
         //REGBUSsel
+        g.setColor(Color.GREEN);
         g.drawLine(581, 150, 581, 161);
         //ALUM2out
+        g.setColor(Color.GREEN);
         g.drawLine(299, 476, 299, 485);
         //ALUM3out
+        g.setColor(Color.GREEN);
         g.drawLine(299, 528, 299, 538);
         //PSWin
+        g.setColor(Color.GREEN);
         g.drawLine(491, 651, 502, 651);
         //PSWM2out
-        g.drawLine(297, 655, 297, 675);
+        g.setColor(Color.GREEN);
+        g.drawLine(297, 665, 297, 675);
         //PSWM3out
+        g.setColor(Color.GREEN);
         g.drawLine(297, 700, 297, 710);
         
         
