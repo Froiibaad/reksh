@@ -40,7 +40,10 @@ public class MainFrame extends JFrame {
     String[] ucode = new String[100];
     LinkedList<Integer> accessedAddresses;
     boolean compiled;
-
+    public PanelSignals Alu = new PanelSignals(this);
+    Memory mem = new Memory();
+    MemoryWrapper mw = new MemoryWrapper(mem);
+    
     BorderLayout borderLayout1 = new BorderLayout();
     JMenuBar jMenuBar1 = new JMenuBar();
     JMenu jMenuFile = new JMenu();
@@ -77,7 +80,7 @@ public class MainFrame extends JFrame {
     JPanel memPanel = new JPanel();
     JPanel regPanel = new JPanel();
     JPanel jPanel9 = new JPanel();
-    JPanel aluPanel = new PanelAlu(init);
+    JPanel aluPanel = new PanelAlu(init, this);
     JPanel cpuPanel = new PanelCPU(init);
     JPanel oper1Panel = new PanelOper1(init);
     JPanel oper2Panel = new PanelOper2(init);
@@ -283,31 +286,19 @@ public class MainFrame extends JFrame {
         jTabbedPane2.addTab("Kombination PSW", kombPanel);
         jTabbedPane2.addTab("Control Unit", upravPanel);
         
-        /*jTabbedPane2.addTab("ALU signali", aluSigPanel);
-        jTabbedPane2.addTab("ALU IR", IRPanel);
-        jTabbedPane2.addTab("ALU PC", aluPCPanel);
-        jTabbedPane2.addTab("CU", cuPanel);
-        jTabbedPane2.addTab("Arbitration", arbPanel);
-        jTabbedPane2.addTab("PSW", pswPanel);
-        jTabbedPane2.addTab("Periferije", perPanel);
-        jTabbedPane2.addTab("Sync M", synchPanel);
-        jTabbedPane2.addTab("Sync M2", synchPanel1);
-        jTabbedPane2.addTab("Sync S", synchPanel2);
-        jTabbedPane2.addTab("Mem Master", synchPanel3);
-        jTabbedPane2.addTab("Mem Slave", synchPanel4);
-        jTabbedPane2.addTab("Interrupt1", intPanel1);
-        jTabbedPane2.addTab("Interrupt2", intPanel2);
-        jTabbedPane2.addTab("Interrupt3", intPanel3);*/
         //Clock++ Ins++ i Prog++ dugme je inicijalno onemoguceno. Omogucava tek po
         //ucitavanju fajla sa asemblerskim kodom
         clockButton.setEnabled(false);
         insButton.setEnabled(false);
         progButton.setEnabled(false);
+        
         compiled = false;
         clock = 0;
+        Alu.sve_na_nulu();
+            
         //Inicijalno popunjavanje memorijske i registarske tabele
         fillRegTable();
- //       drawMemTable();
+        drawMemTable();
         //Ucitavanje mikrokoda
         int nUCode = 0;
         BufferedReader inputUCode = null;
@@ -319,7 +310,13 @@ public class MainFrame extends JFrame {
             }
         } catch (IOException e) {}
     }
+    public int getClock() {
+		return clock;
+	}
 
+	public void setClock(int clock) {
+		this.clock = clock;
+	}
     /**
      * File | Exit action performed.
      *
@@ -332,8 +329,10 @@ public class MainFrame extends JFrame {
     //Clock++ button
     public void jButton5_actionPerformed(ActionEvent actionEvent) {
         clockButton.setEnabled(false);
-        Clock.tick();
+        //Clock.tick();
         clock++;
+        //TODO oziciti inc od cnt na inct
+        init.cnt.calc();
         drawStatus();
         clockButton.setEnabled(true);
     }
@@ -342,7 +341,7 @@ public class MainFrame extends JFrame {
     public void insButton_actionPerformed(ActionEvent actionEvent) {
         insButton.setEnabled(false);
         do {
-            Clock.tick();
+            //Clock.tick();
             clock++;
         } while (init.cnt.getValue() != 0 && init.cnt.getValue() != 0x59);
         drawStatus();
@@ -369,8 +368,10 @@ public class MainFrame extends JFrame {
         }
     }
 
-/*    public void drawMemTable() {
-//        accessedAddresses = init.mw.getAccessedAddresses();        
+    public void drawMemTable() {
+     	accessedAddresses = mw.getAccessedAddresses();  
+     	accessedAddresses.add(100);
+     	accessedAddresses.add(101);
         Integer addr;
         if (accessedAddresses != null) {
 //            int n = accessedAddresses.size();
@@ -385,7 +386,7 @@ public class MainFrame extends JFrame {
                         mw.read(addr)).toUpperCase(), i, 1);
             }
         }
-    }*/
+    }
 
     public void drawStatus() {
         pcLabel.setText("PC = " + Integer.toHexString(init.PC.getValue()) + 'h');
@@ -470,8 +471,11 @@ public class MainFrame extends JFrame {
                 clock = 0;
             //}
             if (mcFile != null) {
+            	int startAdr = Loader.loadMemory(mw, mcFile);
+            	 init.Mem.initialize(1);
+                 init.PC.initialize(startAdr);
  //             init.initialize(mcFile);
-                Clock.init();
+                //Clock.init();
                 compiled = true;                
                 drawStatus();
                 clockButton.setEnabled(true);

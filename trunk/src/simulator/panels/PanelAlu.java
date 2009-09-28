@@ -7,13 +7,16 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 import simulator.Initializator;
+import simulator.MainFrame;
 import sun.java2d.loops.DrawLine;
 
 
 public class PanelAlu extends ImagePanel {
     private static final String imageName = "alu.png";
-    public PanelAlu(Initializator init) {
+    public MainFrame mf;
+    public PanelAlu(Initializator init, MainFrame mf) {
         super(init, imageName);
+        this.mf = mf;
         this.setLayout(new GridBagLayout());
     }
 
@@ -22,7 +25,7 @@ public class PanelAlu extends ImagePanel {
         
         //ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 0));
         g.drawLine(95, 144, 118, 144);
         g.drawLine(118, 144, 118, 520);
         g.drawLine(118, 520, 140, 520);
