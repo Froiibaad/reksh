@@ -1,6 +1,6 @@
 package simulator.elements;
 
-import simulator.MainFrame;
+import simulator.Initializator;
 
 public abstract class SekvMreza extends Mreza {
     public String name = "";
@@ -15,7 +15,11 @@ public abstract class SekvMreza extends Mreza {
     }
 
     public void addInput(int inputNo, Mreza m, int outputNo) {
-        inputs.add(inputNo, m.getOutput(outputNo));
+        int size = this.inputs.size();
+        for (int i = size; i < inputNo; i++) {
+        	inputs.add(Initializator.nula.getOutput(0));
+        }
+        inputs.add(m.getOutput(outputNo));
     }
 
     public void wakeUp() {}

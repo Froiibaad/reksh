@@ -1,7 +1,5 @@
 package simulator;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Single;
-
 import simulator.elements.*;
 import simulator.upravljacka.*;
 
@@ -264,10 +262,10 @@ public class Initializator {
 //  Arbitracija
 ////////////////////////////////////////////////////////////////////////////////
     //Arbitrator
-    public Buffer BGR0 = new Buffer();
-    public Buffer BGR1 = new Buffer();
-    public Buffer BREQ0 = new Buffer();
-    public Buffer BREQ1 = new Buffer();
+    //public Buffer BGR0 = new Buffer();
+    //public Buffer BGR1 = new Buffer();
+    //public Buffer BREQ0 = new Buffer();
+    //public Buffer BREQ1 = new Buffer();
     public Coder8 arbCoder = new Coder8();
     public Decoder8 arbDecoder = new Decoder8();
 
@@ -275,7 +273,7 @@ public class Initializator {
     public BusIn busyBuss = new BusIn("CPUBusyBuss");
     public SRff busySet = new SRff ();
     public Or readorwrite =  new Or (2);
-    public Buffer BGRCpu = new Buffer();
+    public Dff BGRCpu = new Dff();
     public And BGRandBusyBus = new And (2);
     public Not noBusy = new Not();
 
@@ -285,24 +283,32 @@ public class Initializator {
     public uMemory uMem = new uMemory (8, 81);
     public Register8 cnt = new Register8 ("CNT");
     public Mux4 upravljackaMux = new Mux4 ();
-    public uMemory kmstore = new uMemory (3, 8);
-    public uMemory kmop = new uMemory (4, 8);
-    public uMemory kmaddr = new uMemory (3, 8);
+    //public uMemory kmstore = new uMemory (3, 8);
+    //public uMemory kmop = new uMemory (4, 8);
+    //public uMemory kmaddr = new uMemory (3, 8);
     public Or upravljackaOr1 = new Or (2);
     public Or upravljackaOr2 = new Or (2);
     public Or upravljackaOr3 = new Or (4);
-    public And upravljackaAnd = new And	(2);
+    
+    public And upravljackaAnd1 = new And(2);
+    public And upravljackaAnd2 = new And(3);
+    public Not upravljackaNot = new Not();
+    
     
     //logika za branch
     public And brAnd1 = new And (2);
-    public And brAnd2 = new And (2);
-    public And brAnd3 = new And (2);
-    public And brAnd4 = new And (2);
-    public And brAnd5 = new And (2);
-    public And brAnd6 = new And (2);
-    public And brAnd7 = new And (2);
-    public And brAnd8 = new And (2);
-    public Or brOr = new Or (12);
+    //public And brAnd2 = new And (2);
+    //public And brAnd3 = new And (2);
+    //public And brAnd4 = new And (2);
+    //public And brAnd5 = new And (2);
+    //public And brAnd6 = new And (2);
+    //public And brAnd7 = new And (2);
+    //public And brAnd8 = new And (2);
+    public Or brOr = new Or (4);
+    public SRff run = new SRff();
+    
+    public Not notRW = new Not();
+    
     
 ////////////////////////////////////////////////////////////////////////////////
 //  Dekoder instrukcija
@@ -373,14 +379,16 @@ public class Initializator {
     public BusIn16 M3M1 = new BusIn16("M3M1");
     public BusIn16 M2M1 = new BusIn16("M2M1");
 
+    
+    //Nula za sve prazne ulaze
+    public static Const nula = new Const(0);
+    //Jedan za sve stalno aktivne ulaze
+    public static Const jedan = new Const(1);
+    
 ////////////////////////////////////////////////////////////////////////////////
 //  Konstruktor
 ////////////////////////////////////////////////////////////////////////////////
     public Initializator() {
-        //Nula za sve prazne ulaze
-        Const nula = new Const(0);
-        //Jedan za sve stalno aktivne ulaze
-        Const jedan = new Const(1);
         
 ////////////////////////////////////////////////////////////////////////////////
 //  PRESPAJANJE INTERNIH MAGISTRALA
@@ -507,6 +515,7 @@ public class Initializator {
         TEMP.addInput16(M1, 0);
         TEMP.addInput(uMem, Signali.TEMPin.ordinal());
         TEMP.addInput(Register16.LDL, uMem, Signali.TEMPinLOW.ordinal());
+        //TEMP.addInput(inputNo, m, outputNo)
         TEMP.addInput(Register16.SWAP, uMem, Signali.TEMPswap.ordinal());
         TEMPM1.addInput16(TEMP, 0);
         M1.addInput16(TEMPM1, 0);
@@ -1040,19 +1049,42 @@ public class Initializator {
 //  Upravljacka
 ////////////////////////////////////////////////////////////////////////////////
         //branch 
-        brAnd1.addInput(uMem, Signali.brilop.ordinal());
+        brAnd1.addInput(diDec41, 2);
+        brAnd1.addInput(PSWZ, 0);
+        brOr.addInput(brAnd1, 0);
+        brOr.addInput(diDec41, 0);
+        brOr.addInput(diDec41, 1);
+        brOr.addInput(diDec41, 3);
+        
+        
         //brAnd1.addInput(nula, Signali.)
+        
         
         //uMem.addInput8(cnt, 0);
         cnt.addInput8(upravljackaMux, 0);
         upravljackaMux.addInput8(uMem, 73);
-        upravljackaMux.addInput8(kmaddr, 0);
-        upravljackaMux.addInput8(kmstore, 0);
-        upravljackaMux.addInput8(kmop, 0);
+        //upravljackaMux.addInput8(kmaddr, 0);
+        //upravljackaMux.addInput8(kmstore, 0);
+        //upravljackaMux.addInput8(kmop, 0);
+        upravljackaMux.addInput8(nula, 0);
+        upravljackaMux.addInput8(nula, 0);
+        upravljackaMux.addInput8(nula, 0);
+        
         upravljackaOr3.addInput(uMem, Signali.brcaseadr.ordinal());
         upravljackaOr3.addInput(uMem, Signali.brcaseop.ordinal());
         upravljackaOr3.addInput(uMem, Signali.brcasestore.ordinal());
-        //upravljackaOr3.addInput(uMem, Signali.br.ordinal());
+        upravljackaOr3.addInput(brOr, 0);
+        
+        upravljackaNot.addInput(uMem, 0);
+        upravljackaAnd1.addInput(run, 0);
+        upravljackaAnd1.addInput(upravljackaNot, 0);
+        upravljackaAnd2.addInput(run, 0);
+        upravljackaAnd2.addInput(uMem, 0);
+        upravljackaAnd2.addInput(upravljackaOr3, 0);
+        
+        cnt.addInput(upravljackaAnd2, 0);
+        cnt.addInput(Register8.INC, upravljackaAnd1, 0);
+        
         
         upravljackaOr1.addInput(uMem, Signali.brcaseop.ordinal());
         upravljackaOr1.addInput(uMem, Signali.brcaseadr.ordinal());
@@ -1061,7 +1093,10 @@ public class Initializator {
         upravljackaMux.addInput(upravljackaOr1, 0);
         upravljackaMux.addInput(upravljackaOr2, 0);
         
+        notRW.addInput(readorwrite, 0);
         
+        run.addInput(notRW, 0);
+        run.addInput(readorwrite, 0);
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1097,7 +1132,7 @@ public class Initializator {
 
     }
 
-/*
+
 ////////////////////////////////////////////////////////////////////////////////
 //  Inicijalizacija
 ////////////////////////////////////////////////////////////////////////////////
@@ -1111,22 +1146,23 @@ public void initialize(String mcFile) {
         IVTP.initialize(0);
         PSWI.initialize(1);
         PSWT.initialize(0);
-        imr1.initialize(1);
-        imr2.initialize(1);
-        imr3.initialize(1);
+        //imr1.initialize(1);
+        //imr2.initialize(1);
+        //imr3.initialize(1);
         run.initialize(1);
-        procId.initialize(0x0);
-        m1MemAccTime.initialize(1);
-        m2MemAccTime.initialize(1);
+        //procId.initialize(0x0);
+        //m1MemAccTime.initialize(1);
+        //m2MemAccTime.initialize(1);
+        uMem.initialize(0);
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Inicijalizacija memorije i PC
 ////////////////////////////////////////////////////////////////////////////////
         //Inicijalizacija programa (code) i PC-ja
-        int startAdr = Loader.loadMemory(mw, mcFile);
-        PC.initialize(startAdr);
+        //int startAdr = Loader.loadMemory(mw, mcFile);
+        //PC.initialize(startAdr);
         //Inicijalizacija podataka u memoriji (data)
-        Loader.loadMemory(mw, "test\\memoryContent.mc");
+        //Loader.loadMemory(mw, "test\\memoryContent.mc");
 
-    }*/
+    }
 }

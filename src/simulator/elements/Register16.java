@@ -12,6 +12,9 @@ public class Register16 extends SekvMreza {
         for (int i = 0; i < 16; i++) {
             b[i] = 0;
         }
+        /*for (int i = 17; i < 23; i++) {
+        	inputs.get(i).set0();
+        }*/
     }
 
     public static final int IN0 = 0, IN1 = 1, IN2 = 2, IN3 = 3, IN4 = 4,

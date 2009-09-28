@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import simulator.Initializator;
+import simulator.upravljacka.Signali;
 
 public class PanelOper2 extends ImagePanel {
 	private static final String imageName = "Operaciona2.png";
@@ -16,7 +17,7 @@ public class PanelOper2 extends ImagePanel {
         g.drawImage(image, 0, 0, null);
         g.setColor(Color.GREEN);
         //IVTPin
-       //g.setColor(findColor(init.adder, 8));
+        //g.setColor(findColor(init.adder, 8));
         g.drawLine(499, 53, 506, 53);
         g.drawLine(499, 54, 506, 54);
         //PCin
@@ -48,7 +49,7 @@ public class PanelOper2 extends ImagePanel {
         g.drawLine(509, 492, 519, 492);
         g.drawLine(509, 493, 519, 493);
         //MARin
-      //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(init.uMem, Signali.MARin.ordinal()));
         g.drawLine(499, 532, 506, 532);
         g.drawLine(499, 533, 506, 533);
         //TEMP2mp
