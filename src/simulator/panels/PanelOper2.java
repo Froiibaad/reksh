@@ -1,5 +1,6 @@
 package simulator.panels;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import simulator.Initializator;
@@ -13,6 +14,64 @@ public class PanelOper2 extends ImagePanel {
 
     public void paint(Graphics g) {
         g.drawImage(image, 0, 0, null);
+        g.setColor(Color.GREEN);
+        //IVTPin
+        g.drawLine(499, 53, 506, 53);
+        //PCin
+        g.drawLine(499, 114, 506, 114);
+        //IR1in
+        g.drawLine(499, 171, 506, 171);
+        //IR2in
+        g.drawLine(499, 228, 506, 228);
+        //IR3in
+        g.drawLine(499, 286, 506, 286);
+        //IR4in
+        g.drawLine(499, 343, 506, 343);
+        //MBRin
+        g.drawLine(499, 402, 506, 402);
+        //MARmp
+        g.drawLine(509, 492, 519, 492);
+        //MARin
+        g.drawLine(499, 532, 506, 532);
+        //TEMP2mp
+        g.drawLine(509, 601, 519, 601);
+        //IRRin
+        g.drawLine(629, 729, 636, 729);
+        //IVTPM2out
+        g.drawLine(337, 68, 337, 75);
+        //IVTPM3out
+        g.drawLine(337, 97, 337, 104);
+        //PCM2out
+        g.drawLine(337, 124, 337, 131);
+        //PCM3out
+        g.drawLine(337, 152, 337, 159);
+        //IR1M2out
+        g.drawLine(337, 181, 337, 188);
+        //IR1M3out
+        g.drawLine(337, 209, 337, 217);
+        //IR2M2out
+        g.drawLine(337, 239, 337, 246);
+        //IR2M3out
+        g.drawLine(337, 267, 337, 273);
+        //IR4M2out
+        g.drawLine(337, 353, 337, 360);
+        //IR4M3out
+        g.drawLine(337, 382, 337, 389);
+        //MBRM2out
+        g.drawLine(337, 412, 337, 419);
+        //MBRM3out
+        g.drawLine(337, 440, 337, 447);
+        //MBRM1out
+        g.drawLine(704, 432, 704, 440);
+        //MARM1out
+        g.drawLine(704, 559, 704, 567);
+        //TEMP2M1out
+        g.drawLine(705, 640, 705, 648);
+        
+       //TEMP2inLOW
+        //g.drawLine(499, 634, 506, 634);
+
+        
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.alu, 8));
         g.drawLine(459, 319, 368, 319);
