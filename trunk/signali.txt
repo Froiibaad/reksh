@@ -1,0 +1,192 @@
+PCM2out, MARmp, MARin, ALUincX, ALUM3out, M3M1out, PCin
+read
+MBRM1out, IR1in
+brilop, madr12
+brl1, madr39
+PCM2out, MARmp, MARin, ALUincX, ALUM3out, M3M1out, PCin
+read
+MBRM1out, IR2in
+briladr, madr12
+brl2, madr11
+PCM2out, MARmp, MARin, ALUincX, ALUM3out, M3M1out, PCin
+read
+MBRM1out, IR3in
+brl3, madr11
+PCM2out, MARmp, MARin, ALUincX, ALUM3out, M3M1out, PCin
+read
+MBRM1out, IR4in
+brcaseadr
+PCM2out, ALUdecX, ALUM3out, M3M1out, PCin, TEMPcl
+brilop, madr15
+PCM2out, ALUdecX, ALUM3out, M3M1out, PCin
+IRRin, TEMPout
+bruncnd, madrAA
+REGout, YselM1, Yin
+bruncnd, madr39
+IR3M2out, M2M1out, TEMPinLOW
+TEMPswap
+IR4M2out, M2M1out, TEMPinLOW
+TEMPout, Yin, YselM1
+bruncnd, madr39
+IR3M2out, M2M1out, TEMPinLOW
+TEMPswap
+IR4M2out, M2M1out, TEMPinLOW
+TEMPout, MARin, Yin, YselM1
+read
+MBRM1out, TEMP2inLOW
+ALUincY, ALUM2out, MARmp, MARin, TEMP2swap
+read
+MBRM1out, TEMP2inLOW
+brMEMINDIR, madr32
+TEMP2out, Yin, YselM1
+bruncnd, madr39
+REGout, TEMP2in
+bruncnd, madr32
+IR3M2out, Yin, M2M1out, YsignEx
+REGout, M1M2out, ALUadd, ALUM3out, TEMP2mp, TEMP2in
+bruncnd, madr32
+IR3M2out, Yin, M2M1out, YsignEx
+PCM2out, ALUadd, ALUM3out, YselM3, Yin
+bruncnd, madr39
+TEMP2out, Yin, YselM1, MARin
+read
+MBRM1out, TEMPinLOW, ALUincY, ALUM2out, MARmp, MARin
+TEMPswap
+read
+MBRM1out, TEMPinLOW
+TEMPout, Yin, YselM1
+brcaseop
+REGout, regsel2, M1M2out, ALUop, ALUM3out, REGBUSsel, REGin, PSWupdateNZCV
+brINTERRUPT, madrAA
+bruncnd, madr00
+ALUM2out, ALUop, PSWupdateNZCV, M2M1out, TEMPin
+bruncnd, madr86
+ALUM2out, ALUtransY, TEMP2mp, TEMP2in
+SPout, REGout, Yin, YselM1
+ALUdecY, ALUM2out, MARmp, MARin, Yin, YselM2
+MBRin, TEMP2out
+write
+ALUdecY, ALUM2out, SPin, MARin, MARmp, TEMP2swap
+MBRin, TEMP2out
+write
+brINTERRUPT, madrAA
+bruncnd, madr00
+SPout,REGout, MARin, Yin, YselM1
+read
+ALUincY, ALUM2out, YselM2, Yin, SPin
+MBRM1out, TEMPinLOW
+SPout, REGout, MARin, TEMPswap
+read
+ALUincY, ALUM2out, YselM2, Yin, SPin
+MBRM1out, TEMPinLOW
+TEMPout, M1M2out, ALUtransX, PSWupdateNZCV
+bruncnd, madr86
+REGout, regsel2, TEMPin
+bruncnd, madr86
+IR2M2out, Yin, YselM3, ALUdecX, ALUM3out
+brZ, madr00
+ALUdecY, ALUM2out, Yin, YselM2
+PCM2out, ALUadd, ALUM3out, M3M1out, PCin
+brINTERRUPT, madrAA
+bruncnd, madr00
+PCM3out, TEMP2mp, TEMP2in, SPout, REGout, Yin, YselM1
+ALUdecY, ALUM2out, MARmp, MARin, Yin, YselM2
+MBRin, TEMP2out
+write
+ALUdecY, ALUM2out, MARmp, MARin, SPin, TEMP2swap
+MBRin, TEMP2out
+write
+IR2M2out, M2M1out, TEMPinLOW
+TEMPswap
+IR3M2out, M2M1out, TEMPinLOW
+TEMPout, PCin
+brINTERRUPT, madrAA
+bruncnd, madr00
+SPout, REGout, MARin, Yin, YselM1
+read
+ALUincY, ALUM2out, Yin, YselM2, SPin
+MBRM1out, TEMPinLOW
+SPout, REGout, MARin, TEMPswap
+read
+ALUincY, ALUM2out, Yin, YselM2, SPin
+MBRM1out, TEMPinLOW
+TEMPout, PSWin
+SPout, REGout, MARin, Yin, YselM1
+read
+ALUincY, ALUM2out, Yin, YselM2, SPin
+MBRM1out, TEMPinLOW
+SPout, REGout, MARin, TEMPswap
+read
+ALUincY, ALUM2out, Yin, YselM2, SPin
+MBRM1out, TEMPinLOW
+TEMPout, PCin
+bruncnd, madr00
+PSWupdateT
+brINTERRUPT, madrAA
+bruncnd, madr00
+IR2M2out, M2M1out, TEMPinLOW
+TEMPswap
+IR3M2out, M2M1out, TEMPinLOW
+IRRin, TEMPout
+bruncnd, madrAA
+ALUM2out, ALUtransY, M2M1out, PCin
+brINTERRUPT, madrAA
+bruncnd, madr00
+brcasestore
+REGin, TEMPout, M1M2out
+brINTERRUPT, madrAA
+bruncnd, madr00
+REGout, TEMP2in
+bruncnd, madrA1
+IR3M2out, M2M1out, TEMP2inLOW
+TEMP2swap
+IR4M2out, M2M1out, TEMP2inLOW
+bruncnd, madrA1
+TEMPout, Yin, YselM1
+IR3M2out, M2M1out, TEMPinLOW
+TEMPswap
+IR4M2out, M2M1out, TEMPinLOW
+TEMPout, MARin
+read
+MBRM1out, TEMP2inLOW
+TEMPout, M1M3out, ALUmp, ALUincX, ALUM2out, MARmp, MARin, TEMP2swap
+read
+ALUM2out, ALUtransY, M2M1out, TEMPin
+MBRM1out, TEMP2inLOW
+bruncnd, madrA1
+IR3M2out, Yin, YselM2
+REGout, M1M2out, ALUadd, ALUM3out, TEMP2mp, TEMP2in
+bruncnd, madrA1
+IR3M2out, Yin, YselM2
+PCM2out, ALUadd, ALUM3out, TEMP2mp, TEMP2in
+TEMP2out, MARin, Yin, YselM1
+TEMPswap
+TEMPout, MBRin
+write
+ALUincY, ALUM2out, MARmp, MARin, TEMP2swap
+TEMPout, MBRin
+write
+brINTERRUPT, madrAA
+bruncnd, madr00
+IADDRout, Yin, YselM1, MARin
+read
+MBRM1out, TEMPinLOW
+ALUM2out, ALUincY, MARin, MARmp, TEMP2swap
+read
+MBRM1out, TEMPinLOW, PCM3out, TEMP2in, TEMP2mp
+REGout, SPout, Yin, YselM1
+ALUincY, ALUM2out, Yin, YselM2, MARin, MARmp
+MBRin, TEMP2out
+write
+ALUdecY, ALUM2out, REGin, SPin, Yin, YselM2, MARin, MARmp, TEMP2swap
+MBRin, TEMP2out
+write
+PSWM3out, TEMP2in, TEMP2mp, ALUdecY, ALUM2out, MARin, MARmp, Yin, YselM2
+MBRin, TEMP2out
+write
+ALUdecY, ALUM2out, REGin, SPin, MARin, MARmp, TEMP2swap
+MBRin, TEMP2out
+write
+intack, PSWinta
+PCin, TEMPout
+bruncnd, madr00

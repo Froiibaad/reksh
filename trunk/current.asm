@@ -1,0 +1,4 @@
+ORG #10
+ADD AX, BX
+INC [CX]
+END
