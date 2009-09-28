@@ -1,9 +1,11 @@
 package simulator.panels;
 
-import javax.swing.*;
-import java.awt.*;
 import simulator.Initializator;
 import simulator.elements.Mreza;
+import java.awt.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 
 public class ImagePanel extends JPanel {
@@ -28,5 +30,18 @@ public class ImagePanel extends JPanel {
         }
         return Color.DARK_GRAY;
     }
+
+	protected Color findColor(PanelSignals s, int o) {
+		//System.out.println("Sada dohvatam " + s.getOutput(0));
+		switch (s.getOutput(0)) {
+		case 0: 
+			return Color.BLUE;
+		case 1:
+			return Color.RED;
+		case -1:
+			return Color.BLACK;
+		}
+		return Color.DARK_GRAY;
+	}
 
 }

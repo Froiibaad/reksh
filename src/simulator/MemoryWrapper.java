@@ -26,6 +26,7 @@ public class MemoryWrapper {
     }
 
     public void write(int data, int address) {
+    	System.out.println("daodajem sledeci bajt: " + Integer.toHexString(data));
     	modul1.write(data, address);
         accessedAddresses.add(address);
     }

@@ -378,6 +378,7 @@ public class Initializator {
     public BusIn16 M1M3 = new BusIn16("M1M3");
     public BusIn16 M3M1 = new BusIn16("M3M1");
     public BusIn16 M2M1 = new BusIn16("M2M1");
+	public MemoryWrapper mw;
 
     
     //Nula za sve prazne ulaze
@@ -1159,10 +1160,10 @@ public void initialize(String mcFile) {
 //  Inicijalizacija memorije i PC
 ////////////////////////////////////////////////////////////////////////////////
         //Inicijalizacija programa (code) i PC-ja
-        //int startAdr = Loader.loadMemory(mw, mcFile);
-        //PC.initialize(startAdr);
+        int startAdr = Loader.loadMemory(mw, mcFile);
+        PC.initialize(startAdr);
         //Inicijalizacija podataka u memoriji (data)
-        //Loader.loadMemory(mw, "test\\memoryContent.mc");
+        Loader.loadMemory(mw, "test\\memoryContent.mc");
 
     }
 }
