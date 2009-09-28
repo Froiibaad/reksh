@@ -28,5 +28,12 @@ public class BusIn8 extends KombMreza {
 		}
 
 	}
-
+    public void notifySuccessors() {
+    	if (inputs.get(8).getValue() == 1)
+    	{
+    		for (int i = 0; i < successor.size(); i++) {
+    			successor.get(i).wakeUp();
+    		}
+    	}
+    }
 }

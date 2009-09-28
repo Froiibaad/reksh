@@ -133,8 +133,8 @@ public class Initializator {
     //Ulazni mux za registarski file
     public MuxBus16 REGBUS = new MuxBus16("REGBUS");
 
-    public Not notIR10 = new Not();
-    public Not notIR11 = new Not();
+    //public Not notIR10 = new Not();
+    //public Not notIR11 = new Not();
 
 ////////////////////////////////////////////////////////////////////////////////
 //  ALU
@@ -152,7 +152,7 @@ public class Initializator {
     public Or orAdd = new Or(2);
     public Or orIncY = new Or(2);
     public Or orDecY = new Or(2);
-    public Or orTransY = new Or(2);
+    //public Or orTransY = new Or(2);
     public Or orMovs = new Or (2);
     
     //Mx and outs
@@ -256,7 +256,7 @@ public class Initializator {
 ////////////////////////////////////////////////////////////////////////////////
 //  Prekidi
 ////////////////////////////////////////////////////////////////////////////////
-    public SRff intGen = new SRff (); // generator prekida
+    //public SRff intGen = new SRff (); // generator prekida
    
 ////////////////////////////////////////////////////////////////////////////////
 //  Arbitracija
@@ -1137,7 +1137,7 @@ public class Initializator {
 //  Inicijalizacija
 ////////////////////////////////////////////////////////////////////////////////
 public void initialize(String mcFile) {
-
+	
 ////////////////////////////////////////////////////////////////////////////////
 //  Inicijalizacija vrednosti registara i flip-flopova
 ////////////////////////////////////////////////////////////////////////////////

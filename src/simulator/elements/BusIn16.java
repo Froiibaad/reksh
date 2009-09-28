@@ -28,4 +28,12 @@ public class BusIn16 extends KombMreza {
 		}
 
 	}
+    public void notifySuccessors() {
+    	if (inputs.get(16).getValue() == 1)
+    	{
+    		for (int i = 0; i < successor.size(); i++) {
+    			successor.get(i).wakeUp();
+    		}
+    	}
+    }
 }

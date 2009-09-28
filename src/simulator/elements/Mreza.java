@@ -6,7 +6,7 @@ public abstract class Mreza {
     public Mreza() {
     }
 
-    private ArrayList<KombMreza> successor;
+    protected ArrayList<KombMreza> successor;
     protected ArrayList<Pin> outputs;
     protected ArrayList<Pin> inputs;
     protected int numOfInputs;
@@ -14,9 +14,9 @@ public abstract class Mreza {
     public Mreza(int numOfInputs, int numOfOutputs) {
         successor = new ArrayList<KombMreza>();
         outputs = new ArrayList<Pin>(numOfOutputs);
-        //outputs.ensureCapacity(numOfOutputs);
+        outputs.ensureCapacity(numOfOutputs);
         inputs = new ArrayList<Pin>(numOfInputs);
-        //inputs.ensureCapacity(numOfInputs);
+        inputs.ensureCapacity(numOfInputs);
         for (int i = 0; i < numOfOutputs; i++) {
             addOutput();
         }
@@ -76,7 +76,7 @@ public abstract class Mreza {
         }
     }
     public void addInput16 (Mreza m, int startNo) {
-    	for (int i = startNo; i< startNo + 16; i++){
+    	for (int i = startNo; i < startNo + 16; i++){
     		addInput(m, i);
     	}
     }
