@@ -1,5 +1,6 @@
 package simulator.panels;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import simulator.Initializator;
@@ -13,6 +14,51 @@ public class PanelSignE extends ImagePanel {
 
     public void paint(Graphics g) {
         g.drawImage(image, 0, 0, null);
+         //M1_0
+        g.setColor(Color.GREEN);
+        g.drawLine(713, 233, 713, 262);
+        //M1_1
+        g.setColor(Color.GREEN);
+        g.drawLine(696, 233, 696, 262);
+        //M1_2
+        g.setColor(Color.GREEN);
+        g.drawLine(679, 233, 679, 262);
+        //M1_3
+        g.setColor(Color.GREEN);
+        g.drawLine(662, 233, 662, 262);
+        //M1_4
+        g.setColor(Color.GREEN);
+        g.drawLine(646, 233, 646, 262);
+        //M1_5
+        g.setColor(Color.GREEN);
+        g.drawLine(629, 233, 629, 262);
+        //M1_6
+        g.setColor(Color.GREEN);
+        g.drawLine(612, 233, 612, 262);
+        //M1_7
+        g.setColor(Color.GREEN);
+        g.drawLine(595, 233, 595, 262);
+        g.drawLine(578, 233, 578, 262);
+        g.drawLine(562, 233, 562, 262);
+        g.drawLine(545, 233, 545, 262);
+        g.drawLine(528, 233, 528, 262);
+        g.drawLine(511, 233, 511, 262);
+        g.drawLine(495, 233, 495, 262);
+        g.drawLine(478, 233, 478, 262);
+        g.drawLine(461, 233, 461, 262);
+        //YselM1
+        g.setColor(Color.GREEN);
+        g.drawLine(772, 376, 796, 376);
+        //YsignEx
+        g.setColor(Color.GREEN);
+        g.drawLine(590, 377, 612, 377);
+        //YselM2
+        g.setColor(Color.GREEN);
+        g.drawLine(353, 375, 377, 375);
+        //YselM3
+        g.setColor(Color.GREEN);
+        g.drawLine(185, 375, 210, 375);
+       
         /*g.setColor(Color.BLACK);
         g.setColor(findColor(init.alu, 8));
         g.drawLine(459, 319, 368, 319);
