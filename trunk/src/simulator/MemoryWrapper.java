@@ -18,34 +18,19 @@ import simulator.elements.Memory;
 
 public class MemoryWrapper {
     private Memory modul1;
-    private Memory modul2;
     private LinkedList<Integer> accessedAddresses;
 
-    public MemoryWrapper(Memory modul1, Memory modul2) {
-        this.modul1 = modul1; this.modul2 = modul2;
+    public MemoryWrapper(Memory modul1) {
+        this.modul1 = modul1;
         accessedAddresses = new LinkedList<Integer>();
     }
 
     public void write(int data, int address) {
-        int lsb = address % 2;
-        int modulAddr = address / 2;
-        if (lsb == 0) { //modul1 parne adrese
-            modul1.write(data, modulAddr);
-        } else {        //modul2 neparne adrese
-            modul2.write(data, modulAddr);
-        }
+    	modul1.write(data, address);
         accessedAddresses.add(address);
     }
     public int read(int address) {
-        int lsb = address % 2;
-        int modulAddr = address / 2;
-        int data = 0;
-        if (lsb == 0) { //modul1 parne adrese
-            data = modul1.read(modulAddr);
-        } else {        //modul2 neparne adrese
-            data = modul2.read(modulAddr);
-        }
-        return data;
+        return modul1.read(address);
     }
 
     public LinkedList<Integer> getAccessedAddresses(){

@@ -25,6 +25,8 @@ import java.io.PrintWriter;
 import javax.swing.BorderFactory;
 import javax.swing.border.TitledBorder;
 
+import asm.Asembler;
+
 import simulator.elements.Clock;
 
 public class MainFrame extends JFrame {
@@ -409,17 +411,16 @@ public class MainFrame extends JFrame {
     public void load_actionPerformed(ActionEvent actionEvent) {
         int returnVal = fc.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = fc.getSelectedFile();
-            BufferedReader inputStream = null;
-            try {
-                inputStream = new BufferedReader(new FileReader(file));
-                asmText.read(inputStream, null);
-                if (inputStream != null) {
-                    inputStream.close();
-                }
-            } catch (IOException e) {}
+           
+            String fileName = fc.getSelectedFile().getAbsolutePath();
+            Asembler temp = new Asembler(fileName);
+			temp.PrviProlaz();
+			temp.DrugiProlaz();
+			System.out.print(temp.getKod());
         }
-    }
+            
+            
+   }
 
 //Save button
     public void save_actionPerformed(ActionEvent actionEvent) {
