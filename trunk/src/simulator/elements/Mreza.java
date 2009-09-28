@@ -14,9 +14,9 @@ public abstract class Mreza {
     public Mreza(int numOfInputs, int numOfOutputs) {
         successor = new ArrayList<KombMreza>();
         outputs = new ArrayList<Pin>(numOfOutputs);
-        outputs.ensureCapacity(numOfOutputs);
+        //outputs.ensureCapacity(numOfOutputs);
         inputs = new ArrayList<Pin>(numOfInputs);
-        inputs.ensureCapacity(numOfInputs);
+        //inputs.ensureCapacity(numOfInputs);
         for (int i = 0; i < numOfOutputs; i++) {
             addOutput();
         }

@@ -409,7 +409,19 @@ public class MainFrame extends JFrame {
 
     //Load button
     public void load_actionPerformed(ActionEvent actionEvent) {
-        int returnVal = fc.showOpenDialog(this);
+    	int returnVal = fc.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fc.getSelectedFile();
+            BufferedReader inputStream = null;
+            try {
+                inputStream = new BufferedReader(new FileReader(file));
+                asmText.read(inputStream, null);
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+            } catch (IOException e) {}
+        }
+    	/*int returnVal = fc.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
            
             String fileName = fc.getSelectedFile().getAbsolutePath();
@@ -417,7 +429,7 @@ public class MainFrame extends JFrame {
 			temp.PrviProlaz();
 			temp.DrugiProlaz();
 			System.out.print(temp.getKod());
-        }
+        }*/
             
             
    }
@@ -447,14 +459,18 @@ public class MainFrame extends JFrame {
             PrintWriter outputStream = new PrintWriter(new FileWriter(
                     "current.asm"));
             asmText.write(outputStream);
-            String mcFile = Assembler.assemble("current.asm");
-            if(compiled) {
+            Asembler temp = new Asembler("current.asm");
+			temp.PrviProlaz();
+			temp.DrugiProlaz();
+			
+            String mcFile = "current.mc";
+            //if(compiled) {
                 init.cnt.initialize(0);
 //                init.mw.clearAccessedAddresses();
                 clock = 0;
-            }
+            //}
             if (mcFile != null) {
- //               init.initialize(mcFile);
+ //             init.initialize(mcFile);
                 Clock.init();
                 compiled = true;                
                 drawStatus();

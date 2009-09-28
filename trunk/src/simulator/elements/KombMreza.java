@@ -1,5 +1,7 @@
 package simulator.elements;
 
+import simulator.Initializator;
+
 public abstract class KombMreza extends Mreza {
 
     public KombMreza(int numOfInputs, int numOfOutputs) {
@@ -39,7 +41,11 @@ public abstract class KombMreza extends Mreza {
 
     public void addInput(int inputNo, Mreza m, int outputNo) {
         m.addSuccessor(this);
-        inputs.add(inputNo, m.getOutput(outputNo));
+        int size = this.inputs.size();
+        for (int i = size; i < inputNo; i++) {
+        	inputs.add(Initializator.nula.getOutput(0));
+        }
+        inputs.add(m.getOutput(outputNo));
     }
 
     protected abstract void calc();
