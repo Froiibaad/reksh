@@ -10,7 +10,8 @@ public abstract class KombMreza extends Mreza {
 
     public void wakeUp() {
         boolean bad = false;
-        for (int i = 0; i < numOfInputs; i++) {
+        //for (int i = 0; i < numOfInputs; i++) {
+        for (int i = 0; i < inputs.size(); i++) {
             if (inputs.get(i).getValue() == -1) {
                 bad = true;
             }

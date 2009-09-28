@@ -1,4 +1,4 @@
-PCM2out, MARmp, MARin, ALUincX, ALUM3out, M3M1out, PCin
+MARmp, MARin, ALUincX, PCin
 read
 MBRM1out, IR1in
 brilop, madr12

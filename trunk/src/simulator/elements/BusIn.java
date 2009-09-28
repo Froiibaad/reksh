@@ -21,5 +21,12 @@ public class BusIn extends KombMreza {
 			outputs.get(0).setHighZ();
 		}
 	}
-
+    public void notifySuccessors() {
+    	if (inputs.get(1).getValue() == 1)
+    	{
+    		for (int i = 0; i < successor.size(); i++) {
+    			successor.get(i).wakeUp();
+    		}
+    	}
+    }
 }

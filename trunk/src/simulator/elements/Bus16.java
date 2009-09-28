@@ -11,7 +11,8 @@ public class Bus16 extends KombMreza {
 
     protected void calc() {
         boolean highZ = true;
-        for (int i = 0; i < numOfInputs; i += 16) {
+        //for (int i = 0; i < numOfInputs; i += 16) {
+        for (int i = 0; i < inputs.size(); i += 16) {
 
             if (inputs.get(i).getValue() != -1) {
                 for (int j = 0; j < 16; j++) {
