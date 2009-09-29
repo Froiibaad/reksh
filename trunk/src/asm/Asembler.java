@@ -333,13 +333,27 @@ import java.util.LinkedList;
 						break;
 					}
 					fin.add(o);
+					if (opc < 16 ) this.kod += "0";
 					this.kod += Integer.toHexString(opc).toUpperCase() + " ";
+					if (na < 16)  this.kod += "0";
 					this.kod += Integer.toHexString(na).toUpperCase() + " ";
 					if(o.getOp2NacinAdresiranja()==NacinAdresiranja.REGINDIROFF) this.kod+= Integer.toHexString(o.getVrednostPomeraja()).toUpperCase() + " ";
 					else if (o.getOp2NacinAdresiranja()==NacinAdresiranja.MEMDIR || o.getOp2NacinAdresiranja()==NacinAdresiranja.MEMINDIR)
-					{
-						this.kod += Integer.toHexString(o.getVrednostOperanda2()/256).toUpperCase() + " ";
-						this.kod += Integer.toHexString(o.getVrednostOperanda2()%256).toUpperCase() + " ";
+					{	
+						int v = o.getVrednostOperanda2()/256;
+						if (v<16)
+						{
+							this.kod+= "0";
+							
+						}
+						this.kod += Integer.toHexString(v).toUpperCase() + " ";
+						v = o.getVrednostOperanda2()%256;
+						if (v<16)
+						{
+							this.kod+= "0";
+							
+						}
+						this.kod += Integer.toHexString(v).toUpperCase() + " ";
 					}
 				}break;
 				}
