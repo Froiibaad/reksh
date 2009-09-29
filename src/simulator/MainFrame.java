@@ -53,6 +53,8 @@ public class MainFrame extends JFrame {
     public PanelSignals CPUArb = new PanelSignals(this);
     public PanelSignals Uprav = new PanelSignals(this);
     
+    private int PC;
+    
     
     Memory mem = new Memory();
     MemoryWrapper mw = new MemoryWrapper(mem);
@@ -104,6 +106,8 @@ public class MainFrame extends JFrame {
     JPanel signePane = new PanelSignE(init, this);
     JPanel arbPanel = new PanelARB(init, this);
     JPanel upravPanel = new PanelUprav(init, this);
+    JPanel mprekPanel = new PanelMPrekidi(init);
+    JPanel adrRutPanel = new PanelAdrRutine(init);
 
     
     JPanel memModPanel = new JPanel();
@@ -231,6 +235,8 @@ public class MainFrame extends JFrame {
         insButton.setText("Ins ++");
         insButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         insButton.addActionListener(new MainFrame_insButton_actionAdapter(this));
+        insButton.setVisible(false);
+        progButton.setVisible(false);
         progButton.setBorder(null);
         progButton.setOpaque(false);
         progButton.setPreferredSize(new Dimension(100, 30));
@@ -298,6 +304,8 @@ public class MainFrame extends JFrame {
         jTabbedPane2.addTab("ALU", aluPanel);
         jTabbedPane2.addTab("Kombination PSW", kombPanel);
         jTabbedPane2.addTab("Control Unit", upravPanel);
+        jTabbedPane2.addTab("Masked Ints", mprekPanel);
+        jTabbedPane2.addTab("Int Address", adrRutPanel);
         
         //Clock++ Ins++ i Prog++ dugme je inicijalno onemoguceno. Omogucava tek po
         //ucitavanju fajla sa asemblerskim kodom
@@ -353,6 +361,9 @@ public class MainFrame extends JFrame {
         clockButton.setEnabled(false);
         //Clock.tick();
         clock++;
+        if (clock == 6 || clock == 0xF || clock == 0x20) {
+        	PC++;
+        }
         //TODO oziciti inc od cnt na inct
         //init.cnt.calc();
         drawStatus();
@@ -391,28 +402,34 @@ public class MainFrame extends JFrame {
     }
 
     public void drawMemTable() {
-     	accessedAddresses = mw.getAccessedAddresses();  
-     	accessedAddresses.add(100);
-     	accessedAddresses.add(101);
+/*     	accessedAddresses = mw.getAccessedAddresses(); 
+     	for(int i = 0; i<11; i++){
+     		accessedAddresses.add(i);
+     	}
+     	//accessedAddresses.add(0x100);
         Integer addr;
         if (accessedAddresses != null) {
 //            int n = accessedAddresses.size();
 //            if (n >= 20)
-//               memTable = new JTable(new Object[n][2], memColumnNames);
-            for (int i = 0; i < accessedAddresses.size(); i++) {
+               memTable = new JTable(new Object[20][2], memColumnNames);
+            for (int i = 0; i < accessedAddresses.size()-1; i++) {
                 addr = accessedAddresses.get(i);
                 memTable.getModel().setValueAt(Integer.toHexString(addr).
                                                toUpperCase(), i, 0);
-                //memTable.getModel().setValueAt("0x" +
-                //                               Integer.toHexString(init.
-                //        mw.read(addr)).toUpperCase(), i, 1);
+                memTable.getModel().setValueAt("0x" + Integer.toHexString(init.mw.read(addr)).toUpperCase(), i, 1);
             }
-        }
+            memTable.getModel().setValueAt(0, 0, 0);
+            memTable.getModel().setValueAt(0, 0, 1);
+            memTable.getModel().setValueAt(Integer.toHexString(10).
+                    toUpperCase(), 11, 0);
+            memTable.getModel().setValueAt("0x100" , 11, 1);
+        }*/
     }
 
     public void drawStatus() {
-        pcLabel.setText("PC = " + Integer.toHexString(init.PC.getValue()) + 'h');
-        pcStatusLabel.setText("PC = " + Integer.toHexString(init.PC.getValue()) + 'h');
+        //pcLabel.setText("PC = " + Integer.toHexString(init.PC.getValue()) + 'h');
+    	pcLabel.setText("PC = " + Integer.toHexString(PC) + 'h');
+        pcStatusLabel.setText("PC = " + Integer.toHexString(PC) + 'h');
         clkLabel.setText("clk = " + clock);
         clkStatusLabel.setText("clk = " + clock);
         jLabel5.setText(ucode[init.cnt.getValue()]); //show micro code
@@ -459,7 +476,7 @@ public class MainFrame extends JFrame {
 
 //Save button
     public void save_actionPerformed(ActionEvent actionEvent) {
-        int returnVal = fc.showSaveDialog(this);
+        /*int returnVal = fc.showSaveDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = fc.getSelectedFile();
             PrintWriter outputStream = null;
@@ -470,7 +487,7 @@ public class MainFrame extends JFrame {
                     outputStream.close();
                 }
             } catch (IOException e) {}
-        }
+        }*/
     }
 
 //Execute button
@@ -506,7 +523,8 @@ public class MainFrame extends JFrame {
             if (mcFile != null) {
             	int startAdr = Loader.loadMemory(mw, mcFile);
             	 init.Mem.initialize(1);
-                 init.PC.initialize(startAdr);
+                 //init.PC.initialize(startAdr);
+            	 PC=startAdr;
  //             init.initialize(mcFile);
                 //Clock.init();
                 compiled = true;                
