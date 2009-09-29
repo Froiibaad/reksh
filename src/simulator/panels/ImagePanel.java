@@ -32,8 +32,8 @@ public class ImagePanel extends JPanel {
     }
 
 	protected Color findColor(PanelSignals s, int o) {
-		//System.out.println("Sada dohvatam " + s.getOutput(0));
-		switch (s.getOutput(0)) {
+		//System.out.println("Sada dohvatam " + s.getOutput(o));
+		switch (s.getOutput(o)) {
 		case 0: 
 			return Color.BLUE;
 		case 1:
