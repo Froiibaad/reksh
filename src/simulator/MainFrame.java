@@ -222,10 +222,11 @@ public class MainFrame extends JFrame {
         jTabbedPane2.setTabPlacement(JTabbedPane.TOP);
         clockButton.setBorder(null);
         clockButton.setOpaque(false);
-        clockButton.setPreferredSize(new Dimension(100, 100));
-        clockButton.setMaximumSize(new Dimension(100,100));
+        clockButton.setPreferredSize(new Dimension(100, 40));
+        clockButton.setMaximumSize(new Dimension(100, 40));
         clockButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         clockButton.setToolTipText("");
+        clockButton.setFont(new Font("Arial", Font.BOLD, 15));
         clockButton.setText("Clock ++");
         clockButton.addActionListener(new MainFrame_jButton5_actionAdapter(this));
         insButton.setBorder(null);
