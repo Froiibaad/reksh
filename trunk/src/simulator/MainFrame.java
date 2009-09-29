@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.BorderFactory;
 import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableModel;
 
 import asm.Asembler;
 
@@ -119,7 +120,7 @@ public class MainFrame extends JFrame {
     JButton getButton = new JButton();
     JScrollPane jScrollPane1 = new JScrollPane();
     JScrollPane asmScrollPane = new JScrollPane();
-    JTable memTable = new JTable(new Object[80][2], memColumnNames);
+    JTable memTable = new JTable(new Object[0x100][2], memColumnNames);
     JScrollPane jScrollPane2 = new JScrollPane();
     BorderLayout borderLayout5 = new BorderLayout();
     JTable regTable = new JTable(new Object[20][2], regColumnNames);
@@ -328,7 +329,7 @@ public class MainFrame extends JFrame {
             
         //Inicijalno popunjavanje memorijske i registarske tabele
         fillRegTable();
-        drawMemTable();
+        
         //Ucitavanje mikrokoda
         int nUCode = 0;
         BufferedReader inputUCode = null;
@@ -402,12 +403,37 @@ public class MainFrame extends JFrame {
     }
 
     public void drawMemTable() {
-/*     	accessedAddresses = mw.getAccessedAddresses(); 
-     	for(int i = 0; i<11; i++){
-     		accessedAddresses.add(i);
+     	accessedAddresses = mw.getAccessedAddresses();
+     	for (int i = 0; i < 10; i++){
+     		memTable.getModel().setValueAt("000"+Integer.toHexString(i), i, 0);
+     		memTable.getModel().setValueAt("0x" + Integer.toHexString(0).toUpperCase(), i, 1);
      	}
+     	memTable.getModel().setValueAt("000" + Integer.toHexString(10).toUpperCase(), 10, 0);
+ 		memTable.getModel().setValueAt("0xC0", 10, 1);
+ 		memTable.getModel().setValueAt("000" + Integer.toHexString(11), 11, 0);
+ 		memTable.getModel().setValueAt("0xC0", 11, 1);
+ 		memTable.getModel().setValueAt("000" + Integer.toHexString(12), 12, 0);
+ 		memTable.getModel().setValueAt("0x00", 12, 1);
+ 		memTable.getModel().setValueAt("000" + Integer.toHexString(13), 13, 0);
+ 		memTable.getModel().setValueAt("0x14", 13, 1);
+ 		memTable.getModel().setValueAt("000" + Integer.toHexString(14), 14, 0);
+ 		memTable.getModel().setValueAt("0x10", 14, 1);
+ 		memTable.getModel().setValueAt("000" + Integer.toHexString(15), 15, 0);
+ 		memTable.getModel().setValueAt("0xFF", 15, 1);
+ 		memTable.getModel().setValueAt("00" + Integer.toHexString(16), 16, 0);
+ 		memTable.getModel().setValueAt("0x10", 16, 1);
+ 		for (int i = 17; i < 0x100; i++){
+ 			String s = null;
+ 			if (i < 0x100) s = "00";
+ 			else s = "0";
+     		memTable.getModel().setValueAt(s + Integer.toHexString(i), i, 0);
+     		memTable.getModel().setValueAt("0x" + Integer.toHexString(0).toUpperCase(), i, 1);
+     	}
+     	/*for(int i = 0; i<11; i++){
+     		accessedAddresses.add(i);
+     	}*/
      	//accessedAddresses.add(0x100);
-        Integer addr;
+        /*Integer addr;
         if (accessedAddresses != null) {
 //            int n = accessedAddresses.size();
 //            if (n >= 20)
@@ -417,13 +443,17 @@ public class MainFrame extends JFrame {
                 memTable.getModel().setValueAt(Integer.toHexString(addr).
                                                toUpperCase(), i, 0);
                 memTable.getModel().setValueAt("0x" + Integer.toHexString(init.mw.read(addr)).toUpperCase(), i, 1);
-            }
-            memTable.getModel().setValueAt(0, 0, 0);
+            }*/
+     		//String data[][] = {{"0","0x00"}, {"1","0x00"}, {"2","0x00"}};
+     		//String col[] = {"Address","Value"};
+     		//DefaultTableModel model = new DefaultTableModel(data,col);
+            //memTable = new JTable (model);
+     		/*memTable.getModel().setValueAt(0, 0, 0);
             memTable.getModel().setValueAt(0, 0, 1);
             memTable.getModel().setValueAt(Integer.toHexString(10).
                     toUpperCase(), 11, 0);
-            memTable.getModel().setValueAt("0x100" , 11, 1);
-        }*/
+            memTable.getModel().setValueAt("0x100" , 11, 1);*/
+        //}
     }
 
     public void drawStatus() {
@@ -503,6 +533,7 @@ public class MainFrame extends JFrame {
 			temp.PrviProlaz();
 			temp.DrugiProlaz();
 			
+			drawMemTable();
 			Alu.alu();
 	        Oper1.oper1();
 	        Oper2.oper2();
@@ -524,7 +555,7 @@ public class MainFrame extends JFrame {
             	int startAdr = Loader.loadMemory(mw, mcFile);
             	 init.Mem.initialize(1);
                  //init.PC.initialize(startAdr);
-            	 PC=startAdr;
+            	 PC=10;
  //             init.initialize(mcFile);
                 //Clock.init();
                 compiled = true;                

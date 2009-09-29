@@ -3,8 +3,6 @@ package simulator.panels;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import java_cup.Main;
-
 import simulator.Initializator;
 import simulator.MainFrame;
 import simulator.upravljacka.Signali;
