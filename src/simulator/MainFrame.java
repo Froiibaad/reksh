@@ -381,9 +381,9 @@ public class MainFrame extends JFrame {
                 addr = accessedAddresses.get(i);
                 memTable.getModel().setValueAt(Integer.toHexString(addr).
                                                toUpperCase(), i, 0);
-                memTable.getModel().setValueAt("0x" +
-                                               Integer.toHexString(init.
-                        mw.read(addr)).toUpperCase(), i, 1);
+                //memTable.getModel().setValueAt("0x" +
+                //                               Integer.toHexString(init.
+                //        mw.read(addr)).toUpperCase(), i, 1);
             }
         }
     }
