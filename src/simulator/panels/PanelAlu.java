@@ -28,7 +28,7 @@ public class PanelAlu extends ImagePanel {
         
         //ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(init.alu, 37));
         g.drawLine(95, 144, 118, 144);
         g.drawLine(95, 145, 118, 145);
         g.drawLine(118, 144, 118, 520);
