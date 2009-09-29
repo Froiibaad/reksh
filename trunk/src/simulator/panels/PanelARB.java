@@ -2,14 +2,16 @@ package simulator.panels;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import simulator.MainFrame;
 
 import simulator.Initializator;
 
 public class PanelARB extends ImagePanel {
 	private static final String imageName = "Arbitrator.png";
-
-    public PanelARB(Initializator init) {
+	public MainFrame mf;
+    public PanelARB(Initializator init, MainFrame mf) {
         super(init, imageName);
+        this.mf = mf;
     }
 
     public void paint(Graphics g) {
@@ -17,35 +19,35 @@ public class PanelARB extends ImagePanel {
         
         //0
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Arb, 0));
         g.drawLine(346, 167, 346, 216);
         g.drawLine(347, 167, 347, 216);
         g.drawLine(348, 167, 348, 216);
         
         //0m
-        g.setColor(Color.GREEN);
+        g.setColor(Color.BLUE);
         //g.setColor(findColor(init.alu, 37));
         g.drawLine(399, 346, 399, 419);
         g.drawLine(400, 346, 400, 419);
         g.drawLine(401, 346, 401, 419);
         
         //1m
-        g.setColor(Color.GREEN);
+        //g.setColor(Color.GREEN);
         //g.setColor(findColor(init.alu, 37));
         g.drawLine(526, 346, 526, 419);
         g.drawLine(527, 346, 527, 419);
         g.drawLine(528, 346, 528, 419);
    
         //2m
-        g.setColor(Color.GREEN);
+        //g.setColor(Color.GREEN);
         //g.setColor(findColor(init.alu, 37));
         g.drawLine(640, 346, 640, 419);
         g.drawLine(641, 346, 641, 419);
         g.drawLine(642, 346, 642, 419);
         
         //0l
-        g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        //g.setColor(Color.GREEN);
+        g.setColor(findColor(mf.Arb, 0));
         g.drawLine(346, 548, 346, 598);
         g.drawLine(347, 548, 347, 598);
         g.drawLine(348, 548, 348, 598);
@@ -58,7 +60,7 @@ public class PanelARB extends ImagePanel {
       
         //W
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Arb, 0));
         g.drawLine(179, 308, 209, 308);
         g.drawLine(179, 309, 209, 309);
         g.drawLine(179, 310, 209, 310);

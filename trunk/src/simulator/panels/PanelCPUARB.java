@@ -1,15 +1,18 @@
 package simulator.panels;
 
 import java.awt.*;
+import simulator.MainFrame;
 
 import simulator.Initializator;
 
 
 public class PanelCPUARB extends ImagePanel {
     private static final String imageName = "CPUArb.png";
+    public MainFrame mf;
 
-    public PanelCPUARB(Initializator init) {
+    public PanelCPUARB(Initializator init, MainFrame mf) {
         super(init, imageName);
+        this.mf = mf;
     }
 
     public void paint(Graphics g) {
@@ -17,7 +20,7 @@ public class PanelCPUARB extends ImagePanel {
         
         //BUSYBUS
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 0));
         g.drawLine(49, 224, 1021, 224);
         g.drawLine(49, 225, 1021, 225);
         g.drawLine(325, 275, 325, 226);
@@ -29,19 +32,19 @@ public class PanelCPUARB extends ImagePanel {
         
         //BGRQ
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 1));
         g.drawLine(65, 362, 104, 362);
         g.drawLine(65, 363, 104, 363);
    
         //run
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 2));
         g.drawLine(65, 476, 104, 476);
         g.drawLine(65, 477, 104, 477);
         
         //Q
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 3));
         g.drawLine(229, 362, 326, 362);
         g.drawLine(229, 363, 326, 363);
         g.drawLine(325, 305, 325, 363);
@@ -49,38 +52,38 @@ public class PanelCPUARB extends ImagePanel {
         
         //CPUBUSBUSYout
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 4));
         g.drawLine(337, 294, 352, 294);
         g.drawLine(338, 295, 352, 295);
         
         
         //read
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 5));
         g.drawLine(463, 415, 482, 415);
         g.drawLine(463, 416, 483, 416);
         
         //write
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 6));
         g.drawLine(463, 439, 483, 439);
         g.drawLine(463, 440, 482, 440);
         
         //read+write
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 7));
         g.drawLine(529, 427, 597, 427);
         g.drawLine(529, 428, 597, 428);
         
         //DQ
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 8));
         g.drawLine(721, 427, 838, 427);
         g.drawLine(721, 428, 838, 428);
  
-        //DQ
+        //BR
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.CPUArb, 9));
         g.drawLine(903, 415, 978, 415);
         g.drawLine(903, 416, 978, 416);
         

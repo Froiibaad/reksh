@@ -4,12 +4,15 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import simulator.Initializator;
+import simulator.MainFrame;
 
 public class PanelRegSel extends ImagePanel {
 	private static final String imageName = "REGSel.png";
+	public MainFrame mf;
 
-    public PanelRegSel(Initializator init) {
+    public PanelRegSel(Initializator init, MainFrame mf) {
         super(init, imageName);
+        this.mf = mf;
     }
 
     public void paint(Graphics g) {
@@ -21,69 +24,69 @@ public class PanelRegSel extends ImagePanel {
         
         //AXsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 0));
         g.drawLine(832, 235, 910, 235);
         g.drawLine(832, 236, 910, 236);
         g.drawLine(832, 237, 910, 237);
         
         //BXsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 1));
         g.drawLine(832, 288, 910, 288);
         g.drawLine(832, 289, 910, 289);
         g.drawLine(832, 290, 910, 290);
         
         //CXsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 2));
         g.drawLine(832, 343, 910, 343);
         g.drawLine(832, 344, 910, 344);
         g.drawLine(832, 345, 910, 345);
         
         //DXsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 3));
         g.drawLine(832, 395, 910, 395);
         g.drawLine(832, 396, 910, 396);
         g.drawLine(832, 397, 910, 397);
         
         //SPsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 4));
         g.drawLine(832, 448, 910, 448);
         g.drawLine(832, 449, 910, 449);
         g.drawLine(832, 450, 910, 450);
         
         //BPsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 5));
         g.drawLine(832, 501, 910, 501);
         g.drawLine(832, 502, 910, 502);
         g.drawLine(832, 503, 910, 503);
      
         //SIsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 6));
         g.drawLine(832, 554, 910, 554);
         g.drawLine(832, 555, 910, 555);
         g.drawLine(832, 556, 910, 556);
      
         //DIsel
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 7));
         g.drawLine(832, 607, 910, 607);
         g.drawLine(832, 608, 910, 608);
         g.drawLine(832, 609, 910, 609);
       
         //regsel2
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.RegSel, 8));
         g.drawLine(300, 542, 300, 583);
         g.drawLine(301, 542, 301, 583);
         g.drawLine(302, 542, 302, 583);
         
         /*g.setColor(Color.BLACK);
-        g.setColor(findColor(init.alu, 8));
+        g.setColor(findColor(mf.RegSel, 8));
         g.drawLine(459, 319, 368, 319);
         g.drawLine(368, 319, 368, 272);
         g.drawLine(368, 272, 272, 272);

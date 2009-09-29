@@ -40,8 +40,20 @@ public class MainFrame extends JFrame {
     String[] ucode = new String[100];
     LinkedList<Integer> accessedAddresses;
     boolean compiled;
+    
+    
     public PanelSignals Alu = new PanelSignals(this);
     public PanelSignals Oper1 = new PanelSignals(this);
+    public PanelSignals Oper2 = new PanelSignals(this);
+    public PanelSignals RegSel = new PanelSignals(this);
+    public PanelSignals RegFile = new PanelSignals(this);
+    public PanelSignals SignE = new PanelSignals(this);
+    public PanelSignals Komb = new PanelSignals(this);
+    public PanelSignals Arb = new PanelSignals(this);
+    public PanelSignals CPUArb = new PanelSignals(this);
+    public PanelSignals Uprav = new PanelSignals(this);
+    
+    
     Memory mem = new Memory();
     MemoryWrapper mw = new MemoryWrapper(mem);
     
@@ -84,14 +96,14 @@ public class MainFrame extends JFrame {
     JPanel aluPanel = new PanelAlu(init, this);
     JPanel cpuPanel = new PanelCPU(init);
     JPanel oper1Panel = new PanelOper1(init, this);
-    JPanel oper2Panel = new PanelOper2(init);
-    JPanel cpuarbPanel = new PanelCPUARB(init);
-    JPanel regfilePanel = new PanelRegFile(init);
-    JPanel regselPanel = new PanelRegSel(init);
-    JPanel kombPanel = new PanelKomb(init);
-    JPanel signePane = new PanelSignE(init);
-    JPanel arbPanel = new PanelARB(init);
-    JPanel upravPanel = new PanelUprav(init);
+    JPanel oper2Panel = new PanelOper2(init, this);
+    JPanel cpuarbPanel = new PanelCPUARB(init, this);
+    JPanel regfilePanel = new PanelRegFile(init, this);
+    JPanel regselPanel = new PanelRegSel(init, this);
+    JPanel kombPanel = new PanelKomb(init, this);
+    JPanel signePane = new PanelSignE(init, this);
+    JPanel arbPanel = new PanelARB(init, this);
+    JPanel upravPanel = new PanelUprav(init, this);
 
     
     JPanel memModPanel = new JPanel();
@@ -297,7 +309,14 @@ public class MainFrame extends JFrame {
         clock = 0;
         Alu.sve_na_nulu();
         Oper1.sve_na_nulu();
-        Oper1.oper1();
+        Oper2.sve_na_nulu();
+        RegSel.sve_na_nulu();
+        RegFile.sve_na_nulu();
+        SignE.sve_na_nulu();
+        Komb.sve_na_nulu();
+        Arb.sve_na_nulu();
+        CPUArb.sve_na_nulu();
+        Uprav.sve_na_nulu();
             
         //Inicijalno popunjavanje memorijske i registarske tabele
         fillRegTable();
@@ -335,7 +354,7 @@ public class MainFrame extends JFrame {
         //Clock.tick();
         clock++;
         //TODO oziciti inc od cnt na inct
-        init.cnt.calc();
+        //init.cnt.calc();
         drawStatus();
         clockButton.setEnabled(true);
     }
@@ -467,6 +486,17 @@ public class MainFrame extends JFrame {
 			temp.PrviProlaz();
 			temp.DrugiProlaz();
 			
+			Alu.alu();
+	        Oper1.oper1();
+	        Oper2.oper2();
+	        RegSel.regsel();
+	        RegFile.regf();
+	        SignE.signext();
+	        Komb.komb();
+	        Arb.arb();
+	        CPUArb.cpuarb();
+	        Uprav.uprav();
+	        
             String mcFile = "current.mc";
             //if(compiled) {
                 init.cnt.initialize(0);

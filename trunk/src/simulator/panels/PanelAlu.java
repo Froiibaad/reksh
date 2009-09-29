@@ -28,7 +28,7 @@ public class PanelAlu extends ImagePanel {
         
         //ALUop
         g.setColor(Color.GREEN);
-        g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 0));
         g.drawLine(95, 144, 118, 144);
         g.drawLine(95, 145, 118, 145);
         g.drawLine(118, 144, 118, 520);
@@ -48,7 +48,7 @@ public class PanelAlu extends ImagePanel {
         
         //ALUtransY
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 1));
         g.drawLine(95, 180, 114, 180);
         g.drawLine(95, 181, 114, 181);
         g.drawArc(114, 175, 9, 9, 0, 180);
@@ -62,7 +62,7 @@ public class PanelAlu extends ImagePanel {
         
         //insMOVS
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 2));
         g.drawLine(95, 208, 114, 208);
         g.drawLine(95, 209, 114, 209);
         g.drawArc(114, 204, 9, 9, 0, 180);
@@ -72,13 +72,13 @@ public class PanelAlu extends ImagePanel {
         
         //insMOVS*ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 3));
         g.drawLine(169, 215, 228, 215);
         g.drawLine(169, 216, 228, 216);
         
         //insMOVS*ALUop+ALUtransY
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 4));
         g.drawLine(257, 208, 316, 208);
         g.drawLine(257, 209, 316, 209);
         g.drawLine(317, 208, 317, 233);
@@ -88,7 +88,7 @@ public class PanelAlu extends ImagePanel {
         
         //ALUadd
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 5));
         g.drawLine(99, 252, 114, 252);
         g.drawLine(99, 253, 114, 253);
         g.drawArc(114, 247, 9, 9, 0, 180);
@@ -102,7 +102,7 @@ public class PanelAlu extends ImagePanel {
         
         //insADD
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 6));
         g.drawLine(98, 287, 114, 287);
         g.drawLine(98, 288, 114, 288);
         g.drawArc(114, 282, 9, 9, 0, 180);
@@ -114,19 +114,19 @@ public class PanelAlu extends ImagePanel {
         
         //insADD*ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 7));
         g.drawLine(171, 279, 232, 279);
         g.drawLine(171, 280, 232, 280);
         
         //insADD*ALUop + ALUadd
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 8));
         g.drawLine(259, 272, 336, 272);
         g.drawLine(259, 273, 336, 273);
         
         //insAND
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 9));
         g.drawLine(98, 317, 114, 317);
         g.drawLine(98, 318, 114, 318);
         g.drawArc(114, 312, 9, 9, 0, 180);
@@ -136,13 +136,13 @@ public class PanelAlu extends ImagePanel {
         
         //insAND*ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 10));
         g.drawLine(171, 324, 347, 324);
         g.drawLine(171, 325, 347, 325);
         
         //insARS
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 11));
         g.drawLine(99, 359, 114, 359);
         g.drawLine(99, 360, 114, 360);
         g.drawArc(114, 354, 9, 9, 0, 180);
@@ -152,13 +152,13 @@ public class PanelAlu extends ImagePanel {
         
         //insARS*ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 12));
         g.drawLine(171, 366, 356, 366);
         g.drawLine(171, 367, 356, 367);
 
         //ALUincX
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 13));
         g.drawLine(98, 399, 114, 399);
         g.drawLine(98, 400, 114, 400);
         g.drawArc(114, 394, 9, 9, 0, 180);
@@ -168,7 +168,7 @@ public class PanelAlu extends ImagePanel {
         
        //ALUincY
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 14));
         g.drawLine(98, 430, 114, 430);
         g.drawLine(98, 431, 114, 431);
         g.drawArc(114, 425, 9, 9, 0, 180);
@@ -182,7 +182,7 @@ public class PanelAlu extends ImagePanel {
         
         //insINC
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 15));
         g.drawLine(99, 460, 114, 460);
         g.drawLine(99, 461, 114, 461);
         g.drawArc(114, 455, 9, 9, 0, 180);
@@ -195,19 +195,19 @@ public class PanelAlu extends ImagePanel {
         
         //insINC*ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 16));
         g.drawLine(174, 452, 221, 452);
         g.drawLine(174, 453, 221, 453);
         
        //insINC*ALUop+ALUincY
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 17));
         g.drawLine(250, 445, 372, 445);
         g.drawLine(250, 446, 372, 446);
         
         //ALUdecX
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 18));
         g.drawLine(101, 484, 114, 484);
         g.drawLine(101, 485, 114, 485);
         g.drawArc(114, 479, 9, 9, 0, 180);
@@ -217,7 +217,7 @@ public class PanelAlu extends ImagePanel {
         
         //ALUdecY
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 19));
         g.drawLine(99, 512, 114, 512);
         g.drawLine(99, 513, 114, 513);
         g.drawArc(114, 507, 9, 9, 0, 180);
@@ -227,7 +227,7 @@ public class PanelAlu extends ImagePanel {
         
         //insDEC
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 20));
         g.drawLine(99, 534, 140, 534);
         g.drawLine(99, 535, 140, 535);
         g.drawLine(844, 516, 867, 516);
@@ -235,31 +235,31 @@ public class PanelAlu extends ImagePanel {
                 
        //insDEC*ALUop
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 21));
         g.drawLine(172, 526, 217, 526);
         g.drawLine(172, 527, 217, 527);
         
        //insDEC*ALUop + ALUdecY
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 22));
         g.drawLine(246, 520, 389, 520);
         g.drawLine(246, 521, 389, 521);
         
        //ALUtransX
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 23));
         g.drawLine(99, 556, 396, 556);
         g.drawLine(99, 557, 396, 557);
         
        //out16
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 24));
         g.drawLine(729, 416, 867, 416);
         g.drawLine(729, 417, 867, 417);
         
         //out15
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 25));
         g.drawLine(751, 442, 751, 614);
         g.drawLine(752, 442, 752, 614);
         g.drawLine(751, 441, 867,441);
@@ -267,38 +267,38 @@ public class PanelAlu extends ImagePanel {
         
         //ALUM2out
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 26));
         g.drawLine(834, 622, 834, 631);
         g.drawLine(835, 622, 835, 631);
         
-        //ALUM2out
+        //ALUM3out
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 27));
         g.drawLine(838, 708, 838, 717);
         g.drawLine(839, 708, 839, 717);
         
         //ALUmp
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 28));
         g.drawLine(327, 142, 337, 142);
         g.drawLine(327, 143, 337, 143);
         
        //Yin
         g.setColor(Color.GREEN);
-        //g.setColor(findColor(init.alu, 37));
+        g.setColor(findColor(mf.Alu, 29));
         g.drawLine(757, 142, 767, 142);
         g.drawLine(757, 143, 767, 143);
         
-        g.setFont(new Font("Arial", Font.PLAIN, 30));
+        //g.setFont(new Font("Arial", Font.PLAIN, 30));
         
-        g.drawString("0000", 517, 645);      
+        //g.drawString("0000", 517, 645);      
         
         //g.drawArc(114, 175, 9, 9, 0, 180);
         //g.drawArc(100, 100, 40, 40, 0, 180);
         //g.drawLine(100, 100, 200, 100);
         //g.drawLine(100, 100, 100, 200);
         /*g.setColor(Color.BLACK);
-        g.setColor(findColor(init.alu, 8));
+        g.setColor(findColor(mf.Alu, 8));
         g.drawLine(459, 319, 368, 319);
         g.drawLine(368, 319, 368, 272);
         g.drawLine(368, 272, 272, 272);
