@@ -4,12 +4,14 @@ package simulator.panels;
 import java.awt.Color;
 import java.awt.Graphics;
 import simulator.Initializator;
+import simulator.MainFrame;
 
 public class PanelOper1 extends ImagePanel { 
 	private static final String imageName = "Operaciona1.png";
-
-    public PanelOper1(Initializator init) {
+	public MainFrame mf;
+    public PanelOper1(Initializator init, MainFrame mf) {
         super(init, imageName);
+        this.mf = mf;
     }
 
     public void paint(Graphics g) {
@@ -18,67 +20,67 @@ public class PanelOper1 extends ImagePanel {
         g.setColor(Color.GREEN);
        
         //M1M2out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 0));
         g.drawLine(201, 32, 201, 42);
         g.drawLine(202, 32, 202, 42);
     
         //M1M3out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 1));
         g.drawLine(201, 79, 201, 90);
         g.drawLine(202, 79, 202, 90);
         
         //M2M1out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 2));
         g.drawLine(837, 76, 837, 84);
         g.drawLine(838, 76, 838, 84);
         
         //M3M1out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 3));
         g.drawLine(837, 123, 837, 132);
         g.drawLine(838, 123, 838, 132);
         
         //REGBUSsel
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 4));
         g.drawLine(581, 150, 581, 161);
         g.drawLine(582, 150, 582, 161);
         
         //REGin
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 5));
         g.drawLine(643, 156, 656, 156);
         g.drawLine(643, 157, 656, 157);
         
         //ALUM2out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 6));
         g.drawLine(299, 476, 299, 485);
         g.drawLine(300, 476, 300, 485);
      
         //ALUM3out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 7));
         g.drawLine(299, 528, 299, 538);
         g.drawLine(300, 528, 300, 538);
          
         //PSWM2out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 8));
         g.drawLine(297, 665, 297, 675);
         g.drawLine(298, 665, 298, 675);
      
         //PSWM3out
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 9));
         g.drawLine(297, 700, 297, 709);
         g.drawLine(298, 700, 298, 709);
      
         //PSWin
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 10));
         g.drawLine(491, 651, 503, 651);
         g.drawLine(491, 652, 503, 652);
         
         //ALUmp
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 11));
         g.drawLine(451, 387, 465, 387);
         g.drawLine(451, 388, 465, 388);
             
         //Yin
-        //g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 12));
         g.drawLine(638, 386, 652, 386);
         g.drawLine(638, 387, 652, 387);
         
@@ -87,7 +89,7 @@ public class PanelOper1 extends ImagePanel {
         g.drawLine(459, 319, 368, 319);
         g.drawLine(368, 319, 368, 272);
         g.drawLine(368, 272, 272, 272);
-        g.setColor(findColor(init.adder, 8));
+        g.setColor(findColor(mf.Oper1, 8));
         g.drawLine(146, 268, 10, 268);
         g.drawLine(10, 268, 10, 401);
         g.drawLine(10, 401, 55, 401);

@@ -41,6 +41,7 @@ public class MainFrame extends JFrame {
     LinkedList<Integer> accessedAddresses;
     boolean compiled;
     public PanelSignals Alu = new PanelSignals(this);
+    public PanelSignals Oper1 = new PanelSignals(this);
     Memory mem = new Memory();
     MemoryWrapper mw = new MemoryWrapper(mem);
     
@@ -82,7 +83,7 @@ public class MainFrame extends JFrame {
     JPanel jPanel9 = new JPanel();
     JPanel aluPanel = new PanelAlu(init, this);
     JPanel cpuPanel = new PanelCPU(init);
-    JPanel oper1Panel = new PanelOper1(init);
+    JPanel oper1Panel = new PanelOper1(init, this);
     JPanel oper2Panel = new PanelOper2(init);
     JPanel cpuarbPanel = new PanelCPUARB(init);
     JPanel regfilePanel = new PanelRegFile(init);
@@ -295,6 +296,8 @@ public class MainFrame extends JFrame {
         compiled = false;
         clock = 0;
         Alu.sve_na_nulu();
+        Oper1.sve_na_nulu();
+        Oper1.oper1();
             
         //Inicijalno popunjavanje memorijske i registarske tabele
         fillRegTable();
