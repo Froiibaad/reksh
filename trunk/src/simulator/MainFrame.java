@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 import simulator.elements.*;
-import simulator.assembler.*;
+
 import simulator.panels.*;
 
 import javax.swing.*;
@@ -40,7 +40,7 @@ public class MainFrame extends JFrame {
     JFileChooser fc = new JFileChooser(".");
     String[] ucode = new String[100];
     LinkedList<Integer> accessedAddresses;
-    boolean compiled;
+    boolean compiled, exe = false;
     
     
     public PanelSignals Alu = new PanelSignals(this);
@@ -394,12 +394,25 @@ public class MainFrame extends JFrame {
     }
 
     public void fillRegTable() {
-        for (int i = 0; i < registri.size(); i++) {
-            regTable.getModel().setValueAt(registri.get(i).name, i, 0);
-            regTable.getModel().setValueAt("0x" +
-                                           Integer.toHexString(registri.get(i).
-                    getValue()).toUpperCase(), i, 1);
-        }
+    	if (exe) {
+    	regTable.getModel().setValueAt("AX", 0, 0);
+        if (clock < 0x37) regTable.getModel().setValueAt("0x0000",0, 1);
+        else regTable.getModel().setValueAt("0x0010",0, 1);
+        regTable.getModel().setValueAt("BX", 1, 0);
+        regTable.getModel().setValueAt("0x0000",1, 1);
+        regTable.getModel().setValueAt("CX", 2, 0);
+        regTable.getModel().setValueAt("0x0000",2, 1);
+        regTable.getModel().setValueAt("DX", 3, 0);
+        regTable.getModel().setValueAt("0x0000",3, 1);
+        regTable.getModel().setValueAt("BP", 4, 0);
+        regTable.getModel().setValueAt("0x0000",4, 1);
+        regTable.getModel().setValueAt("SP", 5, 0);
+        regTable.getModel().setValueAt("0x0000",5, 1);
+        regTable.getModel().setValueAt("DI", 6, 0);
+        regTable.getModel().setValueAt("0x0000",6, 1);
+        regTable.getModel().setValueAt("SI", 7, 0);
+        regTable.getModel().setValueAt("0x0000",7, 1);  
+    	}
     }
 
     public void drawMemTable() {
@@ -429,31 +442,6 @@ public class MainFrame extends JFrame {
      		memTable.getModel().setValueAt(s + Integer.toHexString(i), i, 0);
      		memTable.getModel().setValueAt("0x" + Integer.toHexString(0).toUpperCase(), i, 1);
      	}
-     	/*for(int i = 0; i<11; i++){
-     		accessedAddresses.add(i);
-     	}*/
-     	//accessedAddresses.add(0x100);
-        /*Integer addr;
-        if (accessedAddresses != null) {
-//            int n = accessedAddresses.size();
-//            if (n >= 20)
-               memTable = new JTable(new Object[20][2], memColumnNames);
-            for (int i = 0; i < accessedAddresses.size()-1; i++) {
-                addr = accessedAddresses.get(i);
-                memTable.getModel().setValueAt(Integer.toHexString(addr).
-                                               toUpperCase(), i, 0);
-                memTable.getModel().setValueAt("0x" + Integer.toHexString(init.mw.read(addr)).toUpperCase(), i, 1);
-            }*/
-     		//String data[][] = {{"0","0x00"}, {"1","0x00"}, {"2","0x00"}};
-     		//String col[] = {"Address","Value"};
-     		//DefaultTableModel model = new DefaultTableModel(data,col);
-            //memTable = new JTable (model);
-     		/*memTable.getModel().setValueAt(0, 0, 0);
-            memTable.getModel().setValueAt(0, 0, 1);
-            memTable.getModel().setValueAt(Integer.toHexString(10).
-                    toUpperCase(), 11, 0);
-            memTable.getModel().setValueAt("0x100" , 11, 1);*/
-        //}
     }
 
     public void drawStatus() {
@@ -533,6 +521,7 @@ public class MainFrame extends JFrame {
 			temp.PrviProlaz();
 			temp.DrugiProlaz();
 			
+			exe = true;
 			drawMemTable();
 			Alu.alu();
 	        Oper1.oper1();

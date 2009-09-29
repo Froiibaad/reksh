@@ -20,14 +20,14 @@ public class Loader {
             while (reader.read(code, 0, 2) != -1) {
             	//System.out.println("CODE: " + String.valueOf(code));
                 int data = Integer.parseInt(String.valueOf(code), 16);
-                mem.write(data, address);
-                address++;
+                //mem.write(data, address);
+                //address++;
                 reader.read(); //skip blank
             }
             reader.close();
             return startAddress;
         } catch (Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
             return 10;
         }
     }
