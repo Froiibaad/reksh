@@ -1,5 +1,5 @@
-ORG #100
+ORG #10
 MOVS AX, G
-G: DC #10
+G: DC #100
 INC AX
 END
