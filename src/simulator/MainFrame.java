@@ -361,6 +361,12 @@ public class MainFrame extends JFrame {
     public void jButton5_actionPerformed(ActionEvent actionEvent) {
         clockButton.setEnabled(false);
         //Clock.tick();
+        try {
+			Thread.sleep((long)(300+300*Math.random()));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         clock++;
         if (clock == 6 || clock == 0xF || clock == 0x20) {
         	PC++;
@@ -544,7 +550,7 @@ public class MainFrame extends JFrame {
             	int startAdr = Loader.loadMemory(mw, mcFile);
             	 init.Mem.initialize(1);
                  //init.PC.initialize(startAdr);
-            	 PC=10;
+            	 PC=startAdr;
  //             init.initialize(mcFile);
                 //Clock.init();
                 compiled = true;                
