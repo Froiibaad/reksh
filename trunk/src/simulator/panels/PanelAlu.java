@@ -11,12 +11,15 @@ import javax.swing.JLabel;
 
 import simulator.Initializator;
 import sun.java2d.loops.DrawLine;
+import simulator.MainFrame;
 
 
 public class PanelAlu extends ImagePanel {
-    private static final String imageName = "alu.png";    
-    public PanelAlu(Initializator init) {
+    private static final String imageName = "alu.png";   
+    public MainFrame mf;
+    public PanelAlu(Initializator init, MainFrame mf) {
         super(init, imageName);
+        this.mf = mf;
         //this.setLayout(new GridBagLayout());
     }
 
