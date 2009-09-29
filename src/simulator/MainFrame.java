@@ -272,8 +272,8 @@ public class MainFrame extends JFrame {
         jPanel6.add(executeButton);
         asmPanel.add(asmScrollPane, java.awt.BorderLayout.CENTER);
         jMenu1.add(jMenuItem1);
-        jMenu1.add(jMenuItem2);
-        jMenu1.add(jMenuItem5);
+        //jMenu1.add(jMenuItem2);
+        //jMenu1.add(jMenuItem5);
         jMenu2.add(jMenuItem3);
         jMenu2.add(jMenuItem4);        
         jMenu2.addSeparator();
