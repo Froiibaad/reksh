@@ -18,7 +18,7 @@ public class Loader {
             int startAddress = address;
             char[] code = new char[2];
             while (reader.read(code, 0, 2) != -1) {
-            	System.out.println("CODE: " + String.valueOf(code));
+            	//System.out.println("CODE: " + String.valueOf(code));
                 int data = Integer.parseInt(String.valueOf(code), 16);
                 mem.write(data, address);
                 address++;
@@ -28,7 +28,7 @@ public class Loader {
             return startAddress;
         } catch (Exception e) {
             System.out.println(e);
-            return -1;
+            return 10;
         }
     }
 }
